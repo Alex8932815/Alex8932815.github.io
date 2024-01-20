@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="1.8 安全目标管理和方法" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            1.8 安全目标管理和方法
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%85%AB%E3%80%81%E5%AE%89%E5%85%A8%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86%E5%92%8C%E6%96%B9%E6%B3%95"><span class="post-toc-text">八、安全目标管理和方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E7%9B%AE%E6%A0%87%E7%9A%84%E5%88%B6%E5%AE%9A"><span class="post-toc-text">一、安全管理目标的制定</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E5%88%B6%E5%AE%9A%E5%8E%9F%E5%88%99"><span class="post-toc-text">（一）制定原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%AE%89%E5%85%A8%E7%9B%AE%E6%A0%87%E5%86%85%E5%AE%B9"><span class="post-toc-text">（二）安全目标内容</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E7%9B%AE%E6%A0%87%E6%8E%A7%E5%88%B6"><span class="post-toc-text">二、安全管理目标控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%9B%AE%E6%A0%87%E5%AE%9E%E6%96%BD%E4%B8%AD%E7%9A%84%E6%8E%A7%E5%88%B6"><span class="post-toc-text">（一）目标实施中的控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E6%A6%82%E8%BF%B0"><span class="post-toc-text">（1）概述</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E6%8E%A7%E5%88%B6%E5%BD%A2%E5%BC%8F"><span class="post-toc-text">（2）控制形式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E7%9B%AE%E6%A0%87%E5%AE%9E%E6%96%BD%E4%B8%AD%E7%9A%84%E5%8D%8F%E8%B0%83"><span class="post-toc-text">（二）目标实施中的协调</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="八、安全目标管理和方法"><a href="#八、安全目标管理和方法" class="headerlink" title="八、安全目标管理和方法"></a>八、安全目标管理和方法</h1><h2 id="一、安全管理目标的制定"><a href="#一、安全管理目标的制定" class="headerlink" title="一、安全管理目标的制定"></a>一、安全管理目标的制定</h2><h3 id="（一）制定原则"><a href="#（一）制定原则" class="headerlink" title="（一）制定原则"></a>（一）制定原则</h3><ul>
+<li><strong>突出重点，分清主次</strong><ul>
+<li>不能平均分配，面面俱到，突出重大事故、负伤率等指标</li>
+<li>次要目标与重点目标有效配合</li>
+</ul>
+</li>
+<li><strong>安全目标需要具有适用性和先进性</strong><ul>
+<li>目标不能高不可攀，也不能过低</li>
+</ul>
+</li>
+<li><strong>目标应具体化、定量化、数据化</strong><ul>
+<li>负伤率近年0.003%，比去年低80%</li>
+</ul>
+</li>
+<li><strong>安全目标与实现措施统一性原则</strong><ul>
+<li>制定目标时要保证有保证目标实现的措施</li>
+</ul>
+</li>
+<li><strong>系统性原则</strong><ul>
+<li>建立安全目标管理体系</li>
+</ul>
+</li>
+</ul>
+<p><em>⚠️「速记心法」</em>：<strong>重点主次、适用先进、具体定量数据、标措统一、系统性。</strong></p>
+<h3 id="（二）安全目标内容"><a href="#（二）安全目标内容" class="headerlink" title="（二）安全目标内容"></a>（二）安全目标内容</h3><ul>
+<li>安全<strong>管理水平</strong>提高目标；</li>
+<li>安全<strong>教育达到程度</strong>目标；</li>
+<li><strong>伤亡事故控制</strong>目标；</li>
+<li><strong>事故隐患整改完成率</strong>目标；</li>
+<li><strong>标准化达标</strong>目标；</li>
+<li><strong>企业安全性评价</strong>目标；</li>
+<li><strong>岗位任职安全</strong>目标；</li>
+<li><strong>其他</strong>特定安全工作目标。</li>
+</ul>
+<p><em>⚠️「速记心法」</em>：<strong>管理教育、伤亡事故、达标评价、岗位其他。</strong></p>
+<h2 id="二、安全管理目标控制"><a href="#二、安全管理目标控制" class="headerlink" title="二、安全管理目标控制"></a>二、安全管理目标控制</h2><h3 id="（一）目标实施中的控制"><a href="#（一）目标实施中的控制" class="headerlink" title="（一）目标实施中的控制"></a>（一）目标实施中的控制</h3><h4 id="（1）概述"><a href="#（1）概述" class="headerlink" title="（1）概述"></a>（1）概述</h4><ul>
+<li><strong>目标过程控制</strong>是安全目标管理的<strong>核心</strong>；</li>
+<li>管理人员为保证实际工作与计划一致性，通过对计划执行情况的<strong>监督，检查和评比</strong>，<strong>发现目标偏差</strong>，采取<strong>措施纠正偏差</strong>；</li>
+<li>发现薄弱环节进行<strong>自我调节</strong>，保障目标的顺利实施。</li>
+</ul>
+<h4 id="（2）控制形式"><a href="#（2）控制形式" class="headerlink" title="（2）控制形式"></a>（2）控制形式</h4><ul>
+<li><u><em>自我控制</em></u><ul>
+<li>责任者<strong>自我检查</strong>，自行纠偏达到目标的有效实施；</li>
+<li>便于<strong>人人</strong>参与安全管理，<strong>人人</strong>关心安全工作，激发主人翁责任感；</li>
+<li>应用于<strong>班组目标、岗位目标管理</strong>。</li>
+</ul>
+</li>
+<li><em>逐级控制</em><ul>
+<li>按目标管理的<strong>授权关系</strong>，由下达目标的领导逐级控制被授权人员，一级控制一级，形成<strong>逐级检查、逐级条件、环环相扣</strong>的控制链；</li>
+<li>使发现问题及时得到解决。</li>
+</ul>
+</li>
+<li><em>关键点控制</em><ul>
+<li>主要针对关键点；</li>
+<li>是指实现安全总目标有决定意义和重大影响的因素；</li>
+<li>关键点可以是重点目标、重点措施或重点单位。</li>
+</ul>
+</li>
+</ul>
+<h3 id="（二）目标实施中的协调"><a href="#（二）目标实施中的协调" class="headerlink" title="（二）目标实施中的协调"></a>（二）目标实施中的协调</h3><ul>
+<li><em>指导型协调</em><ul>
+<li>管理<strong>中上下级之间的一种纵向</strong>协调方式；</li>
+<li>采取方式<ul>
+<li><strong>指导</strong></li>
+<li><strong>建议</strong></li>
+<li><strong>劝说</strong></li>
+<li><strong>激励</strong></li>
+<li><strong>引导</strong></li>
+</ul>
+</li>
+<li>特点<ul>
+<li><strong>不干预目标责任者的行动</strong>；</li>
+<li><strong>按上级意图</strong>进行协调。</li>
+</ul>
+</li>
+<li>应用<ul>
+<li><strong>需要调整原计划</strong>时；</li>
+<li><strong>下级执行上级指示出现偏差，需纠正时</strong>；</li>
+<li><strong>同一层次的部门或人员工作中出现矛盾时</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>自愿型协调</em><ul>
+<li><strong>横向部门之间或人</strong>员之间资源寻找配合措施和协作方法的协调方式；</li>
+<li>目的在于<strong>相互协作，避免冲突</strong>，更好地实现目标。</li>
+</ul>
+</li>
+<li><em>促进型协调</em><ul>
+<li>各<strong>职能部门、专业小组或个人</strong>相互合作；</li>
+<li>充分发挥<strong>特长和优势</strong>，为事项目标共同努力的协调方式。</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2022-10-26</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%BA%8C%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            二级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

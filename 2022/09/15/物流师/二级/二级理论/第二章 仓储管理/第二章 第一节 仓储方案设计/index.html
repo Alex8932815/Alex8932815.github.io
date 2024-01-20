@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="2.1 仓储方案设计" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            2.1 仓储方案设计
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%AC%AC%E4%B8%80%E8%8A%82-%E4%BB%93%E5%82%A8%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1"><span class="post-toc-text">第二章 第一节 仓储方案设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E5%95%86%E5%93%81%E4%BF%9D%E7%AE%A1%E5%9C%BA%E6%89%80%E9%80%89%E5%9D%80%EF%BC%88X%EF%BC%89"><span class="post-toc-text">一、商品保管场所选址（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%95%86%E5%93%81%E4%BF%9D%E7%AE%A1%E5%9C%BA%E6%89%80%E8%A7%84%E6%A8%A1%E7%9A%84%E7%A1%AE%E5%AE%9A"><span class="post-toc-text">1.商品保管场所规模的确定</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%95%86%E5%93%81%E4%BF%9D%E7%AE%A1%E5%9C%BA%E6%89%80%E7%9A%84%E9%80%89%E5%9D%80"><span class="post-toc-text">2.商品保管场所的选址</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E4%B8%8D%E4%BB%85%E4%BB%85%E8%A6%81%E8%80%83%E8%99%91%E7%BB%8F%E6%B5%8E%E6%96%B9%E9%9D%A2"><span class="post-toc-text">（1）不仅仅要考虑经济方面</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF%E6%96%B9%E9%9D%A2"><span class="post-toc-text">（2）工程技术方面</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C-%E4%BB%93%E5%BA%93%E5%86%85%E9%83%A8%E7%A9%BA%E9%97%B4%E5%86%B3%E7%AD%96%EF%BC%88X%EF%BC%89"><span class="post-toc-text">二.仓库内部空间决策（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E4%BB%93%E5%BA%93%E5%86%85%E9%83%A8%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F%E5%86%B3%E5%AE%9A%E5%9B%A0%E7%B4%A0"><span class="post-toc-text">1.仓库内部空间大小决定因素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E4%BB%93%E5%BA%93%E5%86%85%E9%83%A8%E7%A9%BA%E9%97%B4"><span class="post-toc-text">2.仓库内部空间</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E7%BB%84%E6%88%90"><span class="post-toc-text">（1）组成</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E7%A1%AE%E5%AE%9A%E5%86%85%E9%83%A8%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F"><span class="post-toc-text">（2）确定内部空间大小</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E4%BB%93%E5%BA%93%E5%86%85%E9%83%A8%E7%A9%BA%E9%97%B4%E5%86%B3%E7%AD%96%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BB%BB%E5%8A%A1"><span class="post-toc-text">3.仓库内部空间决策的主要任务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%BB%93%E5%BA%93%E5%86%85%E9%83%A8%E5%B8%83%E7%BD%AE"><span class="post-toc-text">4.仓库内部布置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81%E4%BB%93%E5%BA%93%E7%9A%84%E5%BB%BA%E9%80%A0%E6%88%96%E7%A7%9F%E8%B5%81%E5%86%B3%E7%AD%96%EF%BC%88Z%EF%BC%89"><span class="post-toc-text">三、仓库的建造或租赁决策（Z）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%BB%BA%E9%80%A0%E8%87%AA%E6%9C%89%E4%BB%93%E5%BA%93%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0"><span class="post-toc-text">1.建造自有仓库影响因素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%A7%9F%E7%94%A8%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0"><span class="post-toc-text">2.租用公共仓库影响因素</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E4%BB%93%E5%BA%93%E6%9C%8D%E5%8A%A1%E5%86%B3%E7%AD%96%EF%BC%88X%EF%BC%89"><span class="post-toc-text">四、仓库服务决策（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%AD%98%E8%B4%A7%E5%8F%AF%E5%BE%97%E6%80%A7"><span class="post-toc-text">1.存货可得性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E4%BD%9C%E4%B8%9A%E5%AE%8C%E6%88%90"><span class="post-toc-text">2.作业完成</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="post-toc-text">3.可靠性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%94%E3%80%81%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1%E5%86%B3%E7%AD%96%EF%BC%88X%EF%BC%89"><span class="post-toc-text">五、增值服务决策（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E6%89%98%E7%9B%98%E5%8C%96"><span class="post-toc-text">1.托盘化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%8C%85%E8%A3%85"><span class="post-toc-text">2.包装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E8%B4%B4%E6%A0%87%E7%AD%BE"><span class="post-toc-text">3.贴标签</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%BA%A7%E5%93%81%E9%85%8D%E5%A5%97%E3%80%81%E7%BB%84%E8%A3%85"><span class="post-toc-text">4.产品配套、组装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E4%B8%8A%E6%B2%B9%E6%BC%86"><span class="post-toc-text">5.上油漆</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E7%AE%80%E5%8D%95%E5%8A%A0%E5%B7%A5%E7%94%9F%E4%BA%A7"><span class="post-toc-text">6.简单加工生产</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-%E9%80%80%E8%B4%A7%E4%B8%8E%E8%B0%83%E6%8D%A2%E6%9C%8D%E5%8A%A1"><span class="post-toc-text">7.退货与调换服务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-%E5%BA%93%E5%AD%98%E6%8E%A7%E5%88%B6%E5%92%8C%E8%AE%A2%E8%B4%A7%E5%86%B3%E7%AD%96%E6%94%AF%E6%8C%81"><span class="post-toc-text">8.库存控制和订货决策支持</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AD%E3%80%81%E4%BB%93%E5%BA%93%E8%AE%BE%E5%A4%87%E5%86%B3%E7%AD%96%EF%BC%88X%EF%BC%89"><span class="post-toc-text">六、仓库设备决策（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E8%AE%BE%E5%A4%87%E8%B4%AD%E7%BD%AE%E5%86%B3%E7%AD%96"><span class="post-toc-text">1.设备购置决策</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E8%AE%BE%E5%A4%87%E6%9B%B4%E6%96%B0%E6%94%B9%E9%80%A0%E5%86%B3%E7%AD%96"><span class="post-toc-text">2.设备更新改造决策</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E8%AE%BE%E5%A4%87%E6%9B%B4%E6%96%B0%E5%88%86%E7%B1%BB"><span class="post-toc-text">（1）设备更新分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a-%E8%AE%BE%E5%A4%87%E5%8E%9F%E5%9E%8B%E6%9B%B4%E6%96%B0"><span class="post-toc-text">a.设备原型更新</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#b-%E8%AE%BE%E5%A4%87%E6%8A%80%E6%9C%AF%E6%9B%B4%E6%96%B0"><span class="post-toc-text">b.设备技术更新</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89-%E8%AE%BE%E5%A4%87%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9"><span class="post-toc-text">（2） 设备更新内容</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E8%AE%BE%E5%A4%87%E7%A3%A8%E6%8D%9F%E7%BB%8F%E6%B5%8E%E5%88%86%E6%9E%90"><span class="post-toc-text">（3）设备磨损经济分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a-%E6%9C%89%E5%BD%A2%E7%A3%A8%E6%8D%9F"><span class="post-toc-text">a. 有形磨损</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#b-%E6%97%A0%E5%BD%A2%E7%A3%A8%E6%8D%9F"><span class="post-toc-text">b.无形磨损</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%884%EF%BC%89-%E8%AE%BE%E5%A4%87%E5%AF%BF%E5%91%BD%E5%88%86%E6%9E%90"><span class="post-toc-text">（4） 设备寿命分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a-%E4%BD%BF%E7%94%A8%E5%AF%BF%E5%91%BD"><span class="post-toc-text">a.使用寿命</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#b-%E7%BB%8F%E6%B5%8E%E5%AF%BF%E5%91%BD"><span class="post-toc-text">b.经济寿命</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#c-%E6%8A%80%E6%9C%AF%E5%AF%BF%E5%91%BD"><span class="post-toc-text">c.技术寿命</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%885%EF%BC%89%E8%AE%BE%E5%A4%87%E6%9B%B4%E6%96%B0%E6%96%B9%E6%A1%88%E8%AF%84%E4%BB%B7%E4%B8%8E%E9%80%89%E6%8B%A9"><span class="post-toc-text">（5）设备更新方案评价与选择</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a-%E4%BE%9D%E6%8D%AE%E6%9B%B4%E6%96%B0%E5%8E%9F%E5%9B%A0%EF%BC%8C%E7%A1%AE%E5%AE%9A%E6%9B%B4%E6%96%B0%E6%96%B9%E5%BC%8F%EF%BC%8C%E6%8F%90%E5%87%BA%E5%8F%AF%E8%83%BD%E7%9A%84%E6%9B%B4%E6%96%B0%E6%96%B9%E6%A1%88"><span class="post-toc-text">a. 依据更新原因，确定更新方式，提出可能的更新方案</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#b-%E6%98%8E%E7%A1%AE%E6%9B%B4%E6%96%B0%E8%AE%BE%E5%A4%87%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%B6%E9%97%B4%EF%BC%8C%E7%A1%AE%E5%AE%9A%E5%AF%BF%E5%91%BD%E4%B8%8D%E7%AD%89%E6%9B%B4%E6%96%B0%E6%96%B9%E6%A1%88%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="post-toc-text">b. 明确更新设备的使用时间，确定寿命不等更新方案的处理方式</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#c-%E8%AE%A1%E7%AE%97%E5%8F%AF%E8%A1%8C%E6%9B%B4%E6%96%B0%E6%96%B9%E6%A1%88%E7%9A%84%E4%BD%BF%E7%94%A8%E8%B4%B9%E7%94%A8%EF%BC%8C%E8%BF%9B%E8%A1%8C%E6%9B%B4%E6%96%B0%E5%86%B3%E7%AD%96"><span class="post-toc-text">c.计算可行更新方案的使用费用，进行更新决策</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%83%E3%80%81%E5%90%88%E5%90%8C%E4%BB%93%E5%82%A8%E4%B8%8E%E8%87%AA%E8%90%A5%E4%BB%93%E5%82%A8%E7%9A%84%E6%AF%94%E8%BE%83%EF%BC%88Z%EF%BC%89"><span class="post-toc-text">七、合同仓储与自营仓储的比较（Z）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AB%E3%80%81%E4%BB%93%E5%82%A8%E5%90%88%E5%90%8C%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%88Y%EF%BC%89"><span class="post-toc-text">八、仓储合同的内容（Y）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%89%B9%E6%AE%8A%E8%B4%A7%E7%9A%84%E5%91%8A%E7%9F%A5%E4%B8%8E%E5%A4%84%E7%90%86"><span class="post-toc-text">1.特殊货的告知与处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E8%B4%A7%E7%89%A9%E7%9A%84%E5%85%A5%E5%BA%93%E9%AA%8C%E6%94%B6"><span class="post-toc-text">2.货物的入库验收</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E4%BB%93%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="post-toc-text">3.仓单的使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E8%B4%A7%E7%89%A9%E7%9A%84%E6%A3%80%E6%9F%A5%E4%B8%8E%E5%8F%96%E6%A0%B7"><span class="post-toc-text">4.货物的检查与取样</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E9%80%9A%E7%9F%A5%E4%B8%8E%E5%82%AC%E5%91%8A"><span class="post-toc-text">5.通知与催告</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E8%B4%A7%E7%89%A9%E7%9A%84%E6%8F%90%E5%8F%96"><span class="post-toc-text">6.货物的提取</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B9%9D%E3%80%81%E4%BB%93%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88X%EF%BC%89"><span class="post-toc-text">九、仓单的使用（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="post-toc-text">1.定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%86%85%E5%AE%B9"><span class="post-toc-text">2.内容</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E6%B3%A8%E6%84%8F"><span class="post-toc-text">3.注意</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E6%B3%95%E5%BE%8B%E7%89%B9%E6%80%A7"><span class="post-toc-text">4.法律特性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E6%8F%90%E8%B4%A7%E5%87%AD%E8%AF%81"><span class="post-toc-text">（1）提货凭证</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E6%89%80%E6%9C%89%E6%9D%83%E7%9A%84%E6%B3%95%E5%BE%8B%E6%96%87%E4%B9%A6"><span class="post-toc-text">（2）所有权的法律文书</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E6%9C%89%E4%BB%B7%E8%AF%81%E5%88%B8"><span class="post-toc-text">（3）有价证券</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%884%EF%BC%89%E4%BB%93%E5%82%A8%E5%90%88%E5%90%8C%E7%9A%84%E8%AF%81%E6%98%8E"><span class="post-toc-text">（4）仓储合同的证明</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E4%BB%93%E5%8D%95%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="post-toc-text">5.仓单的功能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89-%E4%BF%9D%E7%AE%A1%E4%BA%BA%E6%89%BF%E6%8B%85%E8%B4%A3%E4%BB%BB%E7%9A%84%E8%AF%81%E6%98%8E"><span class="post-toc-text">（1） 保管人承担责任的证明</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89-%E7%89%A9%E6%9D%83%E8%AF%81%E6%98%8E"><span class="post-toc-text">（2） 物权证明</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E7%89%A9%E6%9D%83%E4%BA%A4%E6%98%93"><span class="post-toc-text">（3）物权交易</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%884%EF%BC%89-%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7"><span class="post-toc-text">（4） 金融工具</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E5%86%85%E5%AE%B9"><span class="post-toc-text">6.内容</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-%E4%BB%93%E5%8D%95%E7%9A%84%E4%B8%9A%E5%8A%A1"><span class="post-toc-text">7.仓单的业务</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E4%BB%93%E5%8D%95%E7%9A%84%E7%AD%BE%E5%8F%91"><span class="post-toc-text">（1）仓单的签发</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89-%E4%BB%93%E5%8D%95%E7%9A%84%E4%BB%BD%E6%95%B0"><span class="post-toc-text">（2） 仓单的份数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E4%BB%93%E5%8D%95%E5%88%86%E5%89%B2"><span class="post-toc-text">（3）仓单分割</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%884%EF%BC%89-%E4%BB%93%E5%8D%95%E8%BD%AC%E8%AE%A9"><span class="post-toc-text">（4） 仓单转让</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%90%88%E5%90%8C%E6%B3%95%E5%AF%B9%E4%BA%8E%E4%BB%93%E5%82%A8%E5%90%88%E5%90%8C%E7%9A%84%E8%A7%84%E5%AE%9A"><span class="post-toc-text">合同法对于仓储合同的规定</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BB%93%E5%82%A8%E5%90%88%E5%90%8C%E5%8F%88%E5%8F%AB%E4%BB%93%E5%82%A8%E4%BF%9D%E7%AE%A1%E5%90%88%E5%90%8C"><span class="post-toc-text">仓储合同又叫仓储保管合同</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B3%95%E5%BE%8B%E7%89%B9%E5%BE%81"><span class="post-toc-text">法律特征</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%90%88%E5%90%8C%E6%95%88%E5%8A%9B"><span class="post-toc-text">合同效力</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="第二章-第一节-仓储方案设计"><a href="#第二章-第一节-仓储方案设计" class="headerlink" title="第二章 第一节 仓储方案设计"></a>第二章 第一节 仓储方案设计</h1><blockquote>
+<p>🤔：本节了解仓库要选在哪里？仓库管理的决策有哪些？选好了后就要做五个决策，仓库内部空间怎么布局决策？仓库的建造是自建还是租赁决策？仓库服务决策？增值服务决策？仓库设备决策？合同仓库和自营仓库的比较？仓储合同和仓单具体指什么，有什么关系？仓单如何使用？合同法对仓储合同的规定有哪些？</p>
+</blockquote>
+<h2 id="一、商品保管场所选址（X）"><a href="#一、商品保管场所选址（X）" class="headerlink" title="一、商品保管场所选址（X）"></a>一、商品保管场所选址（X）</h2><h3 id="1-商品保管场所规模的确定"><a href="#1-商品保管场所规模的确定" class="headerlink" title="1.商品保管场所规模的确定"></a>1.商品保管场所规模的确定</h3><ul>
+<li><p><em>直接影响</em>：<strong>仓库储存商品数量</strong></p>
+<ul>
+<li>直接影响因素</li>
+<li>商品<strong>储存量与仓库容量</strong>之间存在客观比例关系</li>
+</ul>
+</li>
+<li><p><strong>商品储存的时间</strong></p>
+<ul>
+<li>商品储存量不变的情况下，商品在仓库里的<strong>平均储存时间越短</strong>，所需的<strong>仓库的容量就越小</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-商品保管场所的选址"><a href="#2-商品保管场所的选址" class="headerlink" title="2.商品保管场所的选址"></a>2.商品保管场所的选址</h3><h4 id="（1）不仅仅要考虑经济方面"><a href="#（1）不仅仅要考虑经济方面" class="headerlink" title="（1）不仅仅要考虑经济方面"></a>（1）不仅仅要考虑<strong>经济方面</strong></h4><h4 id="（2）工程技术方面"><a href="#（2）工程技术方面" class="headerlink" title="（2）工程技术方面"></a>（2）工程技术方面</h4><ul>
+<li><p><em>地质条件</em></p>
+<ul>
+<li><strong>承载力较高</strong>的地基</li>
+<li>地质坚实、平坦、干燥</li>
+<li>沿海沿河注意<strong>耐压力和稳定性</strong></li>
+<li>地震区<strong>避开断裂破碎地带和滑坡地区</strong></li>
+</ul>
+</li>
+<li><p><em>水文及水文地质条件</em></p>
+<ul>
+<li><strong>汛期洪水最高水位</strong></li>
+<li><strong>地下水位</strong></li>
+</ul>
+</li>
+<li><p><em>交通运输条件</em></p>
+<ul>
+<li>铺设<strong>铁路专用线</strong></li>
+<li><strong>专用水运码头</strong></li>
+</ul>
+</li>
+<li><p><em>环境条件</em></p>
+<ul>
+<li><strong>不宜在工厂下风或化工厂附近</strong></li>
+</ul>
+</li>
+<li><p><em>水、电供应条件</em></p>
+<ul>
+<li><strong>靠近水源、电源</strong></li>
+</ul>
+</li>
+<li><p><em>考虑建设成本和将来仓库的发展需要</em></p>
+<ul>
+<li>尽可能<strong>减少土石方量，节省基建投资</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="二-仓库内部空间决策（X）"><a href="#二-仓库内部空间决策（X）" class="headerlink" title="二.仓库内部空间决策（X）"></a>二.仓库内部空间决策（X）</h2><h3 id="1-仓库内部空间大小决定因素"><a href="#1-仓库内部空间大小决定因素" class="headerlink" title="1.仓库内部空间大小决定因素"></a>1.仓库内部空间大小决定因素</h3><ul>
+<li>每年<strong>存储货物的数量</strong></li>
+<li><strong>存储货物的特点</strong></li>
+</ul>
+<h3 id="2-仓库内部空间"><a href="#2-仓库内部空间" class="headerlink" title="2.仓库内部空间"></a>2.仓库内部空间</h3><h4 id="（1）组成"><a href="#（1）组成" class="headerlink" title="（1）组成"></a>（1）组成</h4><ul>
+<li><strong>货物存储所需空间</strong></li>
+<li><strong>仓库过道和通道空间</strong></li>
+<li><strong>仓库设备存放空间</strong></li>
+<li><strong>仓库管理人员办公所需空间</strong></li>
+</ul>
+<h4 id="（2）确定内部空间大小"><a href="#（2）确定内部空间大小" class="headerlink" title="（2）确定内部空间大小"></a>（2）确定内部空间大小</h4><ul>
+<li><em>基本存储空间</em>：对<strong>未来市场需求情况的预测</strong>，经过综合的测算和权衡，确定所需的基本存储空间；</li>
+<li><em>弹性发展空间（备用空间）</em>：依据<strong>企业未来发展的规模和速度</strong>，确定仓库未来的所需弹性发展空间</li>
+<li><em>通道和过道空间</em>：通过对<strong>仓库的内部布局和作业管理设计</strong>确定仓库所需通道和过道空间，从而确定仓库作业的硬性使用空间</li>
+</ul>
+<h3 id="3-仓库内部空间决策的主要任务"><a href="#3-仓库内部空间决策的主要任务" class="headerlink" title="3.仓库内部空间决策的主要任务"></a>3.仓库内部空间决策的主要任务</h3><ul>
+<li><p><strong>如何合理地利用库房面积</strong></p>
+<ul>
+<li>商品储存</li>
+<li>库内作业</li>
+<li>相互矛盾</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-仓库内部布置"><a href="#4-仓库内部布置" class="headerlink" title="4.仓库内部布置"></a>4.仓库内部布置</h3><ul>
+<li><p><em>确定仓库用地面积</em></p>
+<ul>
+<li>地形图</li>
+<li>现场放样</li>
+<li>防火通道</li>
+<li>容积率</li>
+<li>建筑方位</li>
+<li>进出口</li>
+</ul>
+</li>
+<li><p><em>动线流程及大区域规划</em></p>
+<ul>
+<li><p><strong>I形（直线型）</strong></p>
+<ul>
+<li>货运站、转运中心、通用型仓库</li>
+</ul>
+</li>
+<li><p><strong>L形（侧边型）</strong></p>
+</li>
+<li><p><strong>U形（单面型）</strong></p>
+</li>
+</ul>
+</li>
+<li><p><em>商品种类数量分析及商品种类库存数量</em></p>
+<ul>
+<li><p><em>A类</em></p>
+<ul>
+<li><strong>靠近走道或门口的地方</strong></li>
+</ul>
+</li>
+<li><p><em>B类</em></p>
+</li>
+<li><p><em>C类</em></p>
+<ul>
+<li><strong>角落偏远</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em>确定托盘形式和尺寸</em></p>
+</li>
+<li><p><em>确定货架种类和尺寸</em></p>
+<ul>
+<li>2600*2500</li>
+</ul>
+</li>
+<li><p><em>确定搬运方式和设备</em></p>
+<ul>
+<li><p><strong>配重式堆高机</strong></p>
+<ul>
+<li>3.5</li>
+</ul>
+</li>
+<li><p><strong>伸缩式堆高机</strong></p>
+<ul>
+<li>2.5</li>
+</ul>
+</li>
+<li><p><strong>窄道式堆高机</strong></p>
+<ul>
+<li>1.5</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em>确定库房形式、高度和跨度</em></p>
+</li>
+<li><p><em>库房细节规划</em></p>
+</li>
+<li><p><em>确定设备规格和询价</em></p>
+</li>
+</ul>
+<h2 id="三、仓库的建造或租赁决策（Z）"><a href="#三、仓库的建造或租赁决策（Z）" class="headerlink" title="三、仓库的建造或租赁决策（Z）"></a>三、仓库的建造或租赁决策（Z）</h2><h3 id="1-建造自有仓库影响因素"><a href="#1-建造自有仓库影响因素" class="headerlink" title="1.建造自有仓库影响因素"></a>1.建造自有仓库影响因素</h3><ul>
+<li>当地运输水平、质量、手段</li>
+<li>当地劳动力质量和数量</li>
+<li>当地劳动力生产效率和工资水平</li>
+<li>建设成本和仓库达到的质量</li>
+<li>潜在扩张能力和企业发展战略</li>
+<li>当地税收政策和政府法规</li>
+</ul>
+<h3 id="2-租用公共仓库影响因素"><a href="#2-租用公共仓库影响因素" class="headerlink" title="2.租用公共仓库影响因素"></a>2.租用公共仓库影响因素</h3><ul>
+<li>公共仓库的技术设备水平和维护成本</li>
+<li>公共仓库所提供的服务质量</li>
+<li>机械化运输水平</li>
+<li>通信设备、电子计算机、互联网应用情况</li>
+<li>库存记录是否具备完整性准确性及时性</li>
+</ul>
+<h2 id="四、仓库服务决策（X）"><a href="#四、仓库服务决策（X）" class="headerlink" title="四、仓库服务决策（X）"></a>四、仓库服务决策（X）</h2><h3 id="1-存货可得性"><a href="#1-存货可得性" class="headerlink" title="1.存货可得性"></a>1.存货可得性</h3><ul>
+<li><p>当客户需要存货时所拥有的库存能力</p>
+</li>
+<li><p>安全储备政策</p>
+</li>
+<li><p>物流绩效指标衡量</p>
+<ul>
+<li><strong>缺货频率</strong></li>
+<li><strong>供应比率</strong></li>
+<li><strong>订货完成率</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-作业完成"><a href="#2-作业完成" class="headerlink" title="2.作业完成"></a>2.作业完成</h3><ul>
+<li><strong>完成速度</strong></li>
+<li><strong>一致性</strong></li>
+<li><strong>灵活性</strong></li>
+<li><strong>故障与恢复</strong></li>
+</ul>
+<h3 id="3-可靠性"><a href="#3-可靠性" class="headerlink" title="3.可靠性"></a>3.可靠性</h3><ul>
+<li>物流活动中最基本的质量问题就是：<strong>如何实现已计划的存货可得性及作业完成能力</strong></li>
+</ul>
+<p>⚠️ <em>「注意事项」</em>：此处与配送的衡量<strong>配送主体的配送能力的服务水准能力</strong>的6个方面的相同和不同点</p>
+<h2 id="五、增值服务决策（X）"><a href="#五、增值服务决策（X）" class="headerlink" title="五、增值服务决策（X）"></a>五、增值服务决策（X）</h2><h3 id="1-托盘化"><a href="#1-托盘化" class="headerlink" title="1.托盘化"></a>1.托盘化</h3><h3 id="2-包装"><a href="#2-包装" class="headerlink" title="2.包装"></a>2.包装</h3><h3 id="3-贴标签"><a href="#3-贴标签" class="headerlink" title="3.贴标签"></a>3.贴标签</h3><h3 id="4-产品配套、组装"><a href="#4-产品配套、组装" class="headerlink" title="4.产品配套、组装"></a>4.产品配套、组装</h3><h3 id="5-上油漆"><a href="#5-上油漆" class="headerlink" title="5.上油漆"></a>5.上油漆</h3><h3 id="6-简单加工生产"><a href="#6-简单加工生产" class="headerlink" title="6.简单加工生产"></a>6.简单加工生产</h3><h3 id="7-退货与调换服务"><a href="#7-退货与调换服务" class="headerlink" title="7.退货与调换服务"></a>7.退货与调换服务</h3><h3 id="8-库存控制和订货决策支持"><a href="#8-库存控制和订货决策支持" class="headerlink" title="8.库存控制和订货决策支持"></a>8.库存控制和订货决策支持</h3><h2 id="六、仓库设备决策（X）"><a href="#六、仓库设备决策（X）" class="headerlink" title="六、仓库设备决策（X）"></a>六、仓库设备决策（X）</h2><h3 id="1-设备购置决策"><a href="#1-设备购置决策" class="headerlink" title="1.设备购置决策"></a>1.设备购置决策</h3><ul>
+<li>优良的仓库处理设备必须满足<strong>移动路程最短，存储空间占用最少，人工控制程度最低</strong>的要求；</li>
+</ul>
+<h3 id="2-设备更新改造决策"><a href="#2-设备更新改造决策" class="headerlink" title="2.设备更新改造决策"></a>2.设备更新改造决策</h3><h4 id="（1）设备更新分类"><a href="#（1）设备更新分类" class="headerlink" title="（1）设备更新分类"></a>（1）设备更新分类</h4><h5 id="a-设备原型更新"><a href="#a-设备原型更新" class="headerlink" title="a.设备原型更新"></a>a.设备原型更新</h5><ul>
+<li>用与原有设备结构性能相同的新设备去更换原先已经陈旧的或损坏的设备</li>
+</ul>
+<h5 id="b-设备技术更新"><a href="#b-设备技术更新" class="headerlink" title="b.设备技术更新"></a>b.设备技术更新</h5><ul>
+<li>采用技术上更加先进、经济上更加合理的新设备，来替代那些已经陈旧的、过时的或无法使用的设备</li>
+</ul>
+<h4 id="（2）-设备更新内容"><a href="#（2）-设备更新内容" class="headerlink" title="（2） 设备更新内容"></a>（2） 设备更新内容</h4><ul>
+<li><strong>设备的现代化改造</strong></li>
+<li><strong>设备的更换</strong></li>
+</ul>
+<h4 id="（3）设备磨损经济分析"><a href="#（3）设备磨损经济分析" class="headerlink" title="（3）设备磨损经济分析"></a>（3）设备磨损经济分析</h4><h5 id="a-有形磨损"><a href="#a-有形磨损" class="headerlink" title="a. 有形磨损"></a>a. 有形磨损</h5><ul>
+<li><p><em>定义</em></p>
+<ul>
+<li>设备由于<strong>使用和自然力</strong>的影响发生的<strong>使用价值和价值的损耗</strong></li>
+</ul>
+</li>
+<li><p><em>分类</em></p>
+<ul>
+<li><p><em>第一种</em></p>
+<ul>
+<li>使用中<strong>各种力的作用</strong>，摩擦、振动、疲劳,以至于<strong>改变</strong>自己的<strong>物理性能和形状</strong>。</li>
+<li>取决于：<strong>使用时间长短</strong>和<strong>工作负荷的大小</strong>，也取决于<strong>维修程度</strong></li>
+</ul>
+</li>
+<li><p><em>第二种</em></p>
+<ul>
+<li>闲置过程中<strong>受自然力的影响</strong>而生锈、腐蚀、保管不当而<strong>丧失加工精度和工作能力</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="b-无形磨损"><a href="#b-无形磨损" class="headerlink" title="b.无形磨损"></a>b.无形磨损</h5><ul>
+<li><p><em>定义</em></p>
+<ul>
+<li><strong>科学技术进步引起的设备贬值</strong></li>
+</ul>
+</li>
+<li><p><em>分类</em></p>
+<ul>
+<li><p><em>第一种</em></p>
+<ul>
+<li><strong>生产率提高</strong>而使原技术结构和使用性能的<strong>机器设备生产费用降低</strong>而引起的贬值；</li>
+</ul>
+</li>
+<li><p><em>第二种</em></p>
+<ul>
+<li>由于制造机器设备的生产部门<strong>生产出新的技术结构更高，使用性能更优良、更完善，经济效益也更高的机器设备</strong>，使原有设备贬值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="（4）-设备寿命分析"><a href="#（4）-设备寿命分析" class="headerlink" title="（4） 设备寿命分析"></a>（4） 设备寿命分析</h4><h5 id="a-使用寿命"><a href="#a-使用寿命" class="headerlink" title="a.使用寿命"></a>a.使用寿命</h5><ul>
+<li>在<strong>正常使用、维护和保养</strong>的条件下设备的服务时间</li>
+</ul>
+<h5 id="b-经济寿命"><a href="#b-经济寿命" class="headerlink" title="b.经济寿命"></a>b.经济寿命</h5><ul>
+<li>考虑设备<strong>有形磨损</strong>，根据<strong>最小使用费用</strong>的原则确定的设备寿命</li>
+</ul>
+<h5 id="c-技术寿命"><a href="#c-技术寿命" class="headerlink" title="c.技术寿命"></a>c.技术寿命</h5><ul>
+<li>在实际工作中大多数的情况是在设备尚<strong>未达到其经济寿命年限</strong>，就应该<strong>用技术更先进、经济更合理的新设备</strong>，<strong>提前予以更新</strong>，因而设备就具有一定的技术寿命。</li>
+</ul>
+<h4 id="（5）设备更新方案评价与选择"><a href="#（5）设备更新方案评价与选择" class="headerlink" title="（5）设备更新方案评价与选择"></a>（5）设备更新方案评价与选择</h4><h5 id="a-依据更新原因，确定更新方式，提出可能的更新方案"><a href="#a-依据更新原因，确定更新方式，提出可能的更新方案" class="headerlink" title="a. 依据更新原因，确定更新方式，提出可能的更新方案"></a>a. 依据更新原因，确定更新方式，提出可能的更新方案</h5><ul>
+<li>因<strong>磨损</strong>引起的设备更新</li>
+<li>因<strong>技术寿命</strong>引起的设备更新</li>
+</ul>
+<h5 id="b-明确更新设备的使用时间，确定寿命不等更新方案的处理方式"><a href="#b-明确更新设备的使用时间，确定寿命不等更新方案的处理方式" class="headerlink" title="b. 明确更新设备的使用时间，确定寿命不等更新方案的处理方式"></a>b. 明确更新设备的使用时间，确定寿命不等更新方案的处理方式</h5><ul>
+<li>不同更新方式的一次性投资费用和经常性经营费用是不同的</li>
+<li>在更新分析中，尽管处理寿命不等的更新方案有很多，但只有一定条件下才是正确的</li>
+</ul>
+<h5 id="c-计算可行更新方案的使用费用，进行更新决策"><a href="#c-计算可行更新方案的使用费用，进行更新决策" class="headerlink" title="c.计算可行更新方案的使用费用，进行更新决策"></a>c.计算可行更新方案的使用费用，进行更新决策</h5><ul>
+<li>更新分析的<strong>主要目的</strong>就是从可行更新 方案中选择最优方案</li>
+<li>常用的方法是通过<strong>计算各方案的设备使用成本并进行比较</strong>，从中选取 最优方案。</li>
+</ul>
+<h2 id="七、合同仓储与自营仓储的比较（Z）"><a href="#七、合同仓储与自营仓储的比较（Z）" class="headerlink" title="七、合同仓储与自营仓储的比较（Z）"></a>七、合同仓储与自营仓储的比较（Z）</h2><ul>
+<li><p>合同配送商把精力集中到提高仓储的效率上，他们能使<strong>合同仓储的运营比自营仓储的运营更为经济</strong></p>
+</li>
+<li><p><strong>合同仓储员工工资和福利低</strong></p>
+</li>
+<li><p><strong>自营仓储以成本为中心，合同仓储以盈利为中心</strong></p>
+</li>
+</ul>
+<h2 id="八、仓储合同的内容（Y）"><a href="#八、仓储合同的内容（Y）" class="headerlink" title="八、仓储合同的内容（Y）"></a>八、仓储合同的内容（Y）</h2><h3 id="1-特殊货的告知与处理"><a href="#1-特殊货的告知与处理" class="headerlink" title="1.特殊货的告知与处理"></a>1.特殊货的告知与处理</h3><h3 id="2-货物的入库验收"><a href="#2-货物的入库验收" class="headerlink" title="2.货物的入库验收"></a>2.货物的入库验收</h3><h3 id="3-仓单的使用"><a href="#3-仓单的使用" class="headerlink" title="3.仓单的使用"></a>3.仓单的使用</h3><h3 id="4-货物的检查与取样"><a href="#4-货物的检查与取样" class="headerlink" title="4.货物的检查与取样"></a>4.货物的检查与取样</h3><h3 id="5-通知与催告"><a href="#5-通知与催告" class="headerlink" title="5.通知与催告"></a>5.通知与催告</h3><h3 id="6-货物的提取"><a href="#6-货物的提取" class="headerlink" title="6.货物的提取"></a>6.货物的提取</h3><h2 id="九、仓单的使用（X）"><a href="#九、仓单的使用（X）" class="headerlink" title="九、仓单的使用（X）"></a>九、仓单的使用（X）</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><ul>
+<li>是保管人接收货主交付的货物后依法签发给<strong>货主的单证</strong></li>
+<li>表示<strong>货物的所有权</strong></li>
+<li>可以<strong>背书转让</strong></li>
+<li>属于<strong>法定指示证券</strong></li>
+<li>有<strong>债权效力</strong></li>
+</ul>
+<h3 id="2-内容"><a href="#2-内容" class="headerlink" title="2.内容"></a>2.内容</h3><h3 id="3-注意"><a href="#3-注意" class="headerlink" title="3.注意"></a>3.注意</h3><ul>
+<li>仓单有<strong>保管人签字或盖章才生效</strong></li>
+<li>由于<strong>不可抗力的原因、自然因素，不应由保管人负责</strong></li>
+</ul>
+<h3 id="4-法律特性"><a href="#4-法律特性" class="headerlink" title="4.法律特性"></a>4.法律特性</h3><h4 id="（1）提货凭证"><a href="#（1）提货凭证" class="headerlink" title="（1）提货凭证"></a>（1）提货凭证</h4><ul>
+<li>没有仓单不能直接提取仓储 物。</li>
+</ul>
+<h4 id="（2）所有权的法律文书"><a href="#（2）所有权的法律文书" class="headerlink" title="（2）所有权的法律文书"></a>（2）所有权的法律文书</h4><ul>
+<li>保管人在查验并接收仓储物后向存货人签发的仓单，表明仓储物的<strong>所有权并没有转移给保管人</strong>，只是将仓储物的保管责任转交给保管人，通过保管人签发的<strong>仓单作为仓储物的所有权文书</strong>，由<strong>存货人或其他持有人持有</strong></li>
+</ul>
+<h4 id="（3）有价证券"><a href="#（3）有价证券" class="headerlink" title="（3）有价证券"></a>（3）有价证券</h4><ul>
+<li>仓单是仓储物的文件表示，仓储保管人依据仓单返还仓储物，占有仓单表示占有仓储物，也就意味着占有了被仓储的财产和该财产所包含的价值</li>
+</ul>
+<h4 id="（4）仓储合同的证明"><a href="#（4）仓储合同的证明" class="headerlink" title="（4）仓储合同的证明"></a>（4）仓储合同的证明</h4><ul>
+<li><strong>仓单本身并不是仓储合同</strong>，当双方没有订立仓储合同时，仓单作为仓储合同的书面证明，证明合同关系的存在，存货人和保管人按照仓单的记载承担合同责任。</li>
+</ul>
+<h3 id="5-仓单的功能"><a href="#5-仓单的功能" class="headerlink" title="5.仓单的功能"></a>5.仓单的功能</h3><h4 id="（1）-保管人承担责任的证明"><a href="#（1）-保管人承担责任的证明" class="headerlink" title="（1） 保管人承担责任的证明"></a>（1） 保管人承担责任的证明</h4><ul>
+<li>仓单的签发意味着仓储保管人接管仓储物，对仓储物承担保管责任，保证在仓储期满向仓单持有人交还仓单上所记载的仓储物，并对仓储物在仓储期间发生的损害或灭失承担赔偿责任</li>
+</ul>
+<h4 id="（2）-物权证明"><a href="#（2）-物权证明" class="headerlink" title="（2） 物权证明"></a>（2） 物权证明</h4><ul>
+<li>仓单作为提货的凭证就意味着合法获得仓单的仓单持有人具有该仓单上所记载的仓储物的所有权，但这种所有权是一种确定的物权，<strong>只表示占有该仓单上所描述的具 体“物”，并不意味着固定的价值</strong>。这种物权会因为不可抗力、自然损耗等保管人免责的原因造成灭失，还会因为保管到期产生超期费、保管人进行提存的风险，以及由于仓储物的原因造成保管人、其他人财产损失的赔偿风险。</li>
+<li>仓单持有人因持有仓单所获得的仓储物所有权，仅仅是仓单所明示的物权，并不当然获 得存货人与保管人所订立仓储合同中的权利，只有这些权利在仓单中列明时才由仓单持有人 享有。相应地，保管人也不能用未在仓单上明示的仓储合同的约定条款对抗仓单持有人，除 非仓单持有人与存货人为同一人</li>
+</ul>
+<h4 id="（3）物权交易"><a href="#（3）物权交易" class="headerlink" title="（3）物权交易"></a>（3）物权交易</h4><ul>
+<li>仓储物交给仓储保管人保管后，保管人占有仓储物，但是仓储物的所有权仍然属于存货人，存货人有权依法对仓储物进行处理，可以转让仓储物，这是存货人行使所 有权的权利。</li>
+<li>在保管人签发仓单的情形下，存货人和保管人达成了凭仓单提货的契约，保 管人可以拒绝仓单持有人之外的其他人行使提货权。存货人要进行存储物转让就必须将 仓单转让</li>
+<li>仓单转让机制的基础在于仓储保管人对于仓储物的理货验收、对仓储物的完整性承担责任及对所签发仓单的提货保证。</li>
+</ul>
+<h4 id="（4）-金融工具"><a href="#（4）-金融工具" class="headerlink" title="（4） 金融工具"></a>（4） 金融工具</h4><ul>
+<li>由于仓单所具有的物权功能，仓单也代表着仓储物的价值，成为有价证券， 可以作为一定价值的担保，因而仓单可以作为抵押、质押、财产保证的金融工具和其他的信用保证。</li>
+<li>在期货交易市场上，仓单交易是交易最核心的部分。</li>
+</ul>
+<h3 id="6-内容"><a href="#6-内容" class="headerlink" title="6.内容"></a>6.内容</h3><p>货主的名称或姓名和地址；<br>货物的品种、数量、质量、包装、 件数和标记；<br>货物的损耗标准；储存场所；储存期间；仓储费；<br>货物已办理保险的，其保险 金额、保险期间、保险人名称；<br>填发人、填发地和填发日期</p>
+<h3 id="7-仓单的业务"><a href="#7-仓单的业务" class="headerlink" title="7.仓单的业务"></a>7.仓单的业务</h3><h4 id="（1）仓单的签发"><a href="#（1）仓单的签发" class="headerlink" title="（1）仓单的签发"></a>（1）仓单的签发</h4><ul>
+<li>保管人向存货人签发</li>
+</ul>
+<h4 id="（2）-仓单的份数"><a href="#（2）-仓单的份数" class="headerlink" title="（2） 仓单的份数"></a>（2） 仓单的份数</h4><ul>
+<li><p>一式两份</p>
+<ul>
+<li>正式仓单给存货人</li>
+<li>存底单给保管人</li>
+</ul>
+</li>
+</ul>
+<h4 id="（3）仓单分割"><a href="#（3）仓单分割" class="headerlink" title="（3）仓单分割"></a>（3）仓单分割</h4><ul>
+<li>分割后必须收回原仓单</li>
+</ul>
+<h4 id="（4）-仓单转让"><a href="#（4）-仓单转让" class="headerlink" title="（4） 仓单转让"></a>（4） 仓单转让</h4><ul>
+<li><p>背书转让方法</p>
+</li>
+<li><p>保管人签署</p>
+</li>
+<li><p>凭单提货</p>
+<ul>
+<li>核对仓单</li>
+<li>提货人缴纳费用</li>
+<li>保管人签发提货单证并安排提货</li>
+<li>提货人验收仓储物</li>
+</ul>
+</li>
+<li><p>仓单灭失的提货</p>
+<ul>
+<li>通过人民法院的公示催告使仓单失效</li>
+<li>提供担保提货</li>
+</ul>
+</li>
+<li><p>不记名仓单</p>
+<ul>
+<li>转让时无需背书</li>
+<li>不能提前提货</li>
+</ul>
+</li>
+</ul>
+<h2 id="合同法对于仓储合同的规定"><a href="#合同法对于仓储合同的规定" class="headerlink" title="合同法对于仓储合同的规定"></a>合同法对于仓储合同的规定</h2><h3 id="仓储合同又叫仓储保管合同"><a href="#仓储合同又叫仓储保管合同" class="headerlink" title="仓储合同又叫仓储保管合同"></a>仓储合同又叫仓储保管合同</h3><h3 id="法律特征"><a href="#法律特征" class="headerlink" title="法律特征"></a>法律特征</h3><h3 id="合同效力"><a href="#合同效力" class="headerlink" title="合同效力"></a>合同效力</h3><ul>
+<li>仓库营业人员的义务</li>
+<li>货主的义务</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2022-09-15</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%BA%8C%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            二级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

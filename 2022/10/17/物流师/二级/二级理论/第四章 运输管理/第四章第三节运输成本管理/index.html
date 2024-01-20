@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="4.3 库存管理" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            4.3 库存管理
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E7%AC%AC%E4%B8%89%E8%8A%82%E8%BF%90%E8%BE%93%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86"><span class="post-toc-text">第四章第三节运输成本管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E8%BF%90%E8%BE%93%E6%88%90%E6%9C%AC%E7%9A%84%E6%9E%84%E6%88%90%EF%BC%88X%EF%BC%89"><span class="post-toc-text">一、运输成本的构成（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%8F%98%E5%8A%A8%E6%88%90%E6%9C%AC"><span class="post-toc-text">1.变动成本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%9B%BA%E5%AE%9A%E6%88%90%E6%9C%AC"><span class="post-toc-text">2.固定成本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E8%BF%94%E7%A8%8B%E6%88%90%E6%9C%AC"><span class="post-toc-text">3.返程成本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%85%AC%E5%85%B1%E6%88%90%E6%9C%AC"><span class="post-toc-text">4.公共成本</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E5%BD%B1%E5%93%8D%E8%BF%90%E8%BE%93%E6%88%90%E6%9C%AC%E7%9A%84%E5%9B%A0%E7%B4%A0%EF%BC%88X%EF%BC%89"><span class="post-toc-text">二、影响运输成本的因素（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E8%BF%90%E8%BE%93%E8%B7%9D%E7%A6%BB%EF%BC%88X%EF%BC%89"><span class="post-toc-text">1.运输距离（X）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E8%BF%90%E8%BE%93%E9%87%8F"><span class="post-toc-text">2.运输量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E8%B4%A7%E7%89%A9%E7%9A%84%E5%AF%86%E5%BA%A6"><span class="post-toc-text">3.货物的密度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E7%A9%BA%E9%97%B4%E5%88%A9%E7%94%A8%E7%8E%87"><span class="post-toc-text">4.空间利用率</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E6%90%AC%E8%BF%90%E7%9A%84%E9%9A%BE%E6%98%93"><span class="post-toc-text">5.搬运的难易</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E8%BF%90%E8%BE%93%E8%B4%A3%E4%BB%BB"><span class="post-toc-text">6.运输责任</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-%E5%B8%82%E5%9C%BA%E5%9B%A0%E7%B4%A0"><span class="post-toc-text">7.市场因素</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E6%8E%A7%E5%88%B6%E8%BF%90%E8%BE%93%E6%88%90%E6%9C%AC%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%88X%EF%BC%89"><span class="post-toc-text">四、控制运输成本的方式（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%90%88%E7%90%86%E9%80%89%E6%8B%A9%E8%BF%90%E8%BE%93%E5%B7%A5%E5%85%B7"><span class="post-toc-text">1.合理选择运输工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E8%87%AA%E6%9C%89%E8%BF%90%E8%BE%93%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90%E7%BB%93%E5%90%88"><span class="post-toc-text">2.自有运输工具与外部资源结合</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E4%BC%98%E5%8C%96%E9%9B%86%E8%B4%A7%E7%82%B9%E5%B8%83%E5%B1%80"><span class="post-toc-text">3.优化集货点布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%BC%80%E5%B1%95%E9%9B%86%E8%BF%90%E6%96%B9%E5%BC%8F"><span class="post-toc-text">4.开展集运方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E5%A2%9E%E5%8A%A0%E7%9B%B4%E8%BE%BE%E8%BF%90%E8%BE%93%E6%AF%94%E4%BE%8B"><span class="post-toc-text">5.增加直达运输比例</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%94%E3%80%81%E9%87%87%E5%8F%96%E7%9B%B4%E8%BE%BE%E8%BF%90%E8%BE%93%E8%B4%A7%E7%89%A9%E6%97%B6%E8%80%83%E8%99%91%E7%9A%84%E5%9B%A0%E7%B4%A0%EF%BC%88X%EF%BC%89"><span class="post-toc-text">五、采取直达运输货物时考虑的因素（X）</span></a></li></ol></li></ol>
+            
+        
+        <h1 id="第四章第三节运输成本管理"><a href="#第四章第三节运输成本管理" class="headerlink" title="第四章第三节运输成本管理"></a>第四章第三节运输成本管理</h1><h2 id="一、运输成本的构成（X）"><a href="#一、运输成本的构成（X）" class="headerlink" title="一、运输成本的构成（X）"></a>一、运输成本的构成（X）</h2><h3 id="1-变动成本"><a href="#1-变动成本" class="headerlink" title="1.变动成本"></a>1.变动成本</h3><ul>
+<li><strong>运输工具从事运输作业所发生的费用</strong></li>
+<li>包括<ul>
+<li><strong>运输工具的燃料</strong></li>
+<li><strong>维修保管费</strong></li>
+<li><strong>人工成本</strong></li>
+</ul>
+</li>
+<li>变动成本<strong>与具体的运输活动直接相关</strong></li>
+<li>变动成本必须<strong>通过每一次运输活动的收费获得回收</strong></li>
+<li><strong>公路</strong>变动成本<strong>最高</strong></li>
+</ul>
+<h3 id="2-固定成本"><a href="#2-固定成本" class="headerlink" title="2.固定成本"></a>2.固定成本</h3><ul>
+<li>是<strong>运输设施与运输工具的购置成本</strong></li>
+<li>道路、铁路轨道与车站、运输车辆的成本与管理费用</li>
+<li>固定成本<strong>不受运输活动的影响</strong></li>
+<li>固定成本的<strong>回收来源是固定资产折扣</strong></li>
+<li>固定资产通过长<strong>时间运营获得补偿</strong></li>
+</ul>
+<h3 id="3-返程成本"><a href="#3-返程成本" class="headerlink" title="3.返程成本"></a>3.返程成本</h3><ul>
+<li><strong>公路</strong>运输中明显</li>
+<li>必须将<strong>返程成本计入货物运输成本</strong></li>
+<li>铁路、水路、航空，返程成本通过<strong>运输计划实现</strong></li>
+<li>严格的运输计划会造成运输频率不高</li>
+</ul>
+<h3 id="4-公共成本"><a href="#4-公共成本" class="headerlink" title="4.公共成本"></a>4.公共成本</h3><ul>
+<li>是运输场站和运输管理部门收取的费用；</li>
+</ul>
+<h2 id="二、影响运输成本的因素（X）"><a href="#二、影响运输成本的因素（X）" class="headerlink" title="二、影响运输成本的因素（X）"></a>二、影响运输成本的因素（X）</h2><h3 id="1-运输距离（X）"><a href="#1-运输距离（X）" class="headerlink" title="1.运输距离（X）"></a>1.运输距离（X）</h3><ul>
+<li><strong>主要因素</strong></li>
+<li>直接决定<strong>燃料</strong>与<strong>维修保养费用</strong>和<strong>人工费用</strong></li>
+<li>运输距离为<strong>0</strong>时的成本时<strong>货物提取和交付活动所产生的固定费用</strong></li>
+<li><strong>减少市区内运输距离</strong>，减少两端</li>
+</ul>
+<h3 id="2-运输量"><a href="#2-运输量" class="headerlink" title="2.运输量"></a>2.运输量</h3><ul>
+<li>运输量增加，单位重量的成本下降</li>
+<li>运输规模经济由于<strong>提取和交付货物的固定费用以及行政管理费用可以随载货量的增加而被分摊</strong></li>
+</ul>
+<h3 id="3-货物的密度"><a href="#3-货物的密度" class="headerlink" title="3.货物的密度"></a>3.货物的密度</h3><ul>
+<li>货物的重量与体积的比例</li>
+<li><strong>密度小的运输成本高</strong></li>
+<li>货物密度越高，运输成本分摊到单位重量就越少</li>
+</ul>
+<h3 id="4-空间利用率"><a href="#4-空间利用率" class="headerlink" title="4.空间利用率"></a>4.空间利用率</h3><ul>
+<li>产品的<strong>具体尺寸</strong>对运输空间利用率的影响</li>
+</ul>
+<h3 id="5-搬运的难易"><a href="#5-搬运的难易" class="headerlink" title="5.搬运的难易"></a>5.搬运的难易</h3><ul>
+<li>采用通用设备</li>
+<li><strong>特殊搬运设</strong>备会提高成本</li>
+<li><strong>包装方式</strong>也影响成本</li>
+</ul>
+<h3 id="6-运输责任"><a href="#6-运输责任" class="headerlink" title="6.运输责任"></a>6.运输责任</h3><ul>
+<li>关系到货物损坏风险和事故索赔</li>
+<li><strong>承运人投保</strong>转移索赔责任</li>
+<li><strong>承运人要求托运人改善保护性包装</strong>降低风险</li>
+</ul>
+<h3 id="7-市场因素"><a href="#7-市场因素" class="headerlink" title="7.市场因素"></a>7.市场因素</h3><ul>
+<li><strong>同种</strong>运输方式的竞争，<strong>不同</strong>运输方式的竞争</li>
+<li><strong>目标市场位置</strong></li>
+<li>运输活动的<strong>季节性</strong></li>
+<li><strong>政府</strong>对承运人和承运货物管理的鼓励或抑制</li>
+<li><strong>运输行业协会</strong>的协调影响</li>
+</ul>
+<h2 id="四、控制运输成本的方式（X）"><a href="#四、控制运输成本的方式（X）" class="headerlink" title="四、控制运输成本的方式（X）"></a>四、控制运输成本的方式（X）</h2><h3 id="1-合理选择运输工具"><a href="#1-合理选择运输工具" class="headerlink" title="1.合理选择运输工具"></a>1.合理选择运输工具</h3><ul>
+<li><strong>货物的形状与价值</strong></li>
+<li><strong>运输批量</strong></li>
+<li><strong>交货日期</strong></li>
+<li><strong>到达地点</strong></li>
+</ul>
+<h3 id="2-自有运输工具与外部资源结合"><a href="#2-自有运输工具与外部资源结合" class="headerlink" title="2.自有运输工具与外部资源结合"></a>2.自有运输工具与外部资源结合</h3><ul>
+<li>与<strong>专业运输商建立长期稳定的合作</strong>关系，保证在运输需要时能迅速调用运输能力</li>
+<li>充分利用社会小型运输资源，与<strong>小型零散运输商</strong>合作可以采用<strong>挂靠、租赁</strong>等长期合作方式</li>
+</ul>
+<h3 id="3-优化集货点布局"><a href="#3-优化集货点布局" class="headerlink" title="3.优化集货点布局"></a>3.优化集货点布局</h3><ul>
+<li><strong>总成本随运输网络中集货点（集货仓库）的增加而减少</strong></li>
+<li>适当的集货点有利于降低运输成本</li>
+<li>运输成本的<strong>最低点是集货仓库的合理数量处</strong></li>
+<li>集货点过多，总运输成本增长</li>
+</ul>
+<h3 id="4-开展集运方式"><a href="#4-开展集运方式" class="headerlink" title="4.开展集运方式"></a>4.开展集运方式</h3><ul>
+<li>运输的经济性是运输批量越大，费率越低，集运</li>
+<li>集运方式<ul>
+<li><strong>库存合并</strong></li>
+<li><strong>运输车辆合并</strong></li>
+<li><strong>仓库合并</strong></li>
+<li><strong>时间合并</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="5-增加直达运输比例"><a href="#5-增加直达运输比例" class="headerlink" title="5.增加直达运输比例"></a>5.增加直达运输比例</h3><ul>
+<li>直达运输的<strong>主要困难在于组织整车货物的时间</strong></li>
+<li>直达运输<strong>两端成本高于换载后短途配送运输成本</strong>，但由于减少了一次装卸的时间和财务成本，直达运输仍然有成本降低的优势</li>
+</ul>
+<h2 id="五、采取直达运输货物时考虑的因素（X）"><a href="#五、采取直达运输货物时考虑的因素（X）" class="headerlink" title="五、采取直达运输货物时考虑的因素（X）"></a>五、采取直达运输货物时考虑的因素（X）</h2><ul>
+<li><strong>货物特性</strong></li>
+<li><strong>货物运送的路程与成本</strong></li>
+<li><strong>用户的订货数量与重量</strong></li>
+<li><strong>终端与干线的距离</strong></li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2022-10-17</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%BA%8C%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            二级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="1.1 库存控制" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            1.1 库存控制
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%AC%E4%B8%80%E8%8A%82-%E4%BB%93%E5%82%A8%E4%BD%9C%E4%B8%9A%E7%AE%A1%E7%90%86"><span class="post-toc-text">第一章第一节 仓储作业管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%93%E5%82%A8%E5%9C%A8%E7%89%A9%E6%B5%81%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%886%E7%82%B9%EF%BC%89"><span class="post-toc-text">一、仓储在物流中的作用（6点）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%89%A9%E6%B5%81%E8%BF%87%E7%A8%8B%E9%87%8D%E8%A6%81%E7%8E%AF%E8%8A%82"><span class="post-toc-text">1.物流过程重要环节</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%A4%BE%E4%BC%9A%E5%86%8D%E7%94%9F%E4%BA%A7%E8%BF%87%E7%A8%8B%E9%A1%BA%E5%88%A9%E8%BF%9B%E8%A1%8C"><span class="post-toc-text">2.社会再生产过程顺利进行</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E4%BB%93%E5%82%A8%E5%8F%AF%E4%BC%98%E5%8C%96%E5%95%86%E5%93%81%E6%B5%81%E9%80%9A%EF%BC%8C%E8%8A%82%E7%BA%A6%E6%B5%81%E9%80%9A%E8%B4%B9%E7%94%A8"><span class="post-toc-text">3.仓储可优化商品流通，节约流通费用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%BB%93%E5%82%A8%E5%8F%AF%E4%BF%9D%E8%AF%81%E5%95%86%E5%93%81%E5%9C%A8%E6%B5%81%E9%80%9A%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E8%B4%A8%E9%87%8F"><span class="post-toc-text">4.仓储可保证商品在流通过程中的质量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E4%B8%BA%E5%95%86%E5%93%81%E8%BF%9B%E5%85%A5%E5%B8%82%E5%9C%BA%E5%81%9A%E5%A5%BD%E5%87%86%E5%A4%87"><span class="post-toc-text">5.为商品进入市场做好准备</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E9%80%86%E5%90%91%E6%88%91%E8%A6%81%E7%95%99%E6%8F%90%E4%BE%9B%E5%9C%BA%E6%89%80"><span class="post-toc-text">6.逆向我要留提供场所</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%93%E5%82%A8%E7%AE%A1%E7%90%86%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%883%E4%B8%AA%E7%89%B9%E7%82%B9%EF%BC%89%E7%94%B1%E4%BB%93%E5%82%A8%E7%9A%84%E5%86%85%E5%AE%B9%E5%86%B3%E5%AE%9A%E7%9A%84"><span class="post-toc-text">二、仓储管理的特点（3个特点）由仓储的内容决定的</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%BB%8F%E6%B5%8E%E6%80%A7"><span class="post-toc-text">1.经济性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E6%8A%80%E6%9C%AF%E6%80%A7"><span class="post-toc-text">2.技术性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%BB%BC%E5%90%88%E6%80%A7"><span class="post-toc-text">3.综合性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81%E4%BB%93%E5%82%A8%E7%AE%A1%E7%90%86%E7%9A%84%E5%8E%9F%E5%88%994%E7%82%B9%E5%8E%9F%E5%88%99"><span class="post-toc-text">三、仓储管理的原则4点原则</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%9D%9A%E6%8C%81%E6%95%88%E7%8E%87%E5%8E%9F%E5%88%99"><span class="post-toc-text">1.坚持效率原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%9D%9A%E6%8C%81%E7%BB%8F%E6%B5%8E%E6%95%88%E7%9B%8A%E5%8E%9F%E5%88%99"><span class="post-toc-text">2.坚持经济效益原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%9D%9A%E6%8C%81%E6%9C%8D%E5%8A%A1%E5%8E%9F%E5%88%99"><span class="post-toc-text">3.坚持服务原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E7%A1%AE%E4%BF%9D%E5%AE%89%E5%85%A8%E5%8E%9F%E5%88%99"><span class="post-toc-text">4.确保安全原则</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E4%BB%93%E5%82%A8%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%8A%9F%E8%83%BD4%E4%B8%AA%E5%8A%9F%E8%83%BD"><span class="post-toc-text">四、仓储服务的功能4个功能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%82%A8%E5%AD%98%E5%8A%9F%E8%83%BD"><span class="post-toc-text">1.储存功能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%BB%84%E5%90%88%E5%8A%9F%E8%83%BD"><span class="post-toc-text">2.组合功能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%88%86%E7%B1%BB%E5%92%8C%E8%BD%AC%E8%BF%90%E5%8A%9F%E8%83%BD"><span class="post-toc-text">3.分类和转运功能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%85%B6%E4%BB%96%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD"><span class="post-toc-text">4.其他增值服务功能</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%94%E3%80%81KPI"><span class="post-toc-text">五、KPI</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="post-toc-text">1.定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%BB%BA%E7%AB%8B%E4%BB%93%E5%82%A8%E7%AE%A1%E7%90%86KPI%E6%84%8F%E4%B9%89"><span class="post-toc-text">2.建立仓储管理KPI意义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-KPI%E7%9A%84%E5%8E%9F%E5%88%99"><span class="post-toc-text">3.KPI的原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%B8%BB%E8%A6%81%E7%BB%8F%E6%B5%8E%E6%8A%80%E6%9C%AF%E6%8C%87%E6%A0%87"><span class="post-toc-text">4.主要经济技术指标</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AD%E3%80%81%E4%BB%93%E5%82%A8%E7%AE%A1%E7%90%86%E5%88%B6%E5%BA%A6"><span class="post-toc-text">六、仓储管理制度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%85%A5%E5%BA%93%E9%AA%8C%E6%94%B6%E5%88%B6%E5%BA%A6"><span class="post-toc-text">1.入库验收制度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%9C%A8%E5%BA%93%E4%BF%9D%E7%AE%A1%E5%88%B6%E5%BA%A6"><span class="post-toc-text">2.在库保管制度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%87%BA%E5%BA%93%E5%88%B6%E5%BA%A6"><span class="post-toc-text">3.出库制度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B%E5%88%B6%E5%BA%A6"><span class="post-toc-text">4.质量检测制度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E5%AE%89%E5%85%A8%E5%88%B6%E5%BA%A6"><span class="post-toc-text">5.安全制度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E7%9B%98%E7%82%B9%E5%88%B6%E5%BA%A6"><span class="post-toc-text">6.盘点制度</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="第一章第一节-仓储作业管理"><a href="#第一章第一节-仓储作业管理" class="headerlink" title="第一章第一节 仓储作业管理"></a>第一章第一节 仓储作业管理</h1><h2 id="一、仓储在物流中的作用（6点）"><a href="#一、仓储在物流中的作用（6点）" class="headerlink" title="一、仓储在物流中的作用（6点）"></a>一、仓储在物流中的作用（6点）</h2><h3 id="1-物流过程重要环节"><a href="#1-物流过程重要环节" class="headerlink" title="1.物流过程重要环节"></a>1.物流过程重要环节</h3><ul>
+<li><p><strong>仓储</strong></p>
+<ul>
+<li>货物的<strong>供给和需求</strong>在时间上的<strong>不平衡</strong>来实现其增加价值的功能</li>
+<li>烟叶原料的特性决定烟叶必须在仓储中储存较长时间才能投入生产，长时间的储存实现了原料仓储的时间价值；</li>
+<li>现代仓储是商品在流通过程中<strong>处于“停歇”或“静止”状态</strong>的物流形式。</li>
+</ul>
+</li>
+<li><p><strong>运输</strong></p>
+<ul>
+<li>货物的<strong>位置移动</strong>来实现其增加价值的功能</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-社会再生产过程顺利进行"><a href="#2-社会再生产过程顺利进行" class="headerlink" title="2.社会再生产过程顺利进行"></a>2.社会再生产过程顺利进行</h3><ul>
+<li>货物的仓储过程不仅是<strong>商品流通的必要保证</strong>，也是<strong>社会再生产过程</strong>得以顺利进行的<strong>必要条件</strong>；</li>
+<li>仓储环节应该依据卷烟生产企业的<strong>生产需求和节拍</strong>，开展物料的集中储存、搬运、整理、分拣、配送等服务，为生产提供方便。</li>
+</ul>
+<h3 id="3-仓储可优化商品流通，节约流通费用"><a href="#3-仓储可优化商品流通，节约流通费用" class="headerlink" title="3.仓储可优化商品流通，节约流通费用"></a>3.仓储可优化商品流通，节约流通费用</h3><ul>
+<li>仓储管理水平提升，使商品流通更佳顺畅，加快流通速度；</li>
+<li>物流或仓库<strong>分中心设立</strong>，形成<strong>规模运输、集中储存、分散配送</strong>模式，目的降低物流总成本。</li>
+<li>仓储环节对商品进行<strong>规模化包装、再包装、整理、分拣</strong>等，为下一步快捷配送提供便捷服务</li>
+</ul>
+<h3 id="4-仓储可保证商品在流通过程中的质量"><a href="#4-仓储可保证商品在流通过程中的质量" class="headerlink" title="4.仓储可保证商品在流通过程中的质量"></a>4.仓储可保证商品在流通过程中的质量</h3><ul>
+<li><p><em>入库阶段</em></p>
+<ul>
+<li>对流通<strong>商品</strong>进行<strong>检验</strong>，有利于<strong>分清质量责任</strong>，防止不合格品入库；</li>
+</ul>
+</li>
+<li><p><em>商品储存保管阶段</em></p>
+<ul>
+<li>良好的仓储管理工作，有利于保持<strong>商品的质量</strong>，维护商品的使用价值；</li>
+</ul>
+</li>
+<li><p><em>出库阶段</em></p>
+<ul>
+<li>出库质量检验，最大限度<strong>防止不合格商品流入市场</strong>，减少顾客投诉，提升顾客满意度。</li>
+</ul>
+</li>
+<li><p>卷烟仓储管理中，<em>质量管理</em>是重要的内容，根据<em>商品的特性不同各有侧重</em></p>
+<ul>
+<li><strong>卷烟商品</strong>——防水湿、防外包装破损、防长期存储；</li>
+<li><strong>烟叶原料</strong>——控制水分、防霉变、防虫害、防碳化、防串味。</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-为商品进入市场做好准备"><a href="#5-为商品进入市场做好准备" class="headerlink" title="5.为商品进入市场做好准备"></a>5.为商品进入市场做好准备</h3><ul>
+<li><strong>仓储环节</strong>——商品的整理、包装、质检、分拣、贴标签、再加工等</li>
+<li>在<strong>销售末端</strong>运营成本越来越高的情况下，尽可能利用<strong>仓库集中作业的低成本和有效性</strong>，为下一个环节提供便利，创造价值。</li>
+</ul>
+<h3 id="6-逆向我要留提供场所"><a href="#6-逆向我要留提供场所" class="headerlink" title="6.逆向我要留提供场所"></a>6.逆向我要留提供场所</h3><ul>
+<li>一般，仓储为，原材料——产成品，提供场所，生产者——消费者的过程；</li>
+<li>可持续发展，仓储为，产品、包装品、零部件等物资的再利用，<strong>逆向物流提供通道和场</strong>所；</li>
+<li>卷烟包装纸箱回收利用工作。</li>
+</ul>
+<h2 id="二、仓储管理的特点（3个特点）由仓储的内容决定的"><a href="#二、仓储管理的特点（3个特点）由仓储的内容决定的" class="headerlink" title="二、仓储管理的特点（3个特点）由仓储的内容决定的"></a>二、仓储管理的特点（3个特点）由仓储的内容决定的</h2><h3 id="1-经济性"><a href="#1-经济性" class="headerlink" title="1.经济性"></a>1.经济性</h3><ul>
+<li><strong>供应时间</strong>的改变，实现物流的<strong>时间价值</strong></li>
+<li>通过仓储环节，包装、分拣<strong>组合</strong>，实现物流的<strong>性质效用价值</strong>；</li>
+<li>随着<strong>仓储活动内容的增加</strong>，如延迟生产、再包装，仓储活动实现<strong>商品价值的范围也在不断扩大</strong>。</li>
+</ul>
+<h3 id="2-技术性"><a href="#2-技术性" class="headerlink" title="2.技术性"></a>2.技术性</h3><ul>
+<li>仓储管理中应用<strong>大量信息技术</strong>，机械化程度不断提高。自动化立体仓库</li>
+</ul>
+<h3 id="3-综合性"><a href="#3-综合性" class="headerlink" title="3.综合性"></a>3.综合性</h3><ul>
+<li>综合利用<strong>各个学科理论</strong>，进行货物管理、库存控制、保证生产流通，维护质量，降低成本</li>
+<li>现代仓储包括<strong>新技术、新设备、新管理理念与方法</strong>，涉及行业广泛。</li>
+</ul>
+<h2 id="三、仓储管理的原则4点原则"><a href="#三、仓储管理的原则4点原则" class="headerlink" title="三、仓储管理的原则4点原则"></a>三、仓储管理的原则4点原则</h2><h3 id="1-坚持效率原则"><a href="#1-坚持效率原则" class="headerlink" title="1.坚持效率原则"></a>1.坚持效率原则</h3><ul>
+<li>效率：一定劳动要素投入量条件下产品的产出量</li>
+<li>仓储作业管理的<strong>核心</strong>是效率管理</li>
+<li>效率指标<ul>
+<li>仓库面积利用率</li>
+<li>仓容利用率</li>
+<li>货物周转率</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-坚持经济效益原则"><a href="#2-坚持经济效益原则" class="headerlink" title="2.坚持经济效益原则"></a>2.坚持经济效益原则</h3><ul>
+<li>体现为<strong>获取利润</strong></li>
+</ul>
+<h3 id="3-坚持服务原则"><a href="#3-坚持服务原则" class="headerlink" title="3.坚持服务原则"></a>3.坚持服务原则</h3><ul>
+<li>仓储管理就是围绕着<strong>服务定位</strong>开展的关于如何提供服务、改善服务、提高服务质量的管理：<ul>
+<li><strong>直接的服务管理</strong></li>
+<li><strong>以服务为原则的生产管理</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-确保安全原则"><a href="#4-确保安全原则" class="headerlink" title="4.确保安全原则"></a>4.确保安全原则</h3><ul>
+<li>对<strong>防火防盗的</strong>要求极高；</li>
+<li>坚持<strong>安全第一，预防为主</strong>的安全生产方针。</li>
+</ul>
+<h2 id="四、仓储服务的功能4个功能"><a href="#四、仓储服务的功能4个功能" class="headerlink" title="四、仓储服务的功能4个功能"></a>四、仓储服务的功能4个功能</h2><h3 id="1-储存功能"><a href="#1-储存功能" class="headerlink" title="1.储存功能"></a>1.储存功能</h3><ul>
+<li><strong>基本功能</strong></li>
+<li><strong>生产过程</strong>——适当的原材料和半成品储存，可防止因缺货造成的生产停顿；</li>
+<li><strong>销售过程</strong>——季节性储存为企业市场营销创造良机，为特别商品提供了缓冲和有力支持。</li>
+</ul>
+<h3 id="2-组合功能"><a href="#2-组合功能" class="headerlink" title="2.组合功能"></a>2.组合功能</h3><ul>
+<li><strong>经济功能</strong></li>
+<li>仓库接受多个企业的产品或原材料，按照<strong>不同客户、不同时间、不同地点、不同运输方式资源整合</strong>，进行规模化、个性化运输或配送，达到降低成本，为客户减少多个供应商带来的接货成本。</li>
+</ul>
+<h3 id="3-分类和转运功能"><a href="#3-分类和转运功能" class="headerlink" title="3.分类和转运功能"></a>3.分类和转运功能</h3><ul>
+<li>仓库中，来自<strong>不同供应商商品可以分类</strong>，也可以进行<strong>不同运输工具间调配</strong>；</li>
+</ul>
+<h3 id="4-其他增值服务功能"><a href="#4-其他增值服务功能" class="headerlink" title="4.其他增值服务功能"></a>4.其他增值服务功能</h3><ul>
+<li>增值功能是通过<strong>仓储高质量的作业和服务</strong>，使经营方或供需方<strong>获得额外的利益</strong>，这个过程称为附加增值。这是物流中心与传统仓库重要区别</li>
+<li>典型表现<ul>
+<li><strong>提高客户满意度</strong></li>
+<li><strong>信息的传递</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="五、KPI"><a href="#五、KPI" class="headerlink" title="五、KPI"></a>五、KPI</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><ul>
+<li>通过对组织内部某一流程的<strong>输入端、输出端的参数进行设置</strong>、取样、计算、分析，衡量流程绩效的一种目标式量化管理指标</li>
+<li><strong>核心观念</strong>是设定与企业关键流程相关的<strong>标准值</strong></li>
+</ul>
+<h3 id="2-建立仓储管理KPI意义"><a href="#2-建立仓储管理KPI意义" class="headerlink" title="2.建立仓储管理KPI意义"></a>2.建立仓储管理KPI意义</h3><ul>
+<li>有利于<strong>提高仓储经营水平</strong></li>
+<li>有利于<strong>落实仓储经济责任制</strong></li>
+<li>有利于<strong>仓储设施设备现代化建设</strong></li>
+<li>有利于<strong>提高仓储的经济效益</strong></li>
+</ul>
+<h3 id="3-KPI的原则"><a href="#3-KPI的原则" class="headerlink" title="3.KPI的原则"></a>3.KPI的原则</h3><ul>
+<li><p><em>科学性</em></p>
+<ul>
+<li>指标<strong>宜精不宜多，二八原则</strong>；</li>
+<li>科学性要求企业首先<strong>对关键流程进行识别</strong>，然后在此基础上设定相应的绩效指标；</li>
+<li>指标体系应该能够<strong>客观、准确、全面的反映</strong>仓储管理实际水平。</li>
+</ul>
+</li>
+<li><p><em>可行性</em></p>
+<ul>
+<li>要求<strong>指标简单易行，数据容易获取</strong>，便于统计分析比较；</li>
+<li><strong>指标值设定要适度</strong>，不宜过高和过低。</li>
+</ul>
+</li>
+<li><p><em>综合性</em></p>
+<ul>
+<li><strong>全面、系统的指标体系</strong>才能使各指标相互联系，综合反映；</li>
+<li>指标间<strong>相互协调，避免矛盾重复</strong></li>
+</ul>
+</li>
+<li><p><em>可比性</em></p>
+<ul>
+<li>指标在评判分析过程中，可以<strong>横向和纵向比较</strong></li>
+<li>横向企业内部比、行业单位比；</li>
+<li>纵向不同时期比。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-主要经济技术指标"><a href="#4-主要经济技术指标" class="headerlink" title="4.主要经济技术指标"></a>4.主要经济技术指标</h3><ul>
+<li><p><em>效益</em></p>
+<ul>
+<li><p>反映<strong>仓库容量、能力和货物储存数量</strong>；</p>
+</li>
+<li><p><strong>最基本</strong>的经济指标</p>
+</li>
+<li><p>内容</p>
+<ul>
+<li>期间货物吞吐量</li>
+<li>平均储存量</li>
+<li>平均库存量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em>质量</em></p>
+<ul>
+<li>反映<strong>存储工作质量、货物损耗、费用高低和经济效益</strong></li>
+<li>内容<ul>
+<li><strong>收发货差错率</strong>，竞争上岗，考核奖金依据</li>
+<li><strong>货物损耗率</strong>，考核：易干燥、风化、挥发、失重、破碎货物</li>
+<li><strong>平均保管损失</strong>，霉变残损、丢失短缺、超定额损耗、不按规定验收，错收、错付；有保管期的货物，经仓库预先催办调拨，但货主未及时调拨出库而导致的损失，不算作仓库保管损失。</li>
+<li><strong>平均收发货时间</strong>：收货时间自单货到齐开始计算，到货物经验收入库后，把入库单据送交保管会计登账为止。发货时间自仓库接到发货单开始，直到办妥出入库手续为止。一般不把在库待运时间列为发货时间。</li>
+<li><strong>货物及时验收率</strong>：主要用于货物验收工作质量和效率的考核</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em>效率</em></p>
+<ul>
+<li><p><strong>设施、设备、资金</strong>的利用效果</p>
+</li>
+<li><p><strong>仓库利用率</strong></p>
+<ul>
+<li>仓库<strong>面积利用率</strong></li>
+<li>仓库<strong>容积利用率</strong></li>
+</ul>
+</li>
+<li><p><strong>劳动生产率</strong></p>
+</li>
+<li><p><strong>货物周转速度</strong></p>
+<ul>
+<li>期间货物周转次数</li>
+<li>期间货物周转天数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em>货物储存的经济性</em></p>
+</li>
+<li><p><em>货物储存的安全性</em></p>
+</li>
+</ul>
+<h2 id="六、仓储管理制度"><a href="#六、仓储管理制度" class="headerlink" title="六、仓储管理制度"></a>六、仓储管理制度</h2><h3 id="1-入库验收制度"><a href="#1-入库验收制度" class="headerlink" title="1.入库验收制度"></a>1.入库验收制度</h3><ul>
+<li>入库验收是仓储工作<strong>第一道工序</strong>，对于分清质量责任有重要作用，应严格把关，为后续<strong>保管养护和配送</strong>打好基础。</li>
+<li><em>验收的步骤</em>：<ul>
+<li>对入库烟草制品进行<strong>单据验收</strong><ul>
+<li>合同（订单）；</li>
+<li>运输单据；</li>
+<li>准运证。</li>
+</ul>
+</li>
+<li><strong>实物验收</strong><ul>
+<li>查验品种规格、数量、单件重量；</li>
+<li>核对是否同合同（订单）、相关票据、外包装标识一致。</li>
+</ul>
+</li>
+<li><strong>质量抽查</strong><ul>
+<li>水分；</li>
+<li>虫害；</li>
+<li>霉变；</li>
+<li>标识；</li>
+<li>外包装；</li>
+<li>验收合格方能入库。</li>
+</ul>
+</li>
+<li><strong>制定不合格品处置相关制度</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-在库保管制度"><a href="#2-在库保管制度" class="headerlink" title="2.在库保管制度"></a>2.在库保管制度</h3><ul>
+<li>原料虫害和霉变防治制度；</li>
+<li>温湿度控制制度；</li>
+<li>商品质量日常检查制度；</li>
+<li>报损报溢制度。</li>
+<li>良好的在库保管制度是实现仓储价值的保证，是保证商品在库质量的前提。</li>
+</ul>
+<h3 id="3-出库制度"><a href="#3-出库制度" class="headerlink" title="3.出库制度"></a>3.出库制度</h3><ul>
+<li>任何烟草制品出库都必须办理出库手续；</li>
+<li>出库时，仓管人员认真核对品种、数量、规格、单价，全部无误照单出库。</li>
+</ul>
+<h3 id="4-质量检测制度"><a href="#4-质量检测制度" class="headerlink" title="4.质量检测制度"></a>4.质量检测制度</h3><ul>
+<li>经由培训上岗的专人负责；</li>
+<li><em>质量检测步骤</em></li>
+<li><strong>入库检测</strong>：按照商品质量检验的技术标准，对购进的每批烟草制品进行<strong>抽样检验</strong>；</li>
+<li><strong>在库检测</strong>：对库存商品定期进行质量检查，建立健全检测记录，<strong>必要时出检测报告</strong>；</li>
+<li><strong>出库检测</strong>：在出库时，按照<strong>顾客要求</strong>实施出库质量检验。</li>
+</ul>
+<h3 id="5-安全制度"><a href="#5-安全制度" class="headerlink" title="5.安全制度"></a>5.安全制度</h3><ul>
+<li>严格贯彻安全第一、预防为主，防重于治的方针；</li>
+<li>做好安全培训，提高安全意识；</li>
+<li>制定落实好安全责任制，明确一把手是安全第一责任人，落实各级安全职责；</li>
+<li>做好各项安全制度落实和检查。</li>
+</ul>
+<h3 id="6-盘点制度"><a href="#6-盘点制度" class="headerlink" title="6.盘点制度"></a>6.盘点制度</h3><ul>
+<li><p>日常盘点：物流部门自行实施；</p>
+</li>
+<li><p>月度盘点：物流➕财务</p>
+</li>
+<li><p>盘点时间要求</p>
+<ul>
+<li>日结日清</li>
+<li>周盘点</li>
+<li>每月对账盘点</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-04-01</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%B8%89%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            三级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

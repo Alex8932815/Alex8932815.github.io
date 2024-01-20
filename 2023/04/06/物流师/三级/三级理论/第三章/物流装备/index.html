@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="3.1 分拣管理" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            3.1 分拣管理
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%89%A9%E6%B5%81%E8%A3%85%E5%A4%87"><span class="post-toc-text">物流装备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%89%A9%E6%B5%81%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86"><span class="post-toc-text">物流设备管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="post-toc-text">定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E7%9A%84%E5%8F%91%E5%B1%95"><span class="post-toc-text">设备管理的发展</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%8E%B0%E8%A1%8C%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E5%88%B6%E5%BA%A6"><span class="post-toc-text">现行设备管理制度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E7%9A%84%E6%84%8F%E4%B9%89%EF%BC%884%EF%BC%89"><span class="post-toc-text">设备管理的意义（4）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%A8%E5%91%98%E7%94%9F%E4%BA%A7%E7%BB%B4%E4%BF%AE%E4%BD%93%E5%88%B6%EF%BC%88TPM%EF%BC%89"><span class="post-toc-text">全员生产维修体制（TPM）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%8E%B0%E4%BB%A3%E7%89%A9%E6%B5%81%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%883%EF%BC%89"><span class="post-toc-text">现代物流设备管理的特点（3）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%89%A9%E6%B5%81%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BB%BB%E5%8A%A1%EF%BC%884%EF%BC%89"><span class="post-toc-text">物流设备管理的主要任务（4）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%89%A9%E6%B5%81%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E7%9A%84%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9%EF%BC%883%EF%BC%89"><span class="post-toc-text">物流设备管理的主要内容（3）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TPM"><span class="post-toc-text">TPM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="post-toc-text">定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%84%8F%E4%B9%89"><span class="post-toc-text">意义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%89%B9%E7%82%B9"><span class="post-toc-text">特点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%9B%AE%E6%A0%87"><span class="post-toc-text">目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5S"><span class="post-toc-text">5S</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%87%AA%E4%B8%BB%E7%BB%B4%E4%BF%AE%E6%B8%90%E8%BF%9B%E8%BF%87%E7%A8%8B"><span class="post-toc-text">自主维修渐进过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TPM%E6%95%88%E6%9E%9C%E8%AF%84%E4%BB%B7"><span class="post-toc-text">TPM效果评价</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="物流装备"><a href="#物流装备" class="headerlink" title="物流装备"></a>物流装备</h1><h2 id="物流设备管理"><a href="#物流设备管理" class="headerlink" title="物流设备管理"></a><strong>物流设备管理</strong></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a><strong>定义</strong></h3><ul>
+<li><strong>物流设备管理是以物流设备为研究对象，以追求设备综合能力为目标，在综合考虑技术、经济、管理等因素的基础上，通过进行全面研究，并应用一系列理论和方法，对物流设备的一生进行全过程科学管理</strong></li>
+</ul>
+<h3 id="设备管理的发展"><a href="#设备管理的发展" class="headerlink" title="设备管理的发展"></a><strong>设备管理的发展</strong></h3><ul>
+<li><p><strong>事后维修</strong></p>
+<ul>
+<li>机器设备在生产过程中发生故障或损坏之后才进行修理</li>
+</ul>
+</li>
+<li><p><strong>预防性维修</strong></p>
+<ul>
+<li>为防止意外故障发生而预先安排修理，以减少停机损失</li>
+<li>以日常检查和定期检查为基础，依据检查结果来确定维修的内容、方式和时间</li>
+<li>存在日常检查和定期检查过于频繁，维修费用过大的问题</li>
+</ul>
+</li>
+<li><p><strong>综合管理</strong></p>
+<ul>
+<li><p>预防性维修局限性</p>
+<ul>
+<li>重视设备后半生管理，不重视全过程管理</li>
+<li>不重视设备的经济管理和组织管理</li>
+<li>重视维修专业人员的作用，不重视全员积极参与</li>
+</ul>
+</li>
+<li><p>全员生产维修制</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="现行设备管理制度"><a href="#现行设备管理制度" class="headerlink" title="现行设备管理制度"></a><strong>现行设备管理制度</strong></h3><ul>
+<li><p><strong>一生管理</strong></p>
+<ul>
+<li><p><strong>全生命周期管理</strong></p>
+</li>
+<li><p><strong>基本思想</strong></p>
+<ul>
+<li><strong>设备管理范围扩展到设备研究、设计、制造、购置、安装调试、使用、维修、改造一直到报废为止的全生过程</strong></li>
+</ul>
+</li>
+<li><p><strong>基本目的</strong></p>
+<ul>
+<li><strong>全系统、全效率、全员的三全管理</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>两个目标</strong></p>
+<ul>
+<li><p><strong>提高设备的综合效率或系统效率</strong></p>
+</li>
+<li><p><strong>降低设备的寿命周期费用</strong></p>
+</li>
+<li><p>设备综合管理目标</p>
+<ul>
+<li>充分发挥设备效能和投资效益，追求设备寿命周期费用最经济和设备综合效率最高</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>三个基本方针</strong></p>
+<ul>
+<li><p><strong>依靠技术进步</strong></p>
+<ul>
+<li>对技术落后的陈旧设备进行技术更新</li>
+<li>采用先进的技术对现有设备进行技术改造，全面提高技术装备素质</li>
+</ul>
+</li>
+<li><p><strong>促进生产发展</strong></p>
+<ul>
+<li>设备管理工作不仅限于对设备性能的维持，还涉及整个生产系统的维持</li>
+<li>企业管理者应该提高对生产活动和设备管理之间的辩证关系，把设备管理工作放在首位</li>
+</ul>
+</li>
+<li><p><strong>预防为主</strong></p>
+<ul>
+<li>选型配置设备时要注意设备的功能性、可靠性和维修性的统一，尤其是可靠性和维修性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>四项主要任务</strong></p>
+<ul>
+<li><p><strong>保持设备完好</strong></p>
+<ul>
+<li>最基本的任务和要求</li>
+</ul>
+</li>
+<li><p><strong>不断改善装备素质</strong></p>
+</li>
+<li><p><strong>充分发挥设备效能</strong></p>
+<ul>
+<li>通过提高生产率，减少故障停机和修理间歇时间，综合平衡生产计划和维修计划等途径来充分发货设备效能</li>
+</ul>
+</li>
+<li><p><strong>取得良好投资效益</strong></p>
+<ul>
+<li>是设备管理的出发点和落脚点</li>
+<li>是设备管理出效益的具体体现</li>
+<li>技术管理和经济管理相结合实现</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>五个结合</strong></p>
+<ul>
+<li><p><strong>设备制造与使用相结合</strong></p>
+<ul>
+<li>是应用系统理论对设备进行一生管理的基本要求</li>
+<li>是为克服设计、制造与使用脱节的弊端提出的</li>
+<li>设计制造阶段关系到使用阶段的设备效能充分发挥和设备创造经济效益的实现</li>
+<li>设计、制造单位应从用户要求出发，为用户提供先进、高效、经济、可靠的设备，用户反馈信息给设计单位助其提高质量</li>
+</ul>
+</li>
+<li><p><strong>日常维护与计划检修相结合</strong></p>
+<ul>
+<li>贯彻“预防为主”思想，保持设备良好技术状态的主要手段</li>
+<li>日常维护只能延缓磨损，减少故障不能消除磨损，根除故障，因此需要计划检修（预防性维修）</li>
+</ul>
+</li>
+<li><p><strong>修理改造与更新相结合</strong></p>
+<ul>
+<li>提高企业技术装备素质的有效途径，也是依靠技术进步方针的体现</li>
+<li>修理能补偿设备有形磨损，具有时间短、费用省、经济合理的优点</li>
+<li>设备改造和更新能够补偿无形磨损。</li>
+</ul>
+</li>
+<li><p><strong>专业管理与群众管理相结合</strong></p>
+<ul>
+<li>是我国设备管理的成功经验，应予继承和发扬</li>
+<li>涉及技术、经济和管理专业性强，又必须有合理分工的专业管理又有广大员工积极参与的群众管理</li>
+</ul>
+</li>
+<li><p><strong>技术管理与经济管理相结合</strong></p>
+<ul>
+<li>设备存在物质形态与价值形态两种运动</li>
+<li>技术管理：保持设备技术状态完好，不断提高设备技术素质，从而保证设备高的输出</li>
+<li>经济管理：对设备一生的价值形态进行控制，以达到经济的寿命周期费用和高的综合效率</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="设备管理的意义（4）"><a href="#设备管理的意义（4）" class="headerlink" title="设备管理的意义（4）"></a><strong>设备管理的意义（4）</strong></h3><ul>
+<li><strong>良好的物流设备管理是企业物流活动顺利进行的前提</strong></li>
+<li><strong>物流设备管理是提高企业经济效益的重要条件</strong></li>
+<li><strong>物流设备管理是工业企业安全生产的重要保证</strong></li>
+<li><strong>物流设备管理对技术进步，工业现代化起促进作用</strong></li>
+</ul>
+<h3 id="全员生产维修体制（TPM）"><a href="#全员生产维修体制（TPM）" class="headerlink" title="全员生产维修体制（TPM）"></a>全员生产维修体制（TPM）</h3><ul>
+<li>子主题 1</li>
+</ul>
+<h3 id="现代物流设备管理的特点（3）"><a href="#现代物流设备管理的特点（3）" class="headerlink" title="现代物流设备管理的特点（3）"></a><strong>现代物流设备管理的特点（3）</strong></h3><ul>
+<li><strong>综合性</strong></li>
+<li><strong>全员性</strong></li>
+<li><strong>灵活性</strong></li>
+</ul>
+<h3 id="物流设备管理的主要任务（4）"><a href="#物流设备管理的主要任务（4）" class="headerlink" title="物流设备管理的主要任务（4）"></a><strong>物流设备管理的主要任务（4）</strong></h3><ul>
+<li><strong>合理选用</strong></li>
+<li><strong>保持物流设备良好</strong></li>
+<li><strong>改善和提高物流设备技术装备素质</strong></li>
+<li><strong>充分发挥物流设备效能</strong></li>
+<li><strong>取得良好投资效益</strong></li>
+</ul>
+<h3 id="物流设备管理的主要内容（3）"><a href="#物流设备管理的主要内容（3）" class="headerlink" title="物流设备管理的主要内容（3）"></a><strong>物流设备管理的主要内容（3）</strong></h3><ul>
+<li><p><strong>设备的技术管理</strong></p>
+<ul>
+<li><strong>基础</strong></li>
+</ul>
+</li>
+<li><p><strong>设备的经济管理</strong></p>
+<ul>
+<li><strong>目的</strong></li>
+</ul>
+</li>
+<li><p><strong>设备的组织管理</strong></p>
+<ul>
+<li><strong>手段</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="TPM"><a href="#TPM" class="headerlink" title="TPM"></a><strong>TPM</strong></h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><ul>
+<li><p>全体人员</p>
+<ul>
+<li>企业领导</li>
+<li>生产现场工人</li>
+<li>办公室人员</li>
+</ul>
+</li>
+<li><p>参加的生产维修，维修体制</p>
+</li>
+<li><p>以小组活动为基础，设计设备全系统</p>
+</li>
+<li><p>目的是提高设备的综合效率</p>
+</li>
+<li><p>全员生产维修（全员生产保全）</p>
+</li>
+</ul>
+<h3 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h3><ul>
+<li><p>前期管理（设备的前半生管理）</p>
+<ul>
+<li><p>内容</p>
+<ul>
+<li>规划</li>
+<li>设计</li>
+<li>选型</li>
+<li>购置</li>
+<li>制造</li>
+<li>安装调试</li>
+</ul>
+</li>
+<li><p>决定了设备全寿命周期费用的绝大部分成本</p>
+</li>
+</ul>
+</li>
+<li><p>后期管理（使用期管理）</p>
+<ul>
+<li>设备管理部门验收设备后从使用直至报废</li>
+</ul>
+</li>
+</ul>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a><strong>特点</strong></h3><ul>
+<li><p><strong>三全（3）</strong></p>
+<ul>
+<li><p><strong>全系统</strong></p>
+<ul>
+<li><p><strong>载体</strong></p>
+</li>
+<li><p>各个侧面都包括在内</p>
+<ul>
+<li>预防维修</li>
+<li>维修预防</li>
+<li>必要的事前维修和改善维修</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>全员</strong></p>
+<ul>
+<li><strong>基础</strong></li>
+<li>维修体制群众性特征</li>
+<li>尤其是操作工人自主小组活动</li>
+</ul>
+</li>
+<li><p><strong>全效率</strong></p>
+<ul>
+<li><strong>目标</strong></li>
+<li><strong>设备寿命周期费用评价</strong></li>
+<li>设备综合效率</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul>
+<li><p><strong>主要目标四个0</strong></p>
+<ul>
+<li><strong>停机为0</strong></li>
+<li><strong>废品为0</strong></li>
+<li><strong>事故为0</strong></li>
+<li><strong>速度损失为0</strong></li>
+</ul>
+</li>
+<li><p><strong>实施要点在全效率在于限制和降低6大损失</strong></p>
+<ul>
+<li><strong>停机和故障的损失</strong></li>
+<li><strong>换装和调试的损失</strong></li>
+<li><strong>空转和瞬间停机的损失</strong></li>
+<li><strong>降低速度的损失</strong></li>
+<li><strong>生产次品的损失</strong></li>
+<li><strong>启动到稳定的损失</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="5S"><a href="#5S" class="headerlink" title="5S"></a><strong>5S</strong></h3><ul>
+<li><p><strong>整理</strong></p>
+</li>
+<li><p><strong>整顿</strong></p>
+</li>
+<li><p><strong>清扫</strong></p>
+</li>
+<li><p><strong>清洁</strong></p>
+</li>
+<li><p><strong>素养</strong></p>
+<ul>
+<li><strong>形式化-制度化-习惯化-性格化</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="自主维修渐进过程"><a href="#自主维修渐进过程" class="headerlink" title="自主维修渐进过程"></a><strong>自主维修渐进过程</strong></h3><ul>
+<li><p><strong>TPM的核心是建立自主维修体系</strong></p>
+</li>
+<li><p><strong>自主维修活动的展开（7）</strong></p>
+<ul>
+<li><p><strong>初期清扫</strong></p>
+<ul>
+<li>清扫点检的开始</li>
+<li>以设备为主体和中心的垃圾、尘土和污染的彻底清除</li>
+</ul>
+</li>
+<li><p><strong>技术对策与攻关</strong></p>
+<ul>
+<li>解决清扫、清洁的障碍。难以清扫的部位和易于污染的部位。</li>
+<li>设计制作防护罩，以期彻底解决问题，减少这些部位的清洁时间</li>
+<li>清扫、清洁的难题，维修技术人员应协助予以解决</li>
+</ul>
+</li>
+<li><p><strong>临时基准和规范的编制</strong></p>
+<ul>
+<li><p>制定快速和有效地进行基础保养和防止劣化的措施</p>
+<ul>
+<li><p>清洁</p>
+</li>
+<li><p>润滑</p>
+</li>
+<li><p>紧固的标准和规范</p>
+<ul>
+<li>标准</li>
+<li>方法</li>
+<li>工具</li>
+<li>周期</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>总点检</strong></p>
+<ul>
+<li><p>可以有效度量设备劣化</p>
+</li>
+<li><p>步骤</p>
+<ul>
+<li>TPM小组长进行点见程序培训，培训教材是维修主管编制的总点检手册</li>
+<li>小组长再把点检知识传达给小组成员</li>
+<li>攻关小组成员对总点检中发现的问题制定技术对策，在维修技术人员的帮助下，由TPM小组执行对策，改善劣质部位。</li>
+</ul>
+</li>
+<li><p>总垫肩过程一般较长</p>
+</li>
+<li><p>是操作工人检查异常能力的训练过程，是培养优秀工人的最好方式</p>
+</li>
+<li><p>不可操之过急，只有全体工人都获得点检技能，才能产生效果</p>
+</li>
+<li><p>前三个步骤是为了回复设备基本情况，不会产生明显成效，总点检结束之前应该会有明显提高。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>自主点检</strong></p>
+<ul>
+<li>操作工人可以依照从第一步到第三步建立起来的检查标准评价维修活动与设定的目标和结构有何差异，采取措施缩小这一差距</li>
+<li>车间小组建立的标准规范与维修部门建立的标准进行对标，改正失误，补充不足，消除重叠</li>
+</ul>
+</li>
+<li><p><strong>形成标准化</strong></p>
+<ul>
+<li>通过整理整顿步入标准化</li>
+<li>整理或整顿，即要坚持执行已经建立起来的标准，由操作人员实现</li>
+<li>整理和整顿是推动企业简化管理，组织有序地坚持执行标准的改进活动，标准化、规范化和目视化要在企业贯彻始终</li>
+</ul>
+</li>
+<li><p><strong>实现自主管理</strong></p>
+<ul>
+<li>独立的、有技能的、充满自信的工人</li>
+<li>能够自主地监督自己的工作，不断改进工作</li>
+<li>小组活动集中在减少六大损失，集中在每个车间由项目工作小组树立样板机台的工作上。</li>
+<li>自主维修进入自主管理新阶段</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="TPM效果评价"><a href="#TPM效果评价" class="headerlink" title="TPM效果评价"></a>TPM效果评价</h3><ul>
+<li><p>得到承认并不断发展的原因</p>
+<ul>
+<li>获得良好经济效益</li>
+<li>充分发挥设备生产潜力</li>
+</ul>
+</li>
+<li><p>设备综合效率OEE平价</p>
+<ul>
+<li><p>时间开动率</p>
+<ul>
+<li>体现设备在时间上的活用度</li>
+<li>反映了设备的时间利用情况</li>
+<li>度量了设备停机和故障的损失、换装和调试损失</li>
+</ul>
+</li>
+<li><p>性能开动率</p>
+</li>
+<li><p>合格品率</p>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-04-06</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%B8%89%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            三级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

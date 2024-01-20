@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="5.2 生产物流管理模式设计" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            5.2 生产物流管理模式设计
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E4%BA%8C%E7%BA%A7-%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="post-toc-text">二、二级 第五章 第二节生产物流管理模式设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E5%A4%A7%E6%89%B9%E9%87%8F%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F%EF%BC%88MP%EF%BC%89"><span class="post-toc-text">一、大批量生产模式（MP）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E8%83%8C%E6%99%AF"><span class="post-toc-text">1.背景</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%AE%A1%E7%90%86%E8%A6%81%E7%82%B9"><span class="post-toc-text">2.管理要点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E6%8E%A8%E8%BF%9B%E5%BC%8F%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88X%EF%BC%89"><span class="post-toc-text">二、推进式生产物流管理模式（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%8E%9F%E7%90%86"><span class="post-toc-text">1.原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="post-toc-text">2.基本思想</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%89%A9%E6%B5%81%E7%AE%A1%E7%90%86%E7%89%B9%E8%89%B2"><span class="post-toc-text">3.物流管理特色</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81%E6%8B%89%E5%8A%A8%E5%BC%8F%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88X%EF%BC%89"><span class="post-toc-text">三、拉动式生产物流管理模式（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%8E%9F%E7%90%86-1"><span class="post-toc-text">1.原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3-1"><span class="post-toc-text">2.基本思想</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%AE%A1%E7%90%86%E7%89%B9%E8%89%B2"><span class="post-toc-text">3.管理特色</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E5%A4%A7%E8%A7%84%E6%A8%A1%E5%AE%9A%E5%88%B6%EF%BC%88X%EF%BC%89"><span class="post-toc-text">四、大规模定制（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E8%83%8C%E6%99%AF-1"><span class="post-toc-text">1.背景</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%AE%A1%E7%90%86%E8%A6%81%E7%82%B9-1"><span class="post-toc-text">2.管理要点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%94%E3%80%81MRP%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%AD%98%E8%B4%A7%E7%AE%A1%E7%90%86%E6%AF%94%E8%BE%83%EF%BC%8C%E5%85%B7%E6%9C%89%E5%A6%82%E4%B8%8B%E7%89%B9%E7%82%B9%EF%BC%88Y%EF%BC%89"><span class="post-toc-text">五、MRP与传统存货管理比较，具有如下特点（Y）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AD%EF%BC%9AMRPII%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%88X%EF%BC%89"><span class="post-toc-text">六：MRPII的特点（X）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%83%E3%80%81ERP%E4%B8%8EMRPII%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88X%EF%BC%89"><span class="post-toc-text">七、ERP与MRPII的区别（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%9C%A8%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E8%8C%83%E5%9B%B4%E6%96%B9%E9%9D%A2"><span class="post-toc-text">1.在资源管理范围方面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%9C%A8%E7%94%9F%E4%BA%A7%E6%96%B9%E5%BC%8F%E7%AE%A1%E7%90%86%E6%96%B9%E9%9D%A2"><span class="post-toc-text">2.在生产方式管理方面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%9C%A8%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD%E6%96%B9%E9%9D%A2"><span class="post-toc-text">3.在管理功能方面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%9C%A8%E4%BA%8B%E7%89%A9%E5%A4%84%E7%90%86%E6%8E%A7%E5%88%B6%E6%96%B9%E9%9D%A2"><span class="post-toc-text">4.在事物处理控制方面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E5%9C%A8%E8%B7%A8%E5%9B%BD%EF%BC%88%E6%88%96%E5%9C%B0%E5%8C%BA%EF%BC%89%E7%BB%8F%E8%90%A5%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86%E6%96%B9%E9%9D%A2"><span class="post-toc-text">5.在跨国（或地区）经营事务处理方面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF%E6%96%B9%E9%9D%A2"><span class="post-toc-text">6.在计算机信息处理技术方面</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89MRP%E5%92%8CMRPII%E5%8F%91%E5%B1%95%E6%96%B9%E5%90%91%EF%BC%9A"><span class="post-toc-text">（1）MRP和MRPII发展方向：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E4%BD%86%E6%98%AF%E6%B2%A1%E6%9C%89%E6%91%86%E8%84%B1%E4%B8%A4%E4%B8%AA%E5%B1%80%E9%99%90"><span class="post-toc-text">（2）但是没有摆脱两个局限</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89-ERP%E6%96%B9%E9%9D%A2%EF%BC%9A"><span class="post-toc-text">（3） ERP方面：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AB%E3%80%81JIT%E7%9A%84%E7%9B%AE%E6%A0%87%EF%BC%88X%EF%BC%89%EF%BC%9A%E5%BD%BB%E5%BA%95%E6%B6%88%E9%99%A4%E6%97%A0%E6%95%88%E5%8A%B3%E5%8A%A8%E5%92%8C%E6%B5%AA%E8%B4%B9"><span class="post-toc-text">八、JIT的目标（X）：彻底消除无效劳动和浪费</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%BA%9F%E5%93%81%E9%87%8F%E6%9C%80%E4%BD%8E%EF%BC%88%E9%9B%B6%E5%BA%9F%E5%93%81%EF%BC%89"><span class="post-toc-text">1.废品量最低（零废品）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%BA%93%E5%AD%98%E9%87%8F%E6%9C%80%E4%BD%8E%EF%BC%88%E9%9B%B6%E5%BA%93%E5%AD%98%EF%BC%89"><span class="post-toc-text">2.库存量最低（零库存）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%87%86%E5%A4%87%E6%97%B6%E9%97%B4%E6%9C%80%E7%9F%AD%EF%BC%88%E9%9B%B6%E5%87%86%E5%A4%87%E6%97%B6%E9%97%B4%EF%BC%89"><span class="post-toc-text">3.准备时间最短（零准备时间）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E7%94%9F%E4%BA%A7%E6%8F%90%E5%89%8D%E6%9C%9F%E6%9C%80%E7%9F%AD"><span class="post-toc-text">4.生产提前期最短</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E5%87%8F%E5%B0%91%E9%9B%B6%E4%BB%B6%E6%90%AC%E8%BF%90%EF%BC%8C%E6%90%AC%E8%BF%90%E9%87%8F%E6%9C%80%E4%BD%8E"><span class="post-toc-text">5.减少零件搬运，搬运量最低</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E6%9C%BA%E5%99%A8%E6%8D%9F%E5%9D%8F%E4%BD%8E"><span class="post-toc-text">6.机器损坏低</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-%E6%89%B9%E9%87%8F%E5%B0%8F"><span class="post-toc-text">7.批量小</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B9%9D%E3%80%81JIT%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E7%82%B9"><span class="post-toc-text">九、JIT系统的特点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-JIT%E6%98%AF%E4%B8%80%E7%A7%8D%E7%A7%AF%E6%9E%81%E7%9A%84%E5%92%8C%E5%8A%A8%E6%80%81%E7%9A%84%E7%B3%BB%E7%BB%9F"><span class="post-toc-text">1.JIT是一种积极的和动态的系统</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-JIT%E7%B3%BB%E7%BB%9F%E6%98%AF%E6%8B%89%E5%8A%A8%E6%96%B9%E5%BC%8F"><span class="post-toc-text">2.JIT系统是拉动方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-JIT%E9%87%87%E7%94%A8%E5%BC%BA%E5%88%B6%E6%80%A7%E6%96%B9%E6%B3%95%E8%A7%A3%E5%86%B3%E7%94%9F%E4%BA%A7%E4%B8%AD%E5%AD%98%E5%9C%A8%E7%9A%84%E4%B8%8D%E8%B6%B3"><span class="post-toc-text">3.JIT采用强制性方法解决生产中存在的不足</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-JIT%E6%95%B4%E4%BD%93%E8%AE%A1%E5%88%92%E6%80%A7%E5%BC%B1%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%B8%AD%E9%95%BF%E6%9C%9F%E8%AE%A1%E5%88%92%E7%9A%84%E6%8C%87%E5%AF%BC%EF%BC%8C%E7%94%9F%E4%BA%A7%E6%8E%A7%E5%88%B6%E5%8F%AA%E6%98%AF%E8%A2%AB%E5%8A%A8%E8%B7%9F%E9%9A%8F%E3%80%82"><span class="post-toc-text">1.JIT整体计划性弱，缺少中长期计划的指导，生产控制只是被动跟随。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-JIT%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%87%A1%E6%98%AF%E8%BE%93%E5%87%BA%E5%B0%8F%E4%BA%8E%E4%BA%A4%E8%B4%A7%E6%95%B0%E9%87%8F%E7%9A%84%E8%B5%84%E6%BA%90%E9%83%BD%E6%98%AF%E7%93%B6%E9%A2%88%EF%BC%8C%E9%83%BD%E6%98%AF%E9%9C%80%E8%A6%81%E6%94%B9%E8%BF%9B%E7%9A%84"><span class="post-toc-text">2.JIT系统中凡是输出小于交货数量的资源都是瓶颈，都是需要改进的</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-JIT%E5%9C%A8%E7%94%9F%E4%BA%A7%E7%AE%A1%E7%90%86%E4%B8%AD%E5%8F%8D%E5%AF%B9%E6%B5%AA%E8%B4%B9%EF%BC%8C%E5%B9%B6%E8%87%B4%E5%8A%9B%E4%BA%8E%E6%B6%88%E9%99%A4%E4%BB%BB%E4%BD%95%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%B5%AA%E8%B4%B9%EF%BC%8C%E8%BF%BD%E6%B1%82%E9%9B%B6%E5%BA%93%E5%AD%98"><span class="post-toc-text">3.JIT在生产管理中反对浪费，并致力于消除任何形式的浪费，追求零库存</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E3%80%81%E6%8C%89%E7%89%A9%E6%96%99%E6%B5%81%E5%90%91%E5%AF%B9%E4%BC%81%E4%B8%9A%E5%88%86%E7%B1%BB"><span class="post-toc-text">十、按物料流向对企业分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-V%E5%9E%8B%E4%BC%81%E4%B8%9A"><span class="post-toc-text">1.V型企业</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E7%94%9F%E4%BA%A7%E7%BB%93%E6%9E%84%E8%A1%A8%E7%8E%B0"><span class="post-toc-text">（1）生产结构表现</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E5%B7%A5%E8%89%BA%E6%B5%81%E7%A8%8B"><span class="post-toc-text">（2）工艺流程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%813%EF%BC%89%E7%89%B9%E7%82%B9"><span class="post-toc-text">！3）特点</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-A%E5%9E%8B%E4%BC%81%E4%B8%9A"><span class="post-toc-text">2.A型企业</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E7%94%9F%E4%BA%A7%E7%BB%93%E6%9E%84%E8%A1%A8%E7%8E%B0-1"><span class="post-toc-text">（1）生产结构表现</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E5%B7%A5%E8%89%BA%E6%B5%81%E7%A8%8B-1"><span class="post-toc-text">（2）工艺流程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E7%89%B9%E7%82%B9"><span class="post-toc-text">（3）特点</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-T%E5%9E%8B%E4%BC%81%E4%B8%9A"><span class="post-toc-text">3.T型企业</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E7%94%9F%E4%BA%A7%E7%BB%93%E6%9E%84%E8%A1%A8%E7%8E%B0-2"><span class="post-toc-text">（1）生产结构表现</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E7%89%B9%E7%82%B9"><span class="post-toc-text">（2）特点</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%AE%9E%E8%A1%8C%E2%80%9C%E9%BC%93-%E7%BC%93%E5%86%B2%E5%99%A8-%E7%BB%B3%E2%80%9C%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"><span class="post-toc-text">十一、实行“鼓-缓冲器-绳“系统控制方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E2%80%9C%E9%BC%93-%E7%BC%93%E5%86%B2%E5%99%A8-%E7%BB%B3%E2%80%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86"><span class="post-toc-text">1.“鼓-缓冲器-绳“系统原理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89TOC%E6%8A%8A%E4%B8%BB%E7%94%9F%E4%BA%A7%E8%AE%A1%E5%88%92%EF%BC%88MPS%EF%BC%89%E6%AF%94%E5%96%BB%E6%88%90%E9%BC%93%EF%BC%8C%E6%A0%B9%E6%8D%AE%E7%93%B6%E9%A2%88%E8%B5%84%E6%BA%90%E7%9A%84%E5%8F%AF%E7%94%A8%E8%83%BD%E5%8A%9B%E7%A1%AE%E5%AE%9A%E7%89%A9%E6%B5%81%E9%87%8F"><span class="post-toc-text">（1）TOC把主生产计划（MPS）比喻成鼓，根据瓶颈资源的可用能力确定物流量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E6%89%80%E6%9C%89%E7%93%B6%E9%A2%88%E5%92%8C%E6%80%BB%E8%A3%85%E5%B7%A5%E5%BA%8F%E5%89%8D%E8%A6%81%E6%9C%89%E2%80%9C%E7%BC%93%E5%86%B2%E5%99%A8%E2%80%9D%EF%BC%8C%E4%BF%9D%E8%AF%81%E8%B5%B7%E5%88%B6%E7%BA%A6%E4%BD%9C%E7%94%A8%E7%9A%84%E7%93%B6%E9%A2%88%E8%B5%84%E6%BA%90%E5%BE%97%E5%88%B0%E5%85%85%E5%88%86%E5%88%A9%E7%94%A8%EF%BC%8C%E4%BB%A5%E5%AE%9E%E7%8E%B0%E4%BC%81%E4%B8%9A%E6%9C%80%E5%A4%A7%E7%9A%84%E4%BA%A7%E5%87%BA"><span class="post-toc-text">（2）所有瓶颈和总装工序前要有“缓冲器”，保证起制约作用的瓶颈资源得到充分利用，以实现企业最大的产出</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E6%89%80%E6%9C%89%E9%9C%80%E8%A6%81%E6%8E%A7%E5%88%B6%E7%9A%84%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%BF%83%E5%A6%82%E5%90%8C%E7%94%A8%E4%B8%80%E6%A0%B9%E4%BC%A0%E9%80%92%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%B3%E5%AD%90%E7%89%B5%E4%BD%8F%E7%9A%84%E9%98%9F%E4%BC%8D%EF%BC%8C%E6%8C%89%E5%90%8C%E4%B8%80%E8%8A%82%E6%8B%8D%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E5%9C%A8%E4%BF%9D%E6%8C%81%E5%9D%87%E8%A1%A1%E7%9A%84%E5%9C%A8%E5%88%B6%E5%93%81%E5%BA%93%E5%AD%98%E3%80%81%E4%BF%9D%E6%8C%81%E5%9D%87%E8%A1%A1%E7%9A%84%E7%89%A9%E6%96%99%E6%B5%81%E5%8A%A8%E6%9D%A1%E4%BB%B6%E4%B8%8B%E8%BF%9B%E8%A1%8C%E7%94%9F%E4%BA%A7%E3%80%82"><span class="post-toc-text">（3）所有需要控制的工作中心如同用一根传递信息的绳子牵住的队伍，按同一节拍，也就是在保持均衡的在制品库存、保持均衡的物料流动条件下进行生产。</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E4%BB%8E%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%AE%A1%E7%90%86%E6%89%8B%E6%AE%B5%E6%96%B9%E9%9D%A2%E6%AF%94%E8%BE%83%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88X%EF%BC%89"><span class="post-toc-text">十二、从生产物流管理手段方面比较生产物流管理模式（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E4%BB%8E%E5%88%B6%E8%AE%A2%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%9A%84%E8%AE%A1%E5%88%92%E6%96%B9%E5%BC%8F%E7%9C%8B"><span class="post-toc-text">1.从制订生产物流的计划方式看</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E4%BB%8E%E5%B9%B3%E8%A1%A1%E7%94%9F%E4%BA%A7%E8%83%BD%E5%8A%9B%E7%9A%84%E6%96%B9%E5%BC%8F%E7%9C%8B"><span class="post-toc-text">2.从平衡生产能力的方式看</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E4%BB%8E%E7%89%A9%E6%96%99%E9%87%87%E8%B4%AD%E4%B8%8E%E4%BE%9B%E5%BA%94%E7%9A%84%E6%96%B9%E5%BC%8F%E7%9C%8B"><span class="post-toc-text">3.从物料采购与供应的方式看</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%BB%8E%E7%89%A9%E6%96%99%E8%B4%A8%E9%87%8F%E7%9A%84%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F%E7%9C%8B"><span class="post-toc-text">4.从物料质量的管理方式看</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E4%BB%8E%E7%89%A9%E6%96%99%E5%BA%93%E5%AD%98%E7%9A%84%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F%E7%9C%8B"><span class="post-toc-text">5.从物料库存的控制方式看</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="二、二级-第五章-第二节生产物流管理模式设计"><a href="#二、二级-第五章-第二节生产物流管理模式设计" class="headerlink" title="二、二级 第五章 第二节生产物流管理模式设计"></a>二、二级 第五章 第二节生产物流管理模式设计</h1><h2 id="一、大批量生产模式（MP）"><a href="#一、大批量生产模式（MP）" class="headerlink" title="一、大批量生产模式（MP）"></a>一、大批量生产模式（MP）</h2><h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><ul>
+<li><strong>泰勒</strong>提出了<strong>劳动分工和计件工资制</strong>为基础的<strong>科学管理方法</strong></li>
+<li>亨利·<strong>甘特</strong>用<strong>甘特图</strong>对生产过程进行<strong>计划和控制</strong></li>
+<li><strong>福特</strong>使用大量专用设备进行专业化大批量生产，提出<strong>作业单纯化原理</strong>和<strong>产品标准化原理</strong>，规定<strong>标准时间定额</strong>，移动装配法，建立<strong>T型专用流水线</strong></li>
+</ul>
+<h3 id="2-管理要点"><a href="#2-管理要点" class="headerlink" title="2.管理要点"></a>2.管理要点</h3><ul>
+<li><strong>单一品种大批量生产模式</strong>的生产物流管理是建立在<strong>科学管理</strong>的基础上，<strong>事先</strong>必须制定科学标准——<strong>物料消耗定额</strong>，然后<strong>编制各级</strong>生产进度<strong>计划</strong>，对生产物流进行控制，利用<strong>库存制度</strong>对物料的采购及分配过程进行相应<strong>调节</strong>；</li>
+<li>生产中对库存控制的管理与优化是基于<strong>外界风险因素</strong>建立的，<strong>强调风险管理</strong>，即面对不确定因素<strong>保持适当库存</strong>，<strong>缓冲</strong>各环节之间矛盾，避免风险</li>
+<li><strong>物流管理的目标</strong>在于追求<strong>物流子系统的最优化</strong>。</li>
+</ul>
+<h2 id="二、推进式生产物流管理模式（X）"><a href="#二、推进式生产物流管理模式（X）" class="headerlink" title="二、推进式生产物流管理模式（X）"></a>二、推进式生产物流管理模式（X）</h2><h3 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h3><ul>
+<li>在<strong>计算机信息技术和制造业大批量生产</strong>基础上，提出的<strong>MRPII</strong>（制造资源计划）<strong>技术为核心</strong>的生产物流管理模式</li>
+<li>长处在<strong>多品种、小批量生产类型</strong>的加工装配企业得到了最有效发挥</li>
+</ul>
+<h3 id="2-基本思想"><a href="#2-基本思想" class="headerlink" title="2.基本思想"></a>2.基本思想</h3><ul>
+<li>生产目标应该围绕<strong>物料转化来组织制造资源</strong></li>
+<li><strong>信息流与生产物流完全分离</strong></li>
+<li>信息流控制的目的是要<strong>保证按生产作业按计划要求完成物料加工</strong>任务</li>
+</ul>
+<h3 id="3-物流管理特色"><a href="#3-物流管理特色" class="headerlink" title="3.物流管理特色"></a>3.物流管理特色</h3><ul>
+<li><em>管理标准化和制度</em>：能<strong>重点处理突发事件</strong></li>
+<li><em>管理手段</em>：大量<strong>运用计算机原理</strong></li>
+<li><em>生产物流方式</em>：以<strong>零件为中心</strong>，强调<strong>严格执行计划</strong>，维持一定量的在制品库存</li>
+<li><em>生产物流计划编制和控制</em>：以<strong>零件需求为依据</strong>，计算机编制主生产计划、物料需求计划、生产作业计划。执行中<strong>以计划为中心，工作重点在管理部门</strong></li>
+<li><em>对待在制品库存态度上</em>：<strong>风险是外界的必然</strong>，必要的库存是合理的；采用<strong>较大的安全库存和留有余地的固定提前期</strong>。</li>
+</ul>
+<h2 id="三、拉动式生产物流管理模式（X）"><a href="#三、拉动式生产物流管理模式（X）" class="headerlink" title="三、拉动式生产物流管理模式（X）"></a>三、拉动式生产物流管理模式（X）</h2><h3 id="1-原理-1"><a href="#1-原理-1" class="headerlink" title="1.原理"></a>1.原理</h3><ul>
+<li>以<strong>JIT技术为核心</strong>生产物流管理<strong>，现场一个流</strong>生产方式；</li>
+<li>物流始终处于<strong>不停止、不堆积、不超越</strong>的状态。贯穿于从原材料、毛坯的投入到输出产成品的过程</li>
+</ul>
+<h3 id="2-基本思想-1"><a href="#2-基本思想-1" class="headerlink" title="2.基本思想"></a>2.基本思想</h3><ul>
+<li>强调物流<strong>同步管理</strong></li>
+<li><strong>必要的时间</strong>将<strong>必要的数量</strong>物料运送到<strong>必要的地点</strong></li>
+<li><strong>比例性、节奏性、连续性、协调性</strong>（三级是：连续性、平行性、节奏性、比例性、适应性）</li>
+<li>必要的<strong>生产工具、工位器具按位置摆放挂牌明示</strong></li>
+<li>从市场需求出发，前道工序，上游车间<strong>只生产</strong>后道工序，下游车间需要的数量</li>
+<li><strong>信息流与物流完全结合在一起，信息流与物流方向相反</strong></li>
+<li>信息流目的是保证按<strong>后道工序要求准时完成物料加工任务</strong></li>
+</ul>
+<h3 id="3-管理特色"><a href="#3-管理特色" class="headerlink" title="3.管理特色"></a>3.管理特色</h3><ul>
+<li><em>管理标准化和制度</em>：重点采用<strong>标准化作业</strong></li>
+<li><em>管理手段</em>：<strong>计算机原理</strong>与<strong>看板管理</strong>相结合</li>
+<li><em>生产物流方式</em>：以<strong>零件为中心</strong>，要求<strong>前一道工序加工完的零件立即进入后一道工序</strong>，强调<strong>物流平衡而没有在制品库存</strong>，保证物流与市场需求同步</li>
+<li><em>生产物流计划编制和控制</em>：以<strong>零件为中心</strong>，利用<strong>计算机编制生产计划</strong>，并运用<strong>看板系统执行和控制</strong>。以<strong>实施</strong>为中心，将工作的重点放在<strong>制造现场</strong>。</li>
+<li><em>对待在制品库存态度上</em>：<strong>风险不仅来自于外界的必然，更重要的是来自于内部的在制品库存</strong>。库存掩盖了生产系统中的各种缺陷，应将生产中的一切库存视为浪费，<strong>消灭一切浪费</strong>。库存管理的思想表现为：<strong>一方面强调供应对生产的保证，另一方面强调对零库存的要求</strong>，以不断暴露生产中基本环节的矛盾并加以改进，以消灭库存产生浪费为终极目标不断降低库存</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">项目</th>
+<th align="left">原理</th>
+<th>基本思想</th>
+<th align="left">物流特色</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">推动型</td>
+<td align="left">1. 在<strong>计算机信息技术和制造业大批量生产</strong>基础上，提出的<strong>MRPII</strong>（制造资源计划）<strong>技术为核心</strong>的生产物流管理模式2. 长处在<strong>多品种、小批量生产类型</strong>的加工装配企业得到了最有效发挥</td>
+<td>1.生产目标应该围绕<strong>物料转化来组织制造资源</strong>2.<strong>信息流与生产物流完全分离</strong>3.信息流控制的目的是要<strong>保证按生产作业按计划要求完成物料加工</strong>任务</td>
+<td align="left">1.<em>管理标准化和制度</em>：能<strong>重点处理突发事件</strong>2. <em>管理手段</em>：大量<strong>运用计算机原理</strong>3.<em>生产物流方式</em>：以<strong>零件为中心</strong>，强调<strong>严格执行计划</strong>，维持一定量的在制品库存4.<em>生产物流计划编制和控制</em>：以<strong>零件需求为依据</strong>，计算机编制主生产计划、物料需求计划、生产作业计划。执行中<strong>以计划为中心，工作重点在管理部门</strong>5.<em>对待在制品库存态度上</em>：<strong>风险是外界的必然</strong>，必要的库存是合理的；采用<strong>较大的安全库存和留有余地的固定提前期</strong>。</td>
+</tr>
+<tr>
+<td align="center">拉动型</td>
+<td align="left">1. 以<strong>JIT技术为核心</strong>生产物流管理,<strong>现场一个流</strong>生产方式；2. 物流始终处于<strong>不停止、不堆积、不超越</strong>的状态。贯穿于从原材料、毛坯的投入到输出产成品的过程</td>
+<td>1. 强调物流<strong>同步管理</strong>2. <strong>必要的时间</strong>将<strong>必要的数量</strong>物料运送到<strong>必要的地点</strong>3. <strong>比例性、节奏性、连续性、协调性</strong>（三级是：连续性、平行性、节奏性、比例性、适应性）4. 必要的<strong>生产工具、工位器具按位置摆放挂牌明示</strong>5. 从市场需求出发，前道工序，上游车间<strong>只生产</strong>后道工序，下游车间需要的数量6. <strong>信息流与物流完全结合在一起，信息流与物流方向相反</strong>7. 信息流目的是保证按<strong>后道工序要求准时完成物料加工任务</strong></td>
+<td align="left">1.<em>管理标准化和制度</em>：重点采用<strong>标准化作业</strong>2. <em>管理手段</em>：<strong>计算机原理</strong>与<strong>看板管理</strong>相结合3. <em>生产物流方式</em>：以<strong>零件为中心</strong>，要求<strong>前一道工序加工完的零件立即进入后一道工序</strong>，强调<strong>物流平衡而没有在制品库存</strong>，保证物流与市场需求同步4. <em>生产物流计划编制和控制</em>：以<strong>零件为中心</strong>，利用<strong>计算机编制生产计划</strong>，并运用<strong>看板系统执行和控制</strong>。以<strong>实施</strong>为中心，将工作的重点放在<strong>制造现场</strong>。5. <em>对待在制品库存态度上</em>：<strong>风险不仅来自于外界的必然，更重要的是来自于内部的在制品库存</strong>。库存掩盖了生产系统中的各种缺陷，应将生产中的一切库存视为浪费，<strong>消灭一切浪费</strong>。库存管理的思想表现为：<strong>一方面强调供应对生产的保证，另一方面强调对零库存的要求</strong>，以不断暴露生产中基本环节的矛盾并加以改进，以消灭库存产生浪费为终极目标不断降低库存</td>
+</tr>
+</tbody></table>
+<h2 id="四、大规模定制（X）"><a href="#四、大规模定制（X）" class="headerlink" title="四、大规模定制（X）"></a>四、大规模定制（X）</h2><h3 id="1-背景-1"><a href="#1-背景-1" class="headerlink" title="1.背景"></a>1.背景</h3><ul>
+<li><em>阿尔文·托夫</em>：<strong>以类似于标准化和大规模生产的成本和时间，提供客户特定需求的产品和服务</strong>；</li>
+<li><em>斯坦·戴维斯</em>：<strong>称为大规模定制（MC）</strong></li>
+<li><em>核心是</em>：<strong>产品品种多样化和定制化急剧增加而不相应增加成本</strong>；</li>
+<li><em>范畴是</em>：<strong>个性化定制产品的大规模生产</strong></li>
+<li><em>最大优点</em>：<strong>提供战略优势和经济价值</strong></li>
+</ul>
+<h3 id="2-管理要点-1"><a href="#2-管理要点-1" class="headerlink" title="2.管理要点"></a>2.管理要点</h3><ul>
+<li>大规模定制有助于企业进入新的市场，并吸引大量个性化需求不能被标准产品所满足的顾客</li>
+<li>建立<strong>灵活的员工和组织结构</strong>是<strong>大规模定制的必备条件</strong></li>
+<li>协助方法：<strong>减少循环周期时间，加强生产制造的反应度</strong></li>
+<li>举例：电子数据交换和计算机辅助订单、飞机运输、柔性制造系统、电子商务</li>
+<li>产品和流程设计思想：设计产品并重组制造活动和供应链中分发配送活动，从而使得产生多种产品的定制化步骤发生在供应链中最有效率的环节，同时使得供应链总承包降到最低。</li>
+<li><em>延迟</em>：<ul>
+<li><strong>供应链总成本降到最低</strong>的同时，使得<strong>供应链效率最优化的产品和流程设计的最根本的原则</strong>；</li>
+<li><strong>延迟就是推迟关键流程的时间</strong></li>
+<li><strong>有效支持产品多样化的同时又保持规模经济的</strong>唯一方法就是运用<strong>延迟制造</strong></li>
+<li><em>延迟化策略的基本思想是</em>：表面上的延迟实质上是为了更快速的对市场需求做出反应，即通过<strong>定制需求或个性化需求在时间和空间上的延迟</strong>，实现<strong>供应链的低生产成本、高反应速度和高顾客价值</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="五、MRP与传统存货管理比较，具有如下特点（Y）"><a href="#五、MRP与传统存货管理比较，具有如下特点（Y）" class="headerlink" title="五、MRP与传统存货管理比较，具有如下特点（Y）"></a>五、MRP与传统存货管理比较，具有如下特点（Y）</h2><ul>
+<li>MRP系统用<strong>规划联动需求</strong>，使各项物料相互依存，相互衔接，使需求计划更加客观可靠，大大减少计划的工作量</li>
+<li>实施MRP要求<strong>企业制订详细、可靠的主生产计划</strong>，提供可靠的<strong>存货记录</strong>，迫使企业分析生产能力和对各项工作进行检查，把计划做的更细。MRP<strong>物料需求计划是企业编制现金需求计划的依据</strong></li>
+<li>当企业<strong>MPS发生变化</strong>，<strong>MRP系统</strong>将依据MPS最新数据进行<strong>调整</strong>，及时<strong>提供物料联动需求和存货计划</strong>。</li>
+<li>MRP环境下，可以做到<strong>降低库存成本</strong>、<strong>减少库存资金占用</strong>的同时，保证<strong>物料按计划流动</strong>，保证生产过程中的<strong>物料需求及生产的正常运行</strong>，从而使产品满足用户和市场的需求。</li>
+</ul>
+<h2 id="六：MRPII的特点（X）"><a href="#六：MRPII的特点（X）" class="headerlink" title="六：MRPII的特点（X）"></a>六：MRPII的特点（X）</h2><ul>
+<li><p><em>特点</em>：<strong>MRPII最大的特点</strong>是运用<strong>管理会计</strong>的概念</p>
+<ul>
+<li>用<strong>货币形式</strong>说明了执行企业“物料计划”带来的<strong>效益</strong>，实现<strong>物料信息同资金信息集成</strong>。</li>
+<li>把传统的<strong>财务处理</strong>同发生<strong>财务的事务结合</strong>起来，不仅说明<strong>财务的资金现状</strong>，而且<strong>追溯资金的来龙去脉</strong></li>
+<li><strong>资金流</strong>（财务账）同<strong>物流</strong>（实物账）<strong>同步一致</strong>，改变了资金信息滞后于物料信息的状况，便于实时做出决策。</li>
+</ul>
+</li>
+<li><p><em>缺陷</em>：</p>
+<ul>
+<li><strong>提前期、批量等参数的预先静态设定，可能与实际情况不符</strong>；</li>
+<li>MRPII从MRP发展而来，而MRP没有考虑能力约束问题，尽管<strong>MRPII加入了粗能力平衡和细能力平衡，但是不能弥补其在能力平衡上的缺点，往往造成生产计划无法完成，物料需求不切实际</strong></li>
+<li>MRPII<strong>制订计划时不考虑控制</strong>，而是通过<strong>事后反馈对生产控制进行调节，相对于实际生产肯定存在无法避免的滞后</strong>；MRPII为每道工序安排计划，如果每道工序都严格按照既定的计划进行生产，而工序间又无协调机制，便无法保证每道工序间的关联，造成工序间产量不平衡，在制品库存增加以及需求与生产不一致问题</li>
+<li><strong>由于误差的累积，生产的作业计划很容易和实际脱节</strong>；生产计划抗干扰能力差；MRPII以周或天为单位运行，无法做出迅速响应，对底层的决策与控制是一个很大影响。</li>
+</ul>
+</li>
+</ul>
+<h2 id="七、ERP与MRPII的区别（X）"><a href="#七、ERP与MRPII的区别（X）" class="headerlink" title="七、ERP与MRPII的区别（X）"></a>七、ERP与MRPII的区别（X）</h2><h3 id="1-在资源管理范围方面"><a href="#1-在资源管理范围方面" class="headerlink" title="1.在资源管理范围方面"></a>1.在资源管理范围方面</h3><ul>
+<li>MRPII侧重<strong>人、财、物</strong></li>
+<li>ERP提出了<strong>供应链</strong>的概念，<strong>5个流，物流、资金流、信息流、增值流、工作流</strong>，把客户需求和企业内容的制造活动以及供应商制造资源整合在一起，对所有环节进行有效管理</li>
+</ul>
+<h3 id="2-在生产方式管理方面"><a href="#2-在生产方式管理方面" class="headerlink" title="2.在生产方式管理方面"></a>2.在生产方式管理方面</h3><ul>
+<li>MRPII分<strong>典型的生产方式</strong>，重复生产、批量生产、按订单生产、按订单装配、按库存生产，每一种都有<strong>一套管理标准</strong></li>
+<li>ERP支持和管理<strong>多品种、小批量生产以及看板式生产混合型</strong>制造环境，体现了<strong>精益生产、敏捷制造</strong>的思想，满足<strong>多元化</strong>经营需求</li>
+</ul>
+<h3 id="3-在管理功能方面"><a href="#3-在管理功能方面" class="headerlink" title="3.在管理功能方面"></a>3.在管理功能方面</h3><ul>
+<li>ERP除了MRPII的制造、分销、财务管理功能外</li>
+<li><strong>支持各个供应链物料流通体系</strong>中供、产、需各个环节之间的运输管理和仓库管理</li>
+<li><strong>支持生产保障体系</strong>的质量管理、实验室管理、设备维修、备品备件管理</li>
+<li><strong>支持对工作流的管理</strong></li>
+</ul>
+<h3 id="4-在事物处理控制方面"><a href="#4-在事物处理控制方面" class="headerlink" title="4.在事物处理控制方面"></a>4.在事物处理控制方面</h3><ul>
+<li><strong>MRPII</strong>通过计划及时滚动来控制整个生产过程，<strong>实时性差，实现事中控制</strong></li>
+<li><strong>ERP</strong>支持在线分析处理OLAP、售后服务及质量反馈、强调<strong>事前控制</strong></li>
+<li><strong>MRPII</strong>中，<strong>财务系统只是一个信息的归结者</strong>，功能是将供、产、销中的<strong>数量信息转变为价值信息</strong>，是物流价值的反映</li>
+<li><strong>ERP</strong>则将<strong>财务计划功能和价值控制功能集成</strong>道整个供应链上。</li>
+</ul>
+<h3 id="5-在跨国（或地区）经营事务处理方面"><a href="#5-在跨国（或地区）经营事务处理方面" class="headerlink" title="5.在跨国（或地区）经营事务处理方面"></a>5.在跨国（或地区）经营事务处理方面</h3><ul>
+<li>ERP系统能够运用完善组织架构，<strong>支持跨国经营</strong>的多国家、多工厂、多语种、多币制的需求</li>
+</ul>
+<h3 id="6-在计算机信息处理技术方面"><a href="#6-在计算机信息处理技术方面" class="headerlink" title="6.在计算机信息处理技术方面"></a>6.在计算机信息处理技术方面</h3><ul>
+<li>ERP实现对整个供应链信息进行集成管理</li>
+</ul>
+<p>⚠️「<em>注意事项</em>」：</p>
+<h4 id="（1）MRP和MRPII发展方向："><a href="#（1）MRP和MRPII发展方向：" class="headerlink" title="（1）MRP和MRPII发展方向："></a>（1）<em>MRP和MRPII发展方向</em>：</h4><ul>
+<li><strong>资源概念内涵不断扩大</strong></li>
+<li><strong>企业计划闭环形成</strong></li>
+</ul>
+<h4 id="（2）但是没有摆脱两个局限"><a href="#（2）但是没有摆脱两个局限" class="headerlink" title="（2）但是没有摆脱两个局限"></a>（2）但是没有摆脱两个局限</h4><ul>
+<li>资源<strong>仅仅局限于企业内部</strong></li>
+<li><strong>决策的结构化的倾向明显</strong></li>
+</ul>
+<h4 id="（3）-ERP方面："><a href="#（3）-ERP方面：" class="headerlink" title="（3） ERP方面："></a>（3） <em>ERP方面</em>：</h4><ul>
+<li>ERP计划<strong>不局限于企业内部</strong></li>
+<li>ERP将<strong>时间作为一项关键技术</strong>来考虑，使企业在传统功能方面向<strong>实时化方向</strong>推进了一大步</li>
+<li><strong>DSS</strong>（决策支持系统）是ERP不可缺少的一部分，使之能够<strong>解决半结构化和非结构化问题</strong></li>
+</ul>
+<h2 id="八、JIT的目标（X）：彻底消除无效劳动和浪费"><a href="#八、JIT的目标（X）：彻底消除无效劳动和浪费" class="headerlink" title="八、JIT的目标（X）：彻底消除无效劳动和浪费"></a>八、JIT的目标（X）：彻底消除无效劳动和浪费</h2><h3 id="1-废品量最低（零废品）"><a href="#1-废品量最低（零废品）" class="headerlink" title="1.废品量最低（零废品）"></a>1.废品量最低（零废品）</h3><ul>
+<li>JIT要求消除各种引起不合理的原因，加工过程中每一工序都要求达到最好水平</li>
+</ul>
+<h3 id="2-库存量最低（零库存）"><a href="#2-库存量最低（零库存）" class="headerlink" title="2.库存量最低（零库存）"></a>2.库存量最低（零库存）</h3><ul>
+<li>库存使生产系统设计不合理、生产过程不协调、生产操作不良的证明</li>
+</ul>
+<h3 id="3-准备时间最短（零准备时间）"><a href="#3-准备时间最短（零准备时间）" class="headerlink" title="3.准备时间最短（零准备时间）"></a>3.准备时间最短（零准备时间）</h3><ul>
+<li>准备时间长短与批量选择相联系</li>
+</ul>
+<h3 id="4-生产提前期最短"><a href="#4-生产提前期最短" class="headerlink" title="4.生产提前期最短"></a>4.生产提前期最短</h3><ul>
+<li>短的生产提前期与小批量相结合的系统，应变能力强，柔性好</li>
+</ul>
+<h3 id="5-减少零件搬运，搬运量最低"><a href="#5-减少零件搬运，搬运量最低" class="headerlink" title="5.减少零件搬运，搬运量最低"></a>5.减少零件搬运，搬运量最低</h3><ul>
+<li>零件搬运是非增值操作</li>
+</ul>
+<h3 id="6-机器损坏低"><a href="#6-机器损坏低" class="headerlink" title="6.机器损坏低"></a>6.机器损坏低</h3><h3 id="7-批量小"><a href="#7-批量小" class="headerlink" title="7.批量小"></a>7.批量小</h3><h2 id="九、JIT系统的特点"><a href="#九、JIT系统的特点" class="headerlink" title="九、JIT系统的特点"></a>九、JIT系统的特点</h2><h3 id="1-JIT是一种积极的和动态的系统"><a href="#1-JIT是一种积极的和动态的系统" class="headerlink" title="1.JIT是一种积极的和动态的系统"></a>1.JIT是一种积极的和动态的系统</h3><ul>
+<li>强调在批量、准备时间、提前期、废品率、成本及质量方面持续进取</li>
+<li>对于问题采取事前预防而不是事后检查</li>
+<li>该系统没有必须达到的标准，所有业绩都是前进的过程而不是终点</li>
+</ul>
+<h3 id="2-JIT系统是拉动方式"><a href="#2-JIT系统是拉动方式" class="headerlink" title="2.JIT系统是拉动方式"></a>2.JIT系统是拉动方式</h3><ul>
+<li>以看板管理为手段，采用取料制</li>
+<li>实现全面质量管理过程的前提</li>
+</ul>
+<h3 id="3-JIT采用强制性方法解决生产中存在的不足"><a href="#3-JIT采用强制性方法解决生产中存在的不足" class="headerlink" title="3.JIT采用强制性方法解决生产中存在的不足"></a>3.JIT采用强制性方法解决生产中存在的不足</h3><ul>
+<li>库存已经最低状态，生产无法容忍任何终端，整个生产过程必须精心组织安排，避免任何可能出现的问题</li>
+</ul>
+<p><em>缺陷</em></p>
+<h3 id="1-JIT整体计划性弱，缺少中长期计划的指导，生产控制只是被动跟随。"><a href="#1-JIT整体计划性弱，缺少中长期计划的指导，生产控制只是被动跟随。" class="headerlink" title="1.JIT整体计划性弱，缺少中长期计划的指导，生产控制只是被动跟随。"></a>1.JIT整体计划性弱，缺少中长期计划的指导，生产控制只是被动跟随。</h3><ul>
+<li>当某个中间环节出现问题而停工时，此前所有工序都处于松弛状态；</li>
+<li>当问题解决后，此前所有工序又将成为瓶颈，整个环节加工情况时好时坏</li>
+</ul>
+<h3 id="2-JIT系统中凡是输出小于交货数量的资源都是瓶颈，都是需要改进的"><a href="#2-JIT系统中凡是输出小于交货数量的资源都是瓶颈，都是需要改进的" class="headerlink" title="2.JIT系统中凡是输出小于交货数量的资源都是瓶颈，都是需要改进的"></a>2.JIT系统中凡是输出小于交货数量的资源都是瓶颈，都是需要改进的</h3><ul>
+<li>实际中，它们可能不是真正意义的瓶颈</li>
+<li>导致部门间哄抢系统资源，有限的资源并未用在最需要改善的环节上</li>
+<li>瓶颈才是真正制约整个系统有效产出的控制点</li>
+<li>编排计划的依赖点应该随着瓶颈的变化而变化，应把计划编制的控制点移到系统的瓶颈处（TOC）</li>
+</ul>
+<h3 id="3-JIT在生产管理中反对浪费，并致力于消除任何形式的浪费，追求零库存"><a href="#3-JIT在生产管理中反对浪费，并致力于消除任何形式的浪费，追求零库存" class="headerlink" title="3.JIT在生产管理中反对浪费，并致力于消除任何形式的浪费，追求零库存"></a>3.JIT在生产管理中反对浪费，并致力于消除任何形式的浪费，追求零库存</h3><ul>
+<li>由于供应、生产、需求的波动，非均衡不可避免，进而产生在制品库存</li>
+<li>原材料供应难以做到真正准时，不得不设置安全库存</li>
+<li>JIT认为库存是浪费，但没有考虑到其对系统的产销率，物流平衡等方面的正面影响</li>
+<li>控制一定余量的库存是很有必要的，特别是瓶颈程序（TOC的缓冲）、装配程序（TOC的缓冲）和发货之前（TOC的缓冲）</li>
+</ul>
+<h2 id="十、按物料流向对企业分类"><a href="#十、按物料流向对企业分类" class="headerlink" title="十、按物料流向对企业分类"></a>十、按物料流向对企业分类</h2><h3 id="1-V型企业"><a href="#1-V型企业" class="headerlink" title="1.V型企业"></a>1.V型企业</h3><h4 id="（1）生产结构表现"><a href="#（1）生产结构表现" class="headerlink" title="（1）生产结构表现"></a>（1）生产结构表现</h4><ul>
+<li>由一种原材料加工或转变成许多种不同的最终产品</li>
+<li>炼油厂、钢铁厂</li>
+</ul>
+<h4 id="（2）工艺流程"><a href="#（2）工艺流程" class="headerlink" title="（2）工艺流程"></a>（2）工艺流程</h4><ul>
+<li>清楚且设计简单</li>
+<li>生产提前期较短</li>
+<li>企业的瓶颈识别及其控制协调也相对容易</li>
+</ul>
+<h4 id="！3）特点"><a href="#！3）特点" class="headerlink" title="！3）特点"></a>！3）特点</h4><ul>
+<li>最终产品种类较原材料种类多的多</li>
+<li>所有最终产品的基本加工过程相同</li>
+<li>企业一般资金密集且高度专业化</li>
+</ul>
+<h3 id="2-A型企业"><a href="#2-A型企业" class="headerlink" title="2.A型企业"></a>2.A型企业</h3><h4 id="（1）生产结构表现-1"><a href="#（1）生产结构表现-1" class="headerlink" title="（1）生产结构表现"></a>（1）生产结构表现</h4><ul>
+<li>由许多原材料加工或转变成一种最终产品</li>
+<li>造船厂、飞机厂</li>
+</ul>
+<h4 id="（2）工艺流程-1"><a href="#（2）工艺流程-1" class="headerlink" title="（2）工艺流程"></a>（2）工艺流程</h4><ul>
+<li>物料清单和工艺流程复杂</li>
+<li>在制品库存较高</li>
+<li>生产提前期较长</li>
+<li>瓶颈不易识别</li>
+<li>计划以及工序间协调工作繁多琐碎</li>
+</ul>
+<h4 id="（3）特点"><a href="#（3）特点" class="headerlink" title="（3）特点"></a>（3）特点</h4><ul>
+<li>由许多制成的零部件装配成相对较少数目的成品，原材料较多</li>
+<li>一些零部件对特殊的成品来说是唯一的</li>
+<li>对某一成品来说，其零部件的加工过程往往是不同的</li>
+<li>设备一般是通用型</li>
+</ul>
+<h3 id="3-T型企业"><a href="#3-T型企业" class="headerlink" title="3.T型企业"></a>3.T型企业</h3><h4 id="（1）生产结构表现-2"><a href="#（1）生产结构表现-2" class="headerlink" title="（1）生产结构表现"></a>（1）生产结构表现</h4><ul>
+<li>许多种原材料加工或转变成许多种最终产品</li>
+<li>制锁厂、汽车制造厂</li>
+</ul>
+<h4 id="（2）特点"><a href="#（2）特点" class="headerlink" title="（2）特点"></a>（2）特点</h4><ul>
+<li>由一些共同的零部件装配成相对数目较多的成品，许多成品的零部件是相同的，零部件加工过程通常是不同的</li>
+</ul>
+<h2 id="十一、实行“鼓-缓冲器-绳“系统控制方法"><a href="#十一、实行“鼓-缓冲器-绳“系统控制方法" class="headerlink" title="十一、实行“鼓-缓冲器-绳“系统控制方法"></a>十一、实行“鼓-缓冲器-绳“系统控制方法</h2><blockquote>
+<p>一个企业的计划与控制目标就是寻求顾客需求与企业能力的最佳配合，对约束环节进行有效控制，一旦一个被控制的工序（瓶颈）建立了一个动态平衡，其余工序应相继地与这一杯控制的工序同步</p>
+</blockquote>
+<h3 id="1-“鼓-缓冲器-绳“系统原理"><a href="#1-“鼓-缓冲器-绳“系统原理" class="headerlink" title="1.“鼓-缓冲器-绳“系统原理"></a>1.“鼓-缓冲器-绳“系统原理</h3><h4 id="（1）TOC把主生产计划（MPS）比喻成鼓，根据瓶颈资源的可用能力确定物流量"><a href="#（1）TOC把主生产计划（MPS）比喻成鼓，根据瓶颈资源的可用能力确定物流量" class="headerlink" title="（1）TOC把主生产计划（MPS）比喻成鼓，根据瓶颈资源的可用能力确定物流量"></a>（1）TOC把主生产计划（MPS）比喻成鼓，根据瓶颈资源的可用能力确定物流量<img src="/media/16625913800924/16626295084137.png"></h4><ul>
+<li>作为约束全局的鼓点，控制在制品库存量</li>
+<li>鼓反应了系统对约束资源的利用，对约束资源应编制详细的生产作业计划，以保证对约束资源的充分合理利用</li>
+</ul>
+<h4 id="（2）所有瓶颈和总装工序前要有“缓冲器”，保证起制约作用的瓶颈资源得到充分利用，以实现企业最大的产出"><a href="#（2）所有瓶颈和总装工序前要有“缓冲器”，保证起制约作用的瓶颈资源得到充分利用，以实现企业最大的产出" class="headerlink" title="（2）所有瓶颈和总装工序前要有“缓冲器”，保证起制约作用的瓶颈资源得到充分利用，以实现企业最大的产出"></a>（2）所有瓶颈和总装工序前要有“缓冲器”，保证起制约作用的瓶颈资源得到充分利用，以实现企业最大的产出</h4><ul>
+<li>缓冲分库存缓冲和时间缓冲</li>
+<li>时间缓冲是将所需物料比计划提前一段时间提交，以防随机波动以及机器故障，并以约束资源上的加工时间长度作为计量单位。其长度可凭观察与实验，并经过必要的调整确定。</li>
+<li>库存缓冲是保险在制品，其位置、数量的确定原则同时间缓冲</li>
+</ul>
+<h4 id="（3）所有需要控制的工作中心如同用一根传递信息的绳子牵住的队伍，按同一节拍，也就是在保持均衡的在制品库存、保持均衡的物料流动条件下进行生产。"><a href="#（3）所有需要控制的工作中心如同用一根传递信息的绳子牵住的队伍，按同一节拍，也就是在保持均衡的在制品库存、保持均衡的物料流动条件下进行生产。" class="headerlink" title="（3）所有需要控制的工作中心如同用一根传递信息的绳子牵住的队伍，按同一节拍，也就是在保持均衡的在制品库存、保持均衡的物料流动条件下进行生产。"></a>（3）所有需要控制的工作中心如同用一根传递信息的绳子牵住的队伍，按同一节拍，也就是在保持均衡的在制品库存、保持均衡的物料流动条件下进行生产。</h4><ul>
+<li>“约束”决定着生产线的产出节奏，在其上游的工序实行拉动生产</li>
+<li>用一根看不见的“绳子”把“约束”与这些工序串联起来，有效地使物料依照产品出产计划快速地通过非约束作业，以保证约束资源的需要</li>
+<li>“绳子”控制着企业物料的进入（包括“约束”的上游工序与“非约束”的装配），起的是传递作用，即驱动系统的所有部分按“鼓”的节奏进行生产</li>
+<li>通过“绳子“系统的控制，使得约束资源前的非约束资源均衡生产，加工批量和运输批量减少，可以减少提前期以及在制品库存，而同时又不使约束资源停工待料</li>
+<li>在TOC实施过程中，“绳子”是由一个涉及原材料投料到各车间的详细作业计划来实现的。</li>
+</ul>
+<h2 id="十二、从生产物流管理手段方面比较生产物流管理模式（X）"><a href="#十二、从生产物流管理手段方面比较生产物流管理模式（X）" class="headerlink" title="十二、从生产物流管理手段方面比较生产物流管理模式（X）"></a>十二、从生产物流管理手段方面比较生产物流管理模式（X）</h2><h3 id="1-从制订生产物流的计划方式看"><a href="#1-从制订生产物流的计划方式看" class="headerlink" title="1.从制订生产物流的计划方式看"></a>1.从制订生产物流的计划方式看</h3><ul>
+<li>MRPII<ul>
+<li>集中式的物料计划方式</li>
+<li>无限能力计划法，集中展开对各级生产单元以及供应单元的生产与供应指令</li>
+</ul>
+</li>
+<li>JIT<ul>
+<li>看板管理方式</li>
+<li>有限能力计划，逐道工序地倒序传递生产中的取货指令和生产指令，各级生产单元依据所需满足的上级需求组织生产</li>
+</ul>
+</li>
+<li>TOC<ul>
+<li>先安排约束环节上关键件的生产进度计划，以约束环节为基准，把约束环节之前、之间、之后的工序分别按拉动、工艺顺序、推动方式排定，进行一定优化，然后编制非关键件的作业计划</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-从平衡生产能力的方式看"><a href="#2-从平衡生产能力的方式看" class="headerlink" title="2.从平衡生产能力的方式看"></a>2.从平衡生产能力的方式看</h3><ul>
+<li>MRPII<ul>
+<li>提供能力计划功能。MRPII在展开计划的同时将工作指令落实在具体的生产单元上，因此根据生产单元的初始化能力设置，可以清楚地判断生产能力的实际需求，由计划人员依据经验调整主生产计划以实现生产能力的相对平衡</li>
+</ul>
+</li>
+<li>JIT<ul>
+<li>计划展开时基本不对能力的平衡作太多考虑</li>
+<li>企业以密切协作的方式保持需求的适当稳定</li>
+<li>以高柔性的生产设备来保证生产线上能力的相对平衡</li>
+<li>总体能力的平衡一般作为一个长期的规划问题来处理</li>
+</ul>
+</li>
+<li>TOC<ul>
+<li>按照能力负荷把资源分为约束资源和非约束资源</li>
+<li>通过五大核心步骤与思维流程消除约束，改善企业链条上最薄弱的一环</li>
+<li>约束是动态转移的，通过TOC反复应用实现企业的持续改进</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-从物料采购与供应的方式看"><a href="#3-从物料采购与供应的方式看" class="headerlink" title="3.从物料采购与供应的方式看"></a>3.从物料采购与供应的方式看</h3><ul>
+<li>MRPII<ul>
+<li>采购与供应系统主要根据由计划系统下达的物料需求指令进行采购决策</li>
+<li>负责完成与供应商之间的联系与交易</li>
+<li>采购与供应部门主要围绕如何保证供应，同时降低费用</li>
+</ul>
+</li>
+<li>JIT<ul>
+<li>将采购与物料供应视为生产链的延伸部分</li>
+<li>看板管理向企业外传递需求的部分</li>
+<li>采购供应部门更像是协作管理部门</li>
+</ul>
+</li>
+<li>TOC<ul>
+<li>具体运行需要大量的数据支持</li>
+<li>物料采购提前期不是事先固定的，由函数决定</li>
+<li>物料的供应与投放则按照一个详细作业计划来实现，通过绳子同步</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-从物料质量的管理方式看"><a href="#4-从物料质量的管理方式看" class="headerlink" title="4.从物料质量的管理方式看"></a>4.从物料质量的管理方式看</h3><ul>
+<li>MRPII<ul>
+<li>对出现的物料质量问题视为概率性问题，允许一定废品，在最终环节加以控制</li>
+<li>系统可以设置某些质量控制参数，借助生产中的反馈，事后帮助分析出现质量问题的原因</li>
+</ul>
+</li>
+<li>JIT<ul>
+<li>在每道生产工序中控制物料质量进入下一道工序时确保上一道送来的零件没有质量问题</li>
+<li>一级级控制直至最后成品</li>
+<li>以生产中的质量控制代替最终检验，消灭废品</li>
+</ul>
+</li>
+<li>TOC<ul>
+<li>在约束环节前设置质检，避免前道工序的波动对约束环节的影响</li>
+<li>当质量管理因素成为一个无形约束时，通过五大核心步骤和思维流程的一系列工具找到突破点</li>
+<li>避免质量问题带来的问题波及约束环节，因为约束上一个小时的损失就是整个系统一个小时的损失</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-从物料库存的控制方式看"><a href="#5-从物料库存的控制方式看" class="headerlink" title="5.从物料库存的控制方式看"></a>5.从物料库存的控制方式看</h3><ul>
+<li>MRPII<ul>
+<li>设有各级库存，强调对库存管理的明晰化、准确化</li>
+<li>必须设置一定的原材料安全库存</li>
+<li>控制少量在制品库存，以保证连续生产</li>
+<li>尽量满足客户需求，平衡生产能力，压缩成品库存</li>
+</ul>
+</li>
+<li>JIT<ul>
+<li>不设在制品库存，只有当需求期到达时才供应物料，基本没有库存</li>
+<li>生产直接面对客户，追求零库存，消灭一切浪费</li>
+</ul>
+</li>
+<li>TOC<ul>
+<li>强调合理设置时间缓冲和库存缓冲，以防止随机波动</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2022-09-08</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%BA%8C%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            二级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

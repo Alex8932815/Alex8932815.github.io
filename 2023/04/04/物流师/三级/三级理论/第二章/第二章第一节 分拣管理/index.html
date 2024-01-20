@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="2.1 分拣管理" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            2.1 分拣管理
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%AC%E4%B8%80%E8%8A%82-%E5%88%86%E6%8B%A3%E7%AE%A1%E7%90%86"><span class="post-toc-text">第二章第一节 分拣管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%A2%E6%88%B7%E8%AE%A2%E5%8D%95EIQ%E5%88%86%E6%9E%90"><span class="post-toc-text">一、客户订单EIQ分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-EIQ%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="post-toc-text">1.EIQ的定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89E%EF%BC%9Aentry%EF%BC%8C%E9%85%8D%E9%80%81%E5%AF%B9%E8%B1%A1%E6%88%96%E5%AE%A2%E6%88%B7%E3%80%82%E5%B0%B1%E6%98%AF%E5%8D%B7%E7%83%9F%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%88%B7%E6%88%96%E8%AE%A2%E5%8D%95%EF%BC%9B"><span class="post-toc-text">（1）E：entry，配送对象或客户。就是卷烟零售客户或订单；</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89I%EF%BC%9Aitem%EF%BC%8C%E9%85%8D%E9%80%81%E8%B4%A7%E5%93%81%E7%9A%84%E7%A7%8D%E7%B1%BB%E3%80%82%E5%8D%B7%E7%83%9F%E7%9A%84%E5%93%81%E9%A1%B9%E6%88%96%E7%A7%8D%E7%B1%BB"><span class="post-toc-text">（2）I：item，配送货品的种类。卷烟的品项或种类</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89Q%EF%BC%9Aquantity%EF%BC%8C%E9%85%8D%E9%80%81%E8%B4%A7%E5%93%81%E7%9A%84%E6%95%B0%E9%87%8F%E6%88%96%E5%BA%93%E5%AD%98%E9%87%8F%E3%80%82%E5%8D%B7%E7%83%9F%E5%87%BA%E8%B4%A7%E6%95%B0%E9%87%8F%E6%88%96%E4%BB%93%E5%82%A8%E6%95%B0%E9%87%8F"><span class="post-toc-text">（3）Q：quantity，配送货品的数量或库存量。卷烟出货数量或仓储数量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%884%EF%BC%89N%EF%BC%9A%E8%AE%A2%E5%8D%95%E7%9A%84%E5%87%BA%E8%B4%A7%E9%A1%B9%E6%95%B0"><span class="post-toc-text">（4）N：订单的出货项数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%885%EF%BC%89K%EF%BC%9A%E8%AE%A2%E5%8D%95%E7%9A%84%E5%87%BA%E8%B4%A7%E6%AC%A1%E6%95%B0"><span class="post-toc-text">（5）K：订单的出货次数</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-EIQ%E5%88%86%E6%9E%90%E7%9A%84%E7%9B%AE%E7%9A%84%E5%92%8C%E6%96%B9%E6%B3%95"><span class="post-toc-text">2.EIQ分析的目的和方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E7%9B%AE%E7%9A%84"><span class="post-toc-text">（1）目的</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="post-toc-text">（2）分析方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-EIQ%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="post-toc-text">3.EIQ分析过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89EIQ%E8%B5%84%E6%96%99%E5%8F%96%E6%A0%B7"><span class="post-toc-text">（1）EIQ资料取样</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E8%AE%A2%E5%8D%95%E5%87%BA%E8%B4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E8%A7%A3"><span class="post-toc-text">（2）订单出货数据分解</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-EIQ%E5%9B%BE%E8%A1%A8%E5%88%86%E6%9E%90"><span class="post-toc-text">4.EIQ图表分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E8%AE%A2%E5%8D%95%E9%87%8FEQ%E5%88%86%E6%9E%90"><span class="post-toc-text">（1）订单量EQ分析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E8%AE%A2%E5%8D%95%E5%93%81%E9%A1%B9%E6%95%B0EN%E5%88%86%E6%9E%90"><span class="post-toc-text">（2）订单品项数EN分析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E5%93%81%E9%A1%B9%E6%95%B0IQ%E5%88%86%E6%9E%90"><span class="post-toc-text">（3）品项数IQ分析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%884%EF%BC%89%E5%93%81%E9%A1%B9%E5%8F%97%E8%AE%A2%E6%95%B0IK%E5%88%86%E6%9E%90"><span class="post-toc-text">（4）品项受订数IK分析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%885%EF%BC%89IQ%E5%92%8CIK%E4%BA%A4%E5%8F%89%E5%88%86%E6%9E%90"><span class="post-toc-text">（5）IQ和IK交叉分析</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%86%E6%8B%A3%E7%AD%96%E7%95%A5"><span class="post-toc-text">二、分拣策略</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%88%86%E5%8C%BA"><span class="post-toc-text">1.分区</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E6%8C%89%E5%88%86%E5%8C%BA%E5%8E%9F%E5%88%99%E4%B8%8D%E5%90%8C"><span class="post-toc-text">（1）按分区原则不同</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E8%AE%A2%E5%8D%95%E5%88%86%E5%89%B2"><span class="post-toc-text">2.订单分割</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E8%AE%A2%E5%8D%95%E5%88%86%E6%89%B9"><span class="post-toc-text">3.订单分批</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%88%86%E7%B1%BB"><span class="post-toc-text">4.分类</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81%E5%88%86%E6%8B%A3%E4%BD%9C%E4%B8%9A%E8%AE%A1%E5%88%92%E7%BC%96%E5%88%B6"><span class="post-toc-text">三、分拣作业计划编制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%9B%AE%E7%9A%84"><span class="post-toc-text">1.目的</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E4%BE%9D%E6%8D%AE"><span class="post-toc-text">2.依据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%BC%96%E5%88%B6%E6%96%B9%E6%B3%95"><span class="post-toc-text">3.编制方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E6%A0%87%E5%87%86%E8%AE%A1%E5%88%92%E6%B3%95"><span class="post-toc-text">（1）标准计划法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E5%AE%9A%E6%9C%9F%E8%AE%A1%E5%88%92%E6%B3%95"><span class="post-toc-text">（2）定期计划法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E4%B8%B4%E6%97%B6%E6%B4%BE%E5%B7%A5%E6%B3%95"><span class="post-toc-text">（3）临时派工法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%884%EF%BC%89%E7%9C%8B%E6%9D%BF%E5%88%86%E6%8B%A3%E6%B3%95"><span class="post-toc-text">（4）看板分拣法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%885%EF%BC%89%E6%BB%9A%E5%8A%A8%E8%AE%A1%E5%88%92%E6%B3%95"><span class="post-toc-text">（5）滚动计划法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E8%AE%A1%E5%88%92%E7%BC%96%E5%88%B6%E8%BF%87%E7%A8%8B"><span class="post-toc-text">4.计划编制过程</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E6%8B%A3%E4%BD%9C%E4%B8%9A%E6%8E%A7%E5%88%B6"><span class="post-toc-text">四、分拣作业控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%88%86%E6%8B%A3%E4%BD%9C%E4%B8%9A%E6%8E%A7%E5%88%B6%E5%8E%9F%E5%88%99"><span class="post-toc-text">1.分拣作业控制原则</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E8%BF%87%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8E%9F%E5%88%99"><span class="post-toc-text">（1）过程控制原则</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E4%BA%8B%E5%89%8D%E9%A2%84%E9%98%B2%E5%8E%9F%E5%88%99"><span class="post-toc-text">（2）事前预防原则</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E6%8E%A7%E5%88%B6%E5%85%B3%E9%94%AE%E7%82%B9%E5%8E%9F%E7%90%86"><span class="post-toc-text">（3）控制关键点原理</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%88%86%E6%8B%A3%E4%BD%9C%E4%B8%9A%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"><span class="post-toc-text">2.分拣作业控制方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E7%9C%8B%E6%9D%BF%E7%AE%A1%E7%90%86"><span class="post-toc-text">（1）看板管理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E5%85%A8%E7%A8%8B%E7%9B%91%E6%8E%A7"><span class="post-toc-text">（2）全程监控</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E6%B5%81%E7%A8%8B%E9%A9%B1%E5%8A%A8"><span class="post-toc-text">（3）流程驱动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%884%EF%BC%89%E7%8E%B0%E5%9C%BA%E7%AE%A1%E7%90%86"><span class="post-toc-text">（4）现场管理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%885%EF%BC%89%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="post-toc-text">（5）质量控制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%886%EF%BC%89%E7%9B%AE%E6%A0%87%E6%8E%A7%E5%88%B6"><span class="post-toc-text">（6）目标控制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%887%EF%BC%89PDCA"><span class="post-toc-text">（7）PDCA</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%888%EF%BC%89%E5%85%AD%E8%A5%BF%E6%A0%BC%E7%8E%9B%E7%AE%A1%E7%90%86%E6%B3%95"><span class="post-toc-text">（8）六西格玛管理法</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E6%8B%A3%E4%BD%9C%E4%B8%9A%E6%95%88%E6%9E%9C%E8%AF%84%E4%BC%B0%E5%88%86%E6%9E%90"><span class="post-toc-text">四、分拣作业效果评估分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%88%86%E6%8B%A3%E6%95%88%E6%9E%9C%E8%AF%84%E4%BC%B0%E5%B7%A5%E5%85%B7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="post-toc-text">1.分拣效果评估工具和方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E5%91%98%E5%B7%A5%E6%AF%94%E8%BE%83%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="post-toc-text">（1）员工比较系统：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E5%9B%BE%E8%A7%A3%E5%BC%8F%E8%AF%84%E5%AE%9A%E6%B3%95%EF%BC%88%E5%9B%BE%E8%A1%A8%E8%AF%84%E4%BC%B0%E5%B0%BA%E5%BA%A6%E6%B3%95%E3%80%81%E5%B0%BA%E5%BA%A6%E8%AF%84%E4%BB%B7%E6%B3%95%E3%80%81%E4%B8%9A%E7%BB%A9%E8%AF%84%E5%AE%9A%E6%B3%95%EF%BC%89%E3%80%82"><span class="post-toc-text">（2）图解式评定法（图表评估尺度法、尺度评价法、业绩评定法）。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86%EF%BC%9A"><span class="post-toc-text">*目标管理：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%88%86%E6%8B%A3%E6%95%88%E6%9E%9C%E5%88%86%E6%9E%90"><span class="post-toc-text">2.分拣效果分析</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="第二章第一节-分拣管理"><a href="#第二章第一节-分拣管理" class="headerlink" title="第二章第一节 分拣管理"></a>第二章第一节 分拣管理</h1><h2 id="一、客户订单EIQ分析"><a href="#一、客户订单EIQ分析" class="headerlink" title="一、客户订单EIQ分析"></a>一、客户订单EIQ分析</h2><ul>
+<li>不仅用于<strong>分拣设备选型</strong>，还可用于<strong>物流中心整体规划和仓储设备选型</strong>。（旧书）</li>
+<li>主要用于卷烟物流配送中心规划中<strong>分拣设备选型和分拣策略制定</strong>（新书）</li>
+</ul>
+<h3 id="1-EIQ的定义"><a href="#1-EIQ的定义" class="headerlink" title="1.EIQ的定义"></a>1.EIQ的定义</h3><h4 id="（1）E：entry，配送对象或客户。就是卷烟零售客户或订单；"><a href="#（1）E：entry，配送对象或客户。就是卷烟零售客户或订单；" class="headerlink" title="（1）E：entry，配送对象或客户。就是卷烟零售客户或订单；"></a>（1）E：entry，配送对象或客户。就是卷烟零售客户或订单；</h4><ul>
+<li>订单形态以及客户类型的不同不仅会影响分拣作业的计划，订单分批的策略、补货策略，也是中转运输以及终端配送策略制定的重要影响因素；</li>
+</ul>
+<h4 id="（2）I：item，配送货品的种类。卷烟的品项或种类"><a href="#（2）I：item，配送货品的种类。卷烟的品项或种类" class="headerlink" title="（2）I：item，配送货品的种类。卷烟的品项或种类"></a>（2）I：item，配送货品的种类。卷烟的品项或种类</h4><ul>
+<li>卷烟的外形尺寸较为统一，一定程度上降低了仓储分拣的复杂程度，但也有部分异型卷烟，需作区分处理。</li>
+</ul>
+<h4 id="（3）Q：quantity，配送货品的数量或库存量。卷烟出货数量或仓储数量"><a href="#（3）Q：quantity，配送货品的数量或库存量。卷烟出货数量或仓储数量" class="headerlink" title="（3）Q：quantity，配送货品的数量或库存量。卷烟出货数量或仓储数量"></a>（3）Q：quantity，配送货品的数量或库存量。卷烟出货数量或仓储数量</h4><ul>
+<li>配送中心出货数量</li>
+<li>配送中心的库存数量</li>
+<li>分拣通道数量</li>
+<li>分拣区暂存数量</li>
+<li>周转物流器具的数量</li>
+<li>运输工具的数量</li>
+<li>出入库库门数量</li>
+<li>现场工作人员数量</li>
+</ul>
+<h4 id="（4）N：订单的出货项数"><a href="#（4）N：订单的出货项数" class="headerlink" title="（4）N：订单的出货项数"></a>（4）N：订单的出货项数</h4><h4 id="（5）K：订单的出货次数"><a href="#（5）K：订单的出货次数" class="headerlink" title="（5）K：订单的出货次数"></a>（5）K：订单的出货次数</h4><h3 id="2-EIQ分析的目的和方法"><a href="#2-EIQ分析的目的和方法" class="headerlink" title="2.EIQ分析的目的和方法"></a>2.EIQ分析的目的和方法</h3><h4 id="（1）目的"><a href="#（1）目的" class="headerlink" title="（1）目的"></a>（1）目的</h4><blockquote>
+<p>总目标：是在对客户真实订单分析的基础上，提供满足用户个性化需求的物流服务，既保证物流服务效率，又避免物流资源浪费，最大限度节省资金投入和运营成本。</p>
+</blockquote>
+<ul>
+<li>了解物流特性</li>
+<li>选择物流设备</li>
+<li>作模拟分析</li>
+<li>物流系统基础规划</li>
+</ul>
+<h4 id="（2）分析方法"><a href="#（2）分析方法" class="headerlink" title="（2）分析方法"></a>（2）分析方法</h4><p><strong>量化分析</strong>为主，包括平均值、极值、总数、柏拉图分析、次数分析、交叉分析及ABC分析。</p>
+<h3 id="3-EIQ分析过程"><a href="#3-EIQ分析过程" class="headerlink" title="3.EIQ分析过程"></a>3.EIQ分析过程</h3><h4 id="（1）EIQ资料取样"><a href="#（1）EIQ资料取样" class="headerlink" title="（1）EIQ资料取样"></a>（1）EIQ资料取样</h4><ul>
+<li>先就单日的出货量进行初步分析，找出可能的作业周期及其波动幅度；</li>
+<li>若周期内出货量大致相似，则可缩小数据范围，以某一较小周期内的数据进行分析；</li>
+<li>若周期内趋势相近，但是作业量仍有很大差异，则应对数据适当分组，再从各组群中找出代表性的数据进行分析。</li>
+</ul>
+<h4 id="（2）订单出货数据分解"><a href="#（2）订单出货数据分解" class="headerlink" title="（2）订单出货数据分解"></a>（2）订单出货数据分解</h4><ul>
+<li>EQ（订单量分析）：单张订单出货数量分析</li>
+<li>IQ（品项数量分析）每一单一品项出货数量分析</li>
+<li>EN（订货品项数分析）：单张订单出货品项数分析</li>
+<li>IK（品项目受订次数分析）：每单一品项出货次数的分析</li>
+</ul>
+<h3 id="4-EIQ图表分析"><a href="#4-EIQ图表分析" class="headerlink" title="4.EIQ图表分析"></a>4.EIQ图表分析</h3><h4 id="（1）订单量EQ分析"><a href="#（1）订单量EQ分析" class="headerlink" title="（1）订单量EQ分析"></a>（1）订单量EQ分析</h4><ul>
+<li>用于决定订单处理原则、分拣系统规划，并将影响出货方式及出货区规划</li>
+<li>EQ图形分布可作为决定仓储分区规划及分拣模式的参考</li>
+<li>EQ分析表的目的掌握配送需求及客户ABC分析</li>
+<li>EQ分布图目的分类管理和重点管理</li>
+</ul>
+<h4 id="（2）订单品项数EN分析"><a href="#（2）订单品项数EN分析" class="headerlink" title="（2）订单品项数EN分析"></a>（2）订单品项数EN分析</h4><ul>
+<li>影响订单处理原则及分拣系统规划，并影响出货方式和出货区规划</li>
+<li>EN分析表目的：判断适用拣选方式</li>
+<li>EN分布图目的：拣货作业生产力的指针</li>
+</ul>
+<h4 id="（3）品项数IQ分析"><a href="#（3）品项数IQ分析" class="headerlink" title="（3）品项数IQ分析"></a>（3）品项数IQ分析</h4><ul>
+<li>了解各类产品出货量的分布状况，分析产品重要程度与运量规模</li>
+<li>用于仓储系统规划选用、储位空间估算</li>
+<li>影响拣货方式和拣货区规划</li>
+<li>单日IQ和全年IQ交叉分析</li>
+<li>分类1-5</li>
+<li>IQ分析表目的：商品分类，重点管理</li>
+<li>IQ分布图目的：IQ-ABC分析让管理人员易于了解主要产品状况及需要加强控制的产品。</li>
+</ul>
+<h4 id="（4）品项受订数IK分析"><a href="#（4）品项受订数IK分析" class="headerlink" title="（4）品项受订数IK分析"></a>（4）品项受订数IK分析</h4><ul>
+<li>规划仓储和分拣系统依据</li>
+<li>储位配置原则</li>
+<li>IK分析表目的：各品种被不同客户重复订货次数，了解产品<strong>出货频率</strong></li>
+<li>IK分布图目的：配合IQ分析，决定仓储和分拣系统设计，划分储区</li>
+</ul>
+<h4 id="（5）IQ和IK交叉分析"><a href="#（5）IQ和IK交叉分析" class="headerlink" title="（5）IQ和IK交叉分析"></a>（5）IQ和IK交叉分析</h4><ul>
+<li>拣货策略提供依据</li>
+</ul>
+<h2 id="二、分拣策略"><a href="#二、分拣策略" class="headerlink" title="二、分拣策略"></a>二、分拣策略</h2><blockquote>
+<p>分区、订单分割、订单分批、分类</p>
+</blockquote>
+<h3 id="1-分区"><a href="#1-分区" class="headerlink" title="1.分区"></a>1.分区</h3><ul>
+<li>将拣货作业场地以区域划分；</li>
+</ul>
+<h4 id="（1）按分区原则不同"><a href="#（1）按分区原则不同" class="headerlink" title="（1）按分区原则不同"></a>（1）按分区<strong>原则</strong>不同</h4><ul>
+<li><p><em>按分拣单位分区</em></p>
+<ul>
+<li>件烟分拣区；</li>
+<li>条烟分拣区；</li>
+<li>特殊品分拣区。</li>
+</ul>
+</li>
+<li><p><em>按分拣方式分区</em></p>
+<ul>
+<li>不同分拣单位分区中，依<strong>分拣方法和设备</strong>不同，又可划分若干分区；</li>
+<li>分区原则通过按商品销售的ABC分类而来，以<strong>物流量为基准的群组分区法</strong>。出货量多，拣货次数多为A类，滞销不动，拣货次数少为C类，依据群组特征，决定合适的分拣设备和方式。</li>
+<li>将作业区<strong>单纯化、一致化</strong>，以减少不必要的重复行走所耗费的时间。</li>
+</ul>
+</li>
+<li><p><em>工作分区</em></p>
+<ul>
+<li>在<strong>相同的分拣方式</strong>下，将分拣<strong>作业场地</strong>细分称不同的分区，由一个或一组<strong>固定的</strong>分拣人员负责拣取区域内的货物；</li>
+<li>优点是能<strong>减少分拣人员所需记忆的存货位置</strong>及移动距离，缩短分拣时间。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-订单分割"><a href="#2-订单分割" class="headerlink" title="2.订单分割"></a>2.订单分割</h3><ul>
+<li>当<strong>某一订单</strong>所订购<strong>商品种类较多</strong>时，利用订单分割策略将<strong>订单切分</strong>成若干子订单，交由<strong>不同的分拣人员</strong>进行分拣作业以加速分拣的完成。</li>
+</ul>
+<h3 id="3-订单分批"><a href="#3-订单分批" class="headerlink" title="3.订单分批"></a>3.订单分批</h3><ul>
+<li>定义<ul>
+<li>为了提供分拣作业效率而把多张订单集合成一批，进行批次拣取的作业；</li>
+</ul>
+</li>
+<li>类别<ul>
+<li>总合计量分批<ul>
+<li>合计分拣作业前所累计的订单中每一商品项目的总量，再按这一总量进行拣取；</li>
+<li>可将拣取路径减至最短，同时储存区域较单纯化，需强大的分类系统支持。</li>
+</ul>
+</li>
+<li>时窗分批<ul>
+<li>订单要求紧急发货时；</li>
+<li>常与分区及订单分割联合使用；</li>
+<li>适合于到达间隔时间短而平均的订单形态；</li>
+<li>订购量及种类不宜太多；</li>
+<li>会产生因工作量不平衡产生作业等待问题；</li>
+<li>适合密集频繁的订单，能应付紧急插单的需求。</li>
+</ul>
+</li>
+<li>固定订单量分批<ul>
+<li>按先到先处理的基本原则，当订单累计达到设定数量时，开始分拣作业；</li>
+<li>偏重于维持稳定的作业效率，但在处理速度上慢于时窗分批作业；</li>
+</ul>
+</li>
+<li>智慧型分批<ul>
+<li>订单汇集后必须经过较复杂的电脑计算，将拣取路线相近的订单集中处理，求得最佳的订单分批，可大量缩短拣货行走搬运距离；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-分类"><a href="#4-分类" class="headerlink" title="4.分类"></a>4.分类</h3><ul>
+<li>若采用分批分拣策略，随后必须配有分类策略；<ul>
+<li>分拣时分类<ul>
+<li>拣取的同时将货物分类到各订单，与固定量分批或智慧型分批；</li>
+</ul>
+</li>
+<li>取后集中分类<ul>
+<li>分批按合计总量拣取后，再进行集中分类；</li>
+<li>一种以人工作业为主，将货物搬运到空地上进行分类；</li>
+<li>一种利用分类输送系统进行分类，自动化作业。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、分拣作业计划编制"><a href="#三、分拣作业计划编制" class="headerlink" title="三、分拣作业计划编制"></a>三、分拣作业计划编制</h2><h3 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h3><ul>
+<li>建立<strong>合理储备</strong>；</li>
+<li>调整<strong>分拣负荷</strong>；</li>
+<li>满足<strong>分拣作业需求</strong>；</li>
+<li>充分发挥<strong>备货缓冲功能</strong>；</li>
+<li>确保<strong>分拣资源</strong>合理利用；</li>
+<li>从而充分发挥<strong>现有人员、设备效率</strong>。</li>
+</ul>
+<h3 id="2-依据"><a href="#2-依据" class="headerlink" title="2.依据"></a>2.依据</h3><ul>
+<li>年度分拣任务</li>
+<li>月度预测计划</li>
+<li>当日订单需求</li>
+<li>分拣负荷</li>
+<li>临时需求</li>
+</ul>
+<h3 id="3-编制方法"><a href="#3-编制方法" class="headerlink" title="3.编制方法"></a>3.编制方法</h3><h4 id="（1）标准计划法"><a href="#（1）标准计划法" class="headerlink" title="（1）标准计划法"></a>（1）标准计划法</h4><ul>
+<li><strong>大量流水分拣；稳定成批分拣</strong>；</li>
+<li>在大量分拣中，分拣线每天任务已经明确规定，并编制成标准计划，<strong>可重复使用</strong>，<strong>不需要编制工作计划</strong>；</li>
+<li>稳定成批的分拣类型班组，其工作计划也可采用标准计划法进行确定。</li>
+</ul>
+<h4 id="（2）定期计划法"><a href="#（2）定期计划法" class="headerlink" title="（2）定期计划法"></a>（2）定期计划法</h4><ul>
+<li><strong>生产任务不稳定</strong>的大量分拣和成批分拣类型；</li>
+<li>分拣任务经常变动，每隔一定时间规定一次工程内容的工序作业速度；</li>
+<li>时间长短取决于<strong>订单稳定程度、复杂程度、分拣作业各环节衔接配合程度</strong>；</li>
+<li>行业采用定期计划法，以一周为订货周期。</li>
+</ul>
+<h4 id="（3）临时派工法"><a href="#（3）临时派工法" class="headerlink" title="（3）临时派工法"></a>（3）临时派工法</h4><ul>
+<li>分拣工作任务<strong>杂而乱</strong>，且极<strong>不稳定</strong>的分拣类型；</li>
+<li>根据分拣任务、分拣准备情况实时把分拣任务分配到各分拣线；</li>
+<li>春节销售高峰</li>
+</ul>
+<h4 id="（4）看板分拣法"><a href="#（4）看板分拣法" class="headerlink" title="（4）看板分拣法"></a>（4）看板分拣法</h4><ul>
+<li>是一种传达分拣指令、回馈执行情况、合理组织分拣的科学方法；<br>板的内容：分拣时间、分拣任务、分拣作业方法</li>
+</ul>
+<ul>
+<li>作用1：任务执行人得到明确指令，保证现场作业各岗位之间相互配合，同步运行，使各环节实现“准时领料”准时分拣，准时送出</li>
+<li>作用2:便于管理者从板中发现问题。</li>
+</ul>
+<h4 id="（5）滚动计划法"><a href="#（5）滚动计划法" class="headerlink" title="（5）滚动计划法"></a>（5）滚动计划法</h4><p>依据<strong>实际执行情况和存在问题</strong>，将原计划期<strong>循序向前推进</strong>一段时间的计划编制方法，</p>
+<ul>
+<li>发挥<strong>周计划对日计划，年计划对月计划</strong>的指导作用，使计划更接近实际情况。</li>
+</ul>
+<h3 id="4-计划编制过程"><a href="#4-计划编制过程" class="headerlink" title="4.计划编制过程"></a>4.计划编制过程</h3><p>（1）<strong>储配部</strong>接到订单后，进行<strong>分拣能力分析</strong>，安排<strong>作业班组</strong>分拣任务；<br>（2）依据<strong>送货日期</strong>要求和<strong>分拣能力</strong>制订<strong>分拣作业时间计划</strong>；<br>（3）<strong>分拣班组</strong>依据<strong>订单分拣任务</strong>和<strong>作业时间安排</strong>，组织分拣；<br>（4）当日分拣计划收到<strong>其他因素</strong>影响，需对<strong>分拣作业计划</strong>进行<strong>调整</strong>；<br>（5）<strong>绩效考评员</strong>每天对<strong>各分拣班组</strong>的<strong>分拣任务、作业进度完成情况</strong>进行统计分析。</p>
+<h2 id="四、分拣作业控制"><a href="#四、分拣作业控制" class="headerlink" title="四、分拣作业控制"></a>四、分拣作业控制</h2><h3 id="1-分拣作业控制原则"><a href="#1-分拣作业控制原则" class="headerlink" title="1.分拣作业控制原则"></a>1.分拣作业控制原则</h3><h4 id="（1）过程控制原则"><a href="#（1）过程控制原则" class="headerlink" title="（1）过程控制原则"></a>（1）过程控制原则</h4><ul>
+<li>不能<strong>只关注正确的结果</strong>，也不能简单认为<strong>正确的结果由正确的过程产生</strong>，而忽视对过程的管控；</li>
+<li>作业计划安排好后过程管理要跟进，发现作业过程中的<strong>流程、作业方法、作业标准</strong>是否符合要求，纠正和改进发生的偏差，确保分拣作业的目标顺利实现。</li>
+</ul>
+<h4 id="（2）事前预防原则"><a href="#（2）事前预防原则" class="headerlink" title="（2）事前预防原则"></a>（2）事前预防原则</h4><ul>
+<li>对未来作业过程中可能发生的偏差问题在未发生前予以防止；</li>
+</ul>
+<h4 id="（3）控制关键点原理"><a href="#（3）控制关键点原理" class="headerlink" title="（3）控制关键点原理"></a>（3）控制关键点原理</h4><ul>
+<li>管理者尽可能选择计划的关键点作为控制目标，控制工作就越有效；</li>
+<li>为了进行有效的控制，需要特别注意有关键意义的因素；</li>
+<li>控制了关键点就控制了全局。</li>
+</ul>
+<h3 id="2-分拣作业控制方法"><a href="#2-分拣作业控制方法" class="headerlink" title="2.分拣作业控制方法"></a>2.分拣作业控制方法</h3><h4 id="（1）看板管理"><a href="#（1）看板管理" class="headerlink" title="（1）看板管理"></a>（1）看板管理</h4><ul>
+<li>是一种用于在同一道工序或者前后工序之间记录和传递物流工作状态，并以数、文、图表的标准化形式加以展示的管理工具。</li>
+<li>板是传达信息的媒介物，通过板，使各岗位工作任务清晰化、作业过程可视化、实现对准时制作业的改进、过程和服务的适用性，减少、避免准时制各环节在运作及服务过程中与标准作业的偏差，并促进准时制管理的协调和提升。</li>
+</ul>
+<h4 id="（2）全程监控"><a href="#（2）全程监控" class="headerlink" title="（2）全程监控"></a>（2）全程监控</h4><ul>
+<li>设立专门的监控中心和监控人员，对物流作业环节进行实时监控；</li>
+<li>对物流关键信息的全程数字化、可视化，实现物流作业的全程透明和有效管理。</li>
+</ul>
+<h4 id="（3）流程驱动"><a href="#（3）流程驱动" class="headerlink" title="（3）流程驱动"></a>（3）流程驱动</h4><ul>
+<li>以信息的传递为载体，通过及时监控作业流程各运作环节，了解各环节的衔接状态；</li>
+<li>运用看板管理、制度建设、人员问责等手段，保障各环节的高效协同，持续推进。</li>
+</ul>
+<h4 id="（4）现场管理"><a href="#（4）现场管理" class="headerlink" title="（4）现场管理"></a>（4）现场管理</h4><ul>
+<li>用科学的管理制度、标准和方法对生产现场各生产要素，人机料法环信等进行合理有效的计划、组织、协调、控制和检测，使其处于良好的结合状态，达到优质、高效、低耗、均衡、安全、文明生产的目的。</li>
+</ul>
+<h4 id="（5）质量控制"><a href="#（5）质量控制" class="headerlink" title="（5）质量控制"></a>（5）质量控制</h4><ul>
+<li>保证产品质量并使产品质量不断提高的一种质量管理方法；</li>
+<li>通过研究、分析产品质量数据的分布，揭示质量差异的规律，找出原因，采取技术组织措施，消除或控制次品或不合格品的因素，使产品在生产的全过程中每一个环节都能正常、理想的进行，最终达到人们所具备的自然属性和特性，即产品的<strong>适用性、可靠性和经济性</strong>。</li>
+<li>三个特点<ul>
+<li>数量统计方法；</li>
+<li>着重于对生产全过程中的质量控制；</li>
+<li>广泛运用各种质量数据图。</li>
+</ul>
+</li>
+<li>主要作用：<ul>
+<li>使设计、制造和检验三方面的人员在质量管理中得到协调和配合；</li>
+<li>使质量管理从单纯的事后检验发展成为对生产全过程中产品的质量控制；</li>
+<li>可以观察记录在管理图上的资料，及时分析生产过程中的质量问题，以便迅速采取措施，消除造成质量问题的隐患，使生产处于稳定状态。</li>
+</ul>
+</li>
+<li>运用此方法控制产品质量全过程的步骤<ul>
+<li><strong>订立质量标准</strong>：进行质量控制的<strong>首要条件</strong>。分为质量基础标准、成品质量标准、工艺品质标准、工艺装备质量标准、零部件质量标准、原材料和毛坯质量标准。</li>
+<li><strong>收集质量数据</strong>。进行质量控制的<strong>基础</strong>。任何质量都表现为一定的数量，任何质量的特性、差异性都必须用数据来说明。<ul>
+<li>计量数据：可以连续取值，或可以用测量工具具体测量出来，获得小数点以下数值数据；</li>
+<li>计件数据：不能连续取值，用测量工具也得不到小数点以下数据，只能得到自然数。</li>
+</ul>
+</li>
+<li><strong>运用质量图进行质量控制</strong>：是控制生产过程中产品质量变化的有效手段。控制质量的图表分为：分层图表法、排列图、因果分析图、散步图、直方图、控制图、关系图、KJ图、系统图、矩阵图、矩阵数据分析、PDPC、网络图</li>
+</ul>
+</li>
+</ul>
+<h4 id="（6）目标控制"><a href="#（6）目标控制" class="headerlink" title="（6）目标控制"></a>（6）目标控制</h4><ul>
+<li>通过制订最终目标而进行控制的一种方法；</li>
+<li>是指一个企业内部的管理工作应遵循其创建目标，分期对生产经营、销售、财务、成本等方面制订切实可行的计划，并对其执行情况进行控制的方法。</li>
+</ul>
+<h4 id="（7）PDCA"><a href="#（7）PDCA" class="headerlink" title="（7）PDCA"></a>（7）PDCA</h4><h4 id="（8）六西格玛管理法"><a href="#（8）六西格玛管理法" class="headerlink" title="（8）六西格玛管理法"></a>（8）六西格玛管理法</h4><ul>
+<li>是一种统计评估法、其核心是追求零缺陷生产、防范产品责任风险、降低成本、提高生产率和市场占用率，提高客户满意度和忠诚度。</li>
+<li>既着眼于产品、服务质量又关注过程改进；</li>
+<li>西格玛表示标准的偏差值，描述总体中个体离均值的偏离程度，该值越大，缺陷或错误就越少。</li>
+<li>100万中只有3.4是有缺陷的</li>
+<li>关注过程，特别是企业为市场和客户提供价值的核心过程；西格玛越大，过程波动越小。</li>
+<li>中心思想是，如果你能测量一个过程有多少个缺陷，你便能够有系统分析出，怎样消除它们和尽可能的接近零缺陷。</li>
+</ul>
+<h2 id="四、分拣作业效果评估分析"><a href="#四、分拣作业效果评估分析" class="headerlink" title="四、分拣作业效果评估分析"></a>四、分拣作业效果评估分析</h2><h3 id="1-分拣效果评估工具和方法"><a href="#1-分拣效果评估工具和方法" class="headerlink" title="1.分拣效果评估工具和方法"></a>1.分拣效果评估工具和方法</h3><h4 id="（1）员工比较系统："><a href="#（1）员工比较系统：" class="headerlink" title="（1）员工比较系统："></a>（1）员工比较系统：</h4><ul>
+<li><p><em>简单排序法</em>：序列评定法，</p>
+<ul>
+<li>所有人绩效<strong>由高到低</strong>排列；</li>
+<li>应用在工作评价上，评价人员对各项工作的经验认识和主观判断，相对价值进行整体比较，并加以排序；</li>
+<li>综合考虑工作职责、工作权限、岗位资格、工作条件、工作环境；</li>
+</ul>
+</li>
+<li><p><em>序列选择法</em>：</p>
+<ul>
+<li>先两端再中间，最出色第一、最差最末；</li>
+<li>名单中间人选最后选择出；</li>
+<li>往往十分高效；</li>
+<li>适用于<strong>一个团体履行同一职责</strong></li>
+</ul>
+</li>
+<li><p><em>配对比较法</em>：</p>
+<ul>
+<li>同一时间运用同一标准进行两两比较，更好次数多排第一，按更好次数排列，</li>
+<li>优点克服了高度设定的问题，强迫评估者依次逐一比较每两个成员的工作绩效；</li>
+</ul>
+</li>
+<li><p><em>强制分布法</em>：</p>
+<ul>
+<li>克服其他排序法不足，允许两个工作表现差不多的在同一位置；</li>
+<li>综合几种因素进行分等；</li>
+<li>上级主管必须把一定比例的下属分配到每个等级中去。</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）图解式评定法（图表评估尺度法、尺度评价法、业绩评定法）。"><a href="#（2）图解式评定法（图表评估尺度法、尺度评价法、业绩评定法）。" class="headerlink" title="（2）图解式评定法（图表评估尺度法、尺度评价法、业绩评定法）。"></a>（2）图解式评定法（图表评估尺度法、尺度评价法、业绩评定法）。</h4><ul>
+<li><p><em>步骤</em></p>
+<ul>
+<li>依据岗位工作的性质和特点，选择与绩效有关的若干评价要素。个体：判断能力、适应性、积极性；工作成果：工作质量、数量；行为：合作程度、工作态度；</li>
+<li>以这些评价因素为基础，确定具体的考评项目，每个项目分5-9个等级，用数字或文字表示，最优、良好、一般、较差或12345，并对各个等级尺度的含义作出具体说明；</li>
+<li>制成专用的考评量表。</li>
+</ul>
+</li>
+<li><p><em>优点：</em> </p>
+<ul>
+<li>范围大，涵盖员工个人的质量特征、行为表现、工作结果，广泛应用性；</li>
+<li>简单易行，使用方便、设计简单、汇总快捷。</li>
+</ul>
+</li>
+<li><p><em>缺点：</em></p>
+<ul>
+<li>考评的信度和效度取决于考评因素及项目的完整性和代表性以及考评人评分的准确性和正确性；</li>
+<li>在考评要素选择确定以及考评人存在问题的情况下，本法容易产生晕轮效应和集中趋势的偏误</li>
+</ul>
+</li>
+</ul>
+<h4 id="目标管理："><a href="#目标管理：" class="headerlink" title="*目标管理："></a>*目标管理：</h4><ul>
+<li><em>定义</em>：<ul>
+<li>成员亲自参加目标制定，实现自我控制；</li>
+<li>激发员工为完成组织目标而努力；</li>
+<li>适用于对主管人员的管理，所以称为管理中的管理；</li>
+</ul>
+</li>
+<li><em>步骤</em><ul>
+<li><strong>建立一套完整的目标体系</strong><ul>
+<li>从企业最高主管部门开始，由上而下逐级确定目标；</li>
+<li>目标之间是“目标-手段”的关系，直到作业层的作业目标。</li>
+</ul>
+</li>
+<li><strong>制定目标</strong><ul>
+<li>需要明确指导方针；</li>
+<li>制定目标需采取协商方式，下级制定上级批准；</li>
+</ul>
+</li>
+<li><strong>组织实施</strong><ul>
+<li>主管人员充分授权下级，自己抓关键节点和过程管理；</li>
+<li>上级管理体现在指导、协助、提出问题、纠正偏差及创造良好的工作环境方面。</li>
+</ul>
+</li>
+<li><strong>检查和评价</strong><ul>
+<li>目标完成情况，事先规定出期限，定期检查；</li>
+<li>检查方法自查、互查、专业部门检查；</li>
+<li>依据是事先确定目标；</li>
+<li>评价目标，进行奖罚，进入下一轮。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-分拣效果分析"><a href="#2-分拣效果分析" class="headerlink" title="2.分拣效果分析"></a>2.分拣效果分析</h3><blockquote>
+<p>分拣<strong>人员的专业化水平</strong>直接影响分拣作业效率和准确性；<br>配送中心分拣人员分为<strong>分拣计划负责人</strong>，<strong>分拣作业人员。</strong><br>作业流程固定后，对<strong>分拣人员配置</strong>和<strong>作业时间管理</strong>就很重要。</p>
+</blockquote>
+<ul>
+<li>分拣效率</li>
+<li>人均分拣数量</li>
+<li>分拣差错率</li>
+<li>分拣破损率</li>
+<li><strong>分拣成本分析</strong>&#x3D;计算期分拣费用额（分拣员工费+包装费+商品损耗+与分拣直接相关费用）&#x2F;计算期销售量</li>
+<li>编制分拣作业效果评估报告。（日、周、月）</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-04-04</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%B8%89%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            三级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

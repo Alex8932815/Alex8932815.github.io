@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="3.1 配送管理设计" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            3.1 配送管理设计
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%85%8D%E9%80%81%E7%AE%A1%E7%90%86-%E7%AC%AC%E4%B8%80%E8%8A%82-%E9%85%8D%E9%80%81%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1"><span class="post-toc-text">第三章 配送管理 第一节 配送方案设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E9%85%8D%E9%80%81%E9%9C%80%E6%B1%82%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%88X%EF%BC%89"><span class="post-toc-text">一、配送需求的概念（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="post-toc-text">1.定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%86%85%E5%AE%B9"><span class="post-toc-text">2.内容</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E8%B4%A8"><span class="post-toc-text">（1）质</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E9%87%8F"><span class="post-toc-text">（2）量</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E4%BA%86%E8%A7%A3%E5%AE%A2%E6%88%B7%E9%9C%80%E6%B1%82"><span class="post-toc-text">3.了解客户需求</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E9%80%81%E9%9C%80%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%84%EF%BC%88X%EF%BC%89"><span class="post-toc-text">二、配送需求的结构（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%8A%9F%E8%83%BD%E6%80%A7%E9%9C%80%E6%B1%82"><span class="post-toc-text">1.功能性需求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E9%85%8D%E9%80%81%E8%A7%84%E5%88%92%E4%B8%8E%E7%AE%A1%E5%88%B6"><span class="post-toc-text">2.配送规划与管制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%AD%96%E7%95%A5%E6%80%A7%E9%9C%80%E6%B1%82"><span class="post-toc-text">3.策略性需求</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81%E9%85%8D%E9%80%81%E9%9C%80%E6%B1%82%E8%AE%A1%E5%88%92DRP%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%88X%EF%BC%89"><span class="post-toc-text">三、配送需求计划DRP的原理（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%BA%94%E7%94%A8%E4%BC%81%E4%B8%9A"><span class="post-toc-text">1.应用企业</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%8E%9F%E7%90%86%EF%BC%88%E8%BE%93%E5%85%A53%E4%B8%AA%E6%96%87%E4%BB%B6%EF%BC%8C%E8%BE%93%E5%87%BA2%E4%B8%AA%E8%AE%A1%E5%88%92%EF%BC%89"><span class="post-toc-text">2.原理（输入3个文件，输出2个计划）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89-%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6"><span class="post-toc-text">（1） 输入文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89-%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6"><span class="post-toc-text">（2） 输出文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-DRP%E7%9A%84%E7%BC%96%E5%88%B6"><span class="post-toc-text">3.DRP的编制</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E9%85%8D%E9%80%81%E7%AD%96%E7%95%A5%EF%BC%88X%EF%BC%89"><span class="post-toc-text">四、配送策略（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E8%BD%AC%E8%BF%90%E7%AD%96%E7%95%A5"><span class="post-toc-text">1.转运策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%BB%B6%E8%BF%9F%E7%AD%96%E7%95%A5"><span class="post-toc-text">2.延迟策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E9%9B%86%E8%BF%90%E7%AD%96%E7%95%A5"><span class="post-toc-text">3.集运策略</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%94%E3%80%81%E9%85%8D%E9%80%81%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%88%86%E7%B1%BB%EF%BC%88Y%EF%BC%89"><span class="post-toc-text">五、配送服务的分类（Y）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%9C%8D%E5%8A%A1"><span class="post-toc-text">1.基本服务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1"><span class="post-toc-text">2.增值服务</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AD%E3%80%81-%E9%85%8D%E9%80%81%E5%9F%BA%E6%9C%AC%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%83%BD%E5%8A%9B%E8%A6%81%E6%B1%82%EF%BC%88X%EF%BC%89"><span class="post-toc-text">六、 配送基本服务的能力要求（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E9%85%8D%E9%80%81%E7%B3%BB%E7%BB%9F%E5%85%B7%E5%A4%87%E4%B8%80%E5%AE%9A%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%83%BD%E5%8A%9B%EF%BC%8C%E6%98%AF%E9%85%8D%E9%80%81%E4%B8%BB%E4%BD%93%E5%90%91%E7%94%A8%E6%88%B7%E6%89%BF%E8%AF%BA%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%8C%E4%B9%9F%E6%98%AF%E7%94%A8%E6%88%B7%E9%80%89%E6%8B%A9%E9%85%8D%E9%80%81%E4%B8%BB%E4%BD%93%E7%9A%84%E4%BE%9D%E6%8D%AE"><span class="post-toc-text">1.配送系统具备一定的基本能力，是配送主体向用户承诺的基础，也是用户选择配送主体的依据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E8%A1%A1%E9%87%8F%E4%B8%80%E4%B8%AA%E7%89%A9%E6%B5%81%E4%BC%81%E4%B8%9A%E6%88%96%E4%B8%80%E4%B8%AA%E9%85%8D%E9%80%81%E4%B8%BB%E4%BD%93%E7%9A%84%E9%85%8D%E9%80%81%E8%83%BD%E5%8A%9B%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%96%B9%E9%9D%A2"><span class="post-toc-text">2.衡量一个物流企业或一个配送主体的配送能力的两个方面</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89-%E8%A7%84%E6%A8%A1%E8%83%BD%E5%8A%9B"><span class="post-toc-text">（1） 规模能力</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E6%9C%8D%E5%8A%A1%E6%B0%B4%E5%87%86%E8%83%BD%E5%8A%9B"><span class="post-toc-text">（2）服务水准能力</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a-%E5%8F%AF%E5%BE%97%E6%80%A7%EF%BC%88%E7%94%A8%E6%88%B7%E6%BB%A1%E8%B6%B3%E7%8E%87%EF%BC%89"><span class="post-toc-text">a. 可得性（用户满足率）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#b-%E4%BD%9C%E4%B8%9A%E7%BB%A9%E6%95%88"><span class="post-toc-text">b. 作业绩效</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%83%E3%80%81%E9%85%8D%E9%80%81%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%86%85%E5%AE%B9"><span class="post-toc-text">七、配送增值服务的内容</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E4%BB%A5%E9%A1%BE%E5%AE%A2%E4%B8%BA%E6%A0%B8%E5%BF%83%E7%9A%84%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1"><span class="post-toc-text">1.以顾客为核心的增值服务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E4%BB%A5%E4%BF%83%E9%94%80%E4%B8%BA%E6%A0%B8%E5%BF%83%E7%9A%84%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1"><span class="post-toc-text">2.以促销为核心的增值服务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E4%BB%A5%E5%88%B6%E9%80%A0%E4%B8%BA%E6%A0%B8%E5%BF%83%E7%9A%84%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1"><span class="post-toc-text">3.以制造为核心的增值服务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%BB%A5%E6%97%B6%E9%97%B4%E4%B8%BA%E6%A0%B8%E5%BF%83%E7%9A%84%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1"><span class="post-toc-text">4.以时间为核心的增值服务</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AB%E3%80%81%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%88Z%EF%BC%89"><span class="post-toc-text">八、增值服务的功能（Z）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%A2%9E%E5%8A%A0%E4%BE%BF%E5%88%A9%E6%80%A7"><span class="post-toc-text">1.增加便利性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%8A%A0%E5%BF%AB%E5%8F%8D%E5%BA%94%E9%80%9F%E5%BA%A6"><span class="post-toc-text">2.加快反应速度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E9%99%8D%E4%BD%8E%E7%89%A9%E6%B5%81%E6%88%90%E6%9C%AC"><span class="post-toc-text">3.降低物流成本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%B8%9A%E5%8A%A1%E5%BB%B6%E4%BC%B8"><span class="post-toc-text">4.业务延伸</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B9%9D%E3%80%81%E9%85%8D%E9%80%81%E7%BB%A9%E6%95%88%E8%AF%84%E4%BC%B0%EF%BC%88X%EF%BC%89"><span class="post-toc-text">九、配送绩效评估（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E4%BA%BA%E5%91%98%E5%88%A9%E7%94%A8%E7%8E%87"><span class="post-toc-text">1.人员利用率</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E8%BD%A6%E8%BE%86%E5%88%A9%E7%94%A8%E7%8E%87"><span class="post-toc-text">2.车辆利用率</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E9%85%8D%E9%80%81%E8%A7%84%E5%88%92"><span class="post-toc-text">3.配送规划</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87"><span class="post-toc-text">4.时间效率</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E9%85%8D%E9%80%81%E6%88%90%E6%9C%AC"><span class="post-toc-text">5.配送成本</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="第三章-配送管理-第一节-配送方案设计"><a href="#第三章-配送管理-第一节-配送方案设计" class="headerlink" title="第三章 配送管理 第一节 配送方案设计"></a>第三章 配送管理 第一节 配送方案设计</h1><h2 id="一、配送需求的概念（X）"><a href="#一、配送需求的概念（X）" class="headerlink" title="一、配送需求的概念（X）"></a>一、配送需求的概念（X）</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><ul>
+<li>一定时期内客户由于经营的需要而产生的对货物在<strong>空间、时间和费用</strong>方面的要求</li>
+<li>涉及订单处理、库存、运输、装卸搬运、流通加工以及与之相关的信息需求等配送活动的各环节</li>
+</ul>
+<h3 id="2-内容"><a href="#2-内容" class="headerlink" title="2.内容"></a>2.内容</h3><h4 id="（1）质"><a href="#（1）质" class="headerlink" title="（1）质"></a>（1）质</h4><ul>
+<li><p><strong>配送规模</strong></p>
+<ul>
+<li>订单处理</li>
+<li>库存</li>
+<li>运输（是实现空间转换的中心环节）</li>
+<li>装卸搬运</li>
+<li>流通加工</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）量"><a href="#（2）量" class="headerlink" title="（2）量"></a>（2）量</h4><ul>
+<li><p><strong>配送服务质量</strong></p>
+<ul>
+<li>配送时间</li>
+<li>配送费用</li>
+<li>配送效率</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-了解客户需求"><a href="#3-了解客户需求" class="headerlink" title="3.了解客户需求"></a>3.了解客户需求</h3><ul>
+<li>个体研究不重要，一群<strong>客户进行分类</strong></li>
+<li>分类目的在于掌握各类客户在<strong>时间、地域分布、订货量、货品喜好</strong>等方面特点</li>
+</ul>
+<h2 id="二、配送需求的结构（X）"><a href="#二、配送需求的结构（X）" class="headerlink" title="二、配送需求的结构（X）"></a>二、配送需求的结构（X）</h2><h3 id="1-功能性需求"><a href="#1-功能性需求" class="headerlink" title="1.功能性需求"></a>1.功能性需求</h3><ul>
+<li>配送作业层次</li>
+</ul>
+<h3 id="2-配送规划与管制"><a href="#2-配送规划与管制" class="headerlink" title="2.配送规划与管制"></a>2.配送规划与管制</h3><ul>
+<li>管理层次</li>
+</ul>
+<h3 id="3-策略性需求"><a href="#3-策略性需求" class="headerlink" title="3.策略性需求"></a>3.策略性需求</h3><ul>
+<li><p><strong>策略目标</strong></p>
+<ul>
+<li>成本</li>
+<li>品质</li>
+<li>速度</li>
+<li>弹性</li>
+</ul>
+</li>
+<li><p>建立<strong>信息共享机制</strong>以实现配送信息的共享与沟通</p>
+</li>
+</ul>
+<h2 id="三、配送需求计划DRP的原理（X）"><a href="#三、配送需求计划DRP的原理（X）" class="headerlink" title="三、配送需求计划DRP的原理（X）"></a>三、配送需求计划DRP的原理（X）</h2><h3 id="1-应用企业"><a href="#1-应用企业" class="headerlink" title="1.应用企业"></a>1.应用企业</h3><ul>
+<li>流通企业</li>
+<li>制造企业</li>
+</ul>
+<h3 id="2-原理（输入3个文件，输出2个计划）"><a href="#2-原理（输入3个文件，输出2个计划）" class="headerlink" title="2.原理（输入3个文件，输出2个计划）"></a>2.原理（输入3个文件，输出2个计划）</h3><h4 id="（1）-输入文件"><a href="#（1）-输入文件" class="headerlink" title="（1） 输入文件"></a>（1） 输入文件</h4><ul>
+<li><p><strong>社会需求文件</strong></p>
+<ul>
+<li>订货单</li>
+<li>提货单</li>
+<li>供货合同</li>
+<li>市场预测</li>
+</ul>
+</li>
+<li><p><strong>库存文件</strong></p>
+<ul>
+<li>对自有库存货物进行统计，以便针对社会需求量确定必要的进货量</li>
+</ul>
+</li>
+<li><p><strong>生产厂家资源文件</strong></p>
+<ul>
+<li>可供应的物资品种</li>
+<li>生产厂家的地理位置（与订货提前期有关）</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）-输出文件"><a href="#（2）-输出文件" class="headerlink" title="（2） 输出文件"></a>（2） 输出文件</h4><ul>
+<li><p><strong>送货计划</strong></p>
+<ul>
+<li>对用户的送货计划</li>
+</ul>
+</li>
+<li><p><strong>订货、进货计划</strong></p>
+</li>
+</ul>
+<h3 id="3-DRP的编制"><a href="#3-DRP的编制" class="headerlink" title="3.DRP的编制"></a>3.DRP的编制</h3><ul>
+<li>从<strong>最底层的客户需求开始，逐层向上累计</strong>，直至配送系统的最高层</li>
+<li>预测需求或订单</li>
+<li>一级配送点确定向供货厂商补充订货的日期和数量<br>DRP编制以周为单位</li>
+</ul>
+<h2 id="四、配送策略（X）"><a href="#四、配送策略（X）" class="headerlink" title="四、配送策略（X）"></a>四、配送策略（X）</h2><h3 id="1-转运策略"><a href="#1-转运策略" class="headerlink" title="1.转运策略"></a>1.转运策略</h3><ul>
+<li>为了满足<strong>应急</strong>需要，在<strong>同一层次</strong>的物流中心之间进行货物的调度的运输；</li>
+<li>由于<strong>预测不准确进行配送</strong>后，各需求点上的商品不能符合实际需求，需要进行调整而发生的商品运输</li>
+<li>转运是<strong>零售层次上</strong>最常用的<strong>补救</strong>方法；如直接运输和直通运输模式</li>
+</ul>
+<h3 id="2-延迟策略"><a href="#2-延迟策略" class="headerlink" title="2.延迟策略"></a>2.延迟策略</h3><ul>
+<li><p><em>传统物流系统</em></p>
+<ul>
+<li>对未来需求的预估来决定库存量的多少，以库存来保证需要被满足，并达到一定的服务水平</li>
+</ul>
+</li>
+<li><p><em>现代信息技术支持下物流系统</em></p>
+<ul>
+<li><p><em>生产延迟</em></p>
+<ul>
+<li>使产品的最后<strong>制造延至收到了客户的订单</strong>后再进行，从而使不合适的生产和库存被减少或被消除</li>
+</ul>
+</li>
+<li><p><em>物流延迟</em></p>
+<ul>
+<li>使产品的<strong>最后配送延至收到了客户的订单后</strong>再进行，从而使不合适的生产和库存被减少或被消除</li>
+<li><strong>零库存</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-集运策略"><a href="#3-集运策略" class="headerlink" title="3.集运策略"></a>3.集运策略</h3><ul>
+<li><p>延迟克服了<strong>预估造成库存量大的不足</strong>，但同时也会<strong>影响运输规模效益</strong>的实现</p>
+</li>
+<li><p>集运是为了<strong>在延迟技术下继续维持运输的规模效益</strong>而采用的一种技术</p>
+</li>
+<li><p>增大运输规模，一次装运数量达到足够大</p>
+</li>
+<li><p><strong>措施</strong></p>
+<ul>
+<li><strong>集中小批量用户</strong>的货物进行配送</li>
+<li>在有选择的日期对<strong>特定的市场送货，联营送货</strong></li>
+<li><strong>第三方物流公司</strong>提供物流服务</li>
+</ul>
+</li>
+<li><p><strong>集运是一次性</strong>的，共同配送是企业之间比较稳定的合作</p>
+</li>
+</ul>
+<h2 id="五、配送服务的分类（Y）"><a href="#五、配送服务的分类（Y）" class="headerlink" title="五、配送服务的分类（Y）"></a>五、配送服务的分类（Y）</h2><h3 id="1-基本服务"><a href="#1-基本服务" class="headerlink" title="1.基本服务"></a>1.基本服务</h3><ul>
+<li><strong>基本业务关系</strong>的客户服务方案，一定层次上给予<strong>同等对待</strong></li>
+</ul>
+<h3 id="2-增值服务"><a href="#2-增值服务" class="headerlink" title="2.增值服务"></a>2.增值服务</h3><ul>
+<li>特定服务，超出基本服务范围的<strong>附加服务</strong></li>
+</ul>
+<h2 id="六、-配送基本服务的能力要求（X）"><a href="#六、-配送基本服务的能力要求（X）" class="headerlink" title="六、 配送基本服务的能力要求（X）"></a>六、 配送基本服务的能力要求（X）</h2><h3 id="1-配送系统具备一定的基本能力，是配送主体向用户承诺的基础，也是用户选择配送主体的依据"><a href="#1-配送系统具备一定的基本能力，是配送主体向用户承诺的基础，也是用户选择配送主体的依据" class="headerlink" title="1.配送系统具备一定的基本能力，是配送主体向用户承诺的基础，也是用户选择配送主体的依据"></a>1.配送系统具备一定的基本能力，是配送主体向用户承诺的基础，也是用户选择配送主体的依据</h3><h3 id="2-衡量一个物流企业或一个配送主体的配送能力的两个方面"><a href="#2-衡量一个物流企业或一个配送主体的配送能力的两个方面" class="headerlink" title="2.衡量一个物流企业或一个配送主体的配送能力的两个方面"></a>2.衡量一个物流企业或一个配送主体的配送能力的两个方面</h3><h4 id="（1）-规模能力"><a href="#（1）-规模能力" class="headerlink" title="（1） 规模能力"></a>（1） 规模能力</h4><ul>
+<li>存储能力</li>
+<li>吞吐能力</li>
+<li>运输周转能力</li>
+<li>流通加工能力</li>
+</ul>
+<h4 id="（2）服务水准能力"><a href="#（2）服务水准能力" class="headerlink" title="（2）服务水准能力"></a>（2）服务水准能力</h4><h5 id="a-可得性（用户满足率）"><a href="#a-可得性（用户满足率）" class="headerlink" title="a. 可得性（用户满足率）"></a>a. 可得性（用户满足率）</h5><ul>
+<li><p>定义</p>
+<ul>
+<li>从<strong>用户对物品的需求</strong>是否能<strong>得到满足</strong>的角度提出来的服务水平</li>
+</ul>
+</li>
+<li><p>实现途径</p>
+<ul>
+<li><em>传统</em>：通过对用户的需求预测<strong>设定库存</strong>，保证用户需求满足</li>
+<li><em>现代</em>：<strong>生产延迟、物流延迟</strong></li>
+</ul>
+</li>
+<li><p>衡量指标</p>
+<ul>
+<li><strong>缺货频率</strong></li>
+<li><strong>缺货率</strong></li>
+</ul>
+</li>
+</ul>
+<h5 id="b-作业绩效"><a href="#b-作业绩效" class="headerlink" title="b. 作业绩效"></a>b. 作业绩效</h5><ul>
+<li><p>配送活动对<strong>期望的时间和可接收的变化</strong>所承担的义务</p>
+</li>
+<li><p><em>作业速度</em></p>
+<ul>
+<li>反映配送系统是否能<strong>及时满足用户服务需求的能力</strong></li>
+</ul>
+</li>
+<li><p><em>一致性</em></p>
+<ul>
+<li>必须随时按照<strong>配送承诺加以履行的能力</strong></li>
+<li>每次到货时间要稳定，不能随机性太大</li>
+</ul>
+</li>
+<li><p><em>灵活性</em></p>
+<ul>
+<li>反映系统应付用户<strong>异常需求变化的能力</strong></li>
+<li>增减数量，改变到货地点</li>
+</ul>
+</li>
+<li><p><em>故障与恢复</em></p>
+</li>
+<li><p><em>提供精确信息</em></p>
+<ul>
+<li>能否向用户提供精确的配送信息</li>
+</ul>
+</li>
+<li><p><em>持续改善</em></p>
+<ul>
+<li>可靠性</li>
+</ul>
+</li>
+</ul>
+<h2 id="七、配送增值服务的内容"><a href="#七、配送增值服务的内容" class="headerlink" title="七、配送增值服务的内容"></a>七、配送增值服务的内容</h2><h3 id="1-以顾客为核心的增值服务"><a href="#1-以顾客为核心的增值服务" class="headerlink" title="1.以顾客为核心的增值服务"></a>1.以顾客为核心的增值服务</h3><ul>
+<li>处理客户向<strong>供应商订货</strong></li>
+<li>直接<strong>送货到商店</strong>或客户家</li>
+<li>按照<strong>零售店货架储备所需的明细货品规格</strong>持续提供配送服务</li>
+</ul>
+<h3 id="2-以促销为核心的增值服务"><a href="#2-以促销为核心的增值服务" class="headerlink" title="2.以促销为核心的增值服务"></a>2.以促销为核心的增值服务</h3><ul>
+<li>为用户提供<strong>有利于用户营销活动</strong>的服务</li>
+</ul>
+<h3 id="3-以制造为核心的增值服务"><a href="#3-以制造为核心的增值服务" class="headerlink" title="3.以制造为核心的增值服务"></a>3.以制造为核心的增值服务</h3><ul>
+<li>为客户提供有利于生产制造的特殊服务，使<strong>生产过程的后向或前向延伸</strong>，使通过配送为生产企业提供的原材料、燃料、零部件进入生产消耗过程时尽可能减少准备活动和准备时间</li>
+<li><strong>玻璃套裁</strong></li>
+<li><strong>金属剪切</strong></li>
+<li><strong>木材初加工</strong></li>
+</ul>
+<h3 id="4-以时间为核心的增值服务"><a href="#4-以时间为核心的增值服务" class="headerlink" title="4.以时间为核心的增值服务"></a>4.以时间为核心的增值服务</h3><ul>
+<li>运用<strong>延迟技术</strong>，使配送作业在收到用户订单时才开始启动，并将物品直接配送到生产线或零售店的货架上</li>
+<li><strong>零库存</strong></li>
+</ul>
+<h2 id="八、增值服务的功能（Z）"><a href="#八、增值服务的功能（Z）" class="headerlink" title="八、增值服务的功能（Z）"></a>八、增值服务的功能（Z）</h2><h3 id="1-增加便利性"><a href="#1-增加便利性" class="headerlink" title="1.增加便利性"></a>1.增加便利性</h3><ul>
+<li><strong>一切能够简化手续、简化操作的服务都是增值性服务</strong></li>
+<li>简化<strong>不是服务内容的简化</strong>，而是消费者为了获得某种服务，本需要消费者自己做的一些事情，以<strong>物流供应商</strong>以各种方式<strong>代替消费者做了</strong>。</li>
+</ul>
+<h3 id="2-加快反应速度"><a href="#2-加快反应速度" class="headerlink" title="2.加快反应速度"></a>2.加快反应速度</h3><ul>
+<li><p><em>传统</em>：<strong>提高运输工具的速度或采用快速的运输方式</strong></p>
+</li>
+<li><p><em>现代</em>：</p>
+<ul>
+<li><strong>优化配送系统结构</strong></li>
+<li><strong>重组业务流程</strong></li>
+<li><strong>重新设计适合客户的流通渠道</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-降低物流成本"><a href="#3-降低物流成本" class="headerlink" title="3.降低物流成本"></a>3.降低物流成本</h3><ul>
+<li><strong>共同配送</strong></li>
+<li><strong>提高规模效益</strong></li>
+<li><strong>准时制配送</strong></li>
+<li><strong>降低库存费用</strong></li>
+<li>原材料、零部件与产成品的<strong>双向配送</strong></li>
+<li>提高运输<strong>工具的利用率</strong></li>
+</ul>
+<h3 id="4-业务延伸"><a href="#4-业务延伸" class="headerlink" title="4.业务延伸"></a>4.业务延伸</h3><ul>
+<li><p>配送或物流以外的功能延伸</p>
+</li>
+<li><p><em>向上</em></p>
+<ul>
+<li>市场调查与预测</li>
+<li>采购及订单处理</li>
+</ul>
+</li>
+<li><p><em>向下</em></p>
+<ul>
+<li>物流咨询</li>
+<li>物流系统设计</li>
+<li>物流方案的规划与选择</li>
+<li>库存控制决策建议</li>
+<li>贷款回收与结算</li>
+<li>教育与培训</li>
+</ul>
+</li>
+</ul>
+<h2 id="九、配送绩效评估（X）"><a href="#九、配送绩效评估（X）" class="headerlink" title="九、配送绩效评估（X）"></a>九、配送绩效评估（X）</h2><h3 id="1-人员利用率"><a href="#1-人员利用率" class="headerlink" title="1.人员利用率"></a>1.人员利用率</h3><ul>
+<li>6人均</li>
+</ul>
+<h3 id="2-车辆利用率"><a href="#2-车辆利用率" class="headerlink" title="2.车辆利用率"></a>2.车辆利用率</h3><ul>
+<li><strong>平均每台车</strong>配送金额</li>
+<li><strong>平均每台车</strong>配送吨公里和平均每台车配送距离</li>
+<li><strong>满载车次比率</strong></li>
+<li><strong>空车率</strong></li>
+</ul>
+<h3 id="3-配送规划"><a href="#3-配送规划" class="headerlink" title="3.配送规划"></a>3.配送规划</h3><ul>
+<li><strong>车辆满载率</strong></li>
+<li><strong>平均每车次</strong>配送重量</li>
+<li><strong>平均每车次</strong>配送距离</li>
+<li><strong>平均每车次</strong>配送吨公里数</li>
+<li><strong>外用车比率</strong></li>
+<li><strong>配送平均速度</strong></li>
+</ul>
+<h3 id="4-时间效率"><a href="#4-时间效率" class="headerlink" title="4.时间效率"></a>4.时间效率</h3><ul>
+<li><strong>季节品</strong>比率</li>
+<li><strong>配送时间</strong>比率</li>
+<li><strong>单位时间</strong>配送量</li>
+<li><strong>单位时间</strong>配送生产力</li>
+</ul>
+<h3 id="5-配送成本"><a href="#5-配送成本" class="headerlink" title="5.配送成本"></a>5.配送成本</h3><ul>
+<li>6成本➕延迟率</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2022-09-28</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%BA%8C%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            二级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="5.2 运输调度" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            5.2 运输调度
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%AC%AC%E4%BA%8C%E8%8A%82-%E8%BF%90%E8%BE%93%E8%B0%83%E5%BA%A6"><span class="post-toc-text">第五章 第二节 运输调度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93%E8%AE%A1%E5%88%92%EF%BC%88X%EF%BC%89"><span class="post-toc-text">一、货物运输计划（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="post-toc-text">1.内容：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93%E9%87%8F%E8%AE%A1%E5%88%92"><span class="post-toc-text">（1）货物运输量计划</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93%E5%B7%A5%E5%85%B7%E8%AE%A1%E5%88%92%EF%BC%88%E5%B9%B4%E5%BA%A6%EF%BC%89"><span class="post-toc-text">（2）货物运输工具计划（年度）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93%E5%B7%A5%E5%85%B7%E8%BF%90%E7%94%A8%E8%AE%A1%E5%88%92%EF%BC%88%E6%9C%88%E5%BA%A6%EF%BC%89"><span class="post-toc-text">（3）货物运输工具运用计划（月度）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%A7%8D%E7%B1%BB"><span class="post-toc-text">2.种类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E6%A0%B9%E6%8D%AE%E5%85%B6%E7%BC%96%E5%88%B6%E6%9C%9F%E9%99%90%E5%88%86%E7%B1%BB"><span class="post-toc-text">（1）根据其编制期限分类</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E6%8C%89%E5%85%B6%E8%BF%90%E8%BE%93%E6%96%B9%E5%BC%8F%E5%88%86%E7%B1%BB"><span class="post-toc-text">（2）按其运输方式分类</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E6%8C%89%E8%B4%A7%E8%BF%90%E6%97%A5%E5%B8%B8%E5%B7%A5%E4%BD%9C%E7%BB%84%E7%BB%87%E8%A6%81%E6%B1%82%E5%88%86%E7%B1%BB"><span class="post-toc-text">（3）按货运日常工作组织要求分类</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E8%BF%90%E8%BE%93%E8%B7%AF%E7%BA%BF%E4%BC%98%E5%8C%96%EF%BC%88X%EF%BC%89"><span class="post-toc-text">二、运输路线优化（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E8%A1%A8%E4%B8%8A%E4%BD%9C%E4%B8%9A%E6%B3%95"><span class="post-toc-text">1.表上作业法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E4%BE%9D%E6%8D%AE%E4%BE%9B%E9%9C%80%E5%B9%B3%E8%A1%A1%E8%A1%A8%E5%92%8C%E8%BF%90%E4%BB%B7%E8%A1%A8%E8%BF%90%E7%94%A8%E6%9C%80%E5%B0%8F%E5%85%83%E7%B4%A0%E6%B3%95%E7%A1%AE%E5%AE%9A%E5%88%9D%E5%A7%8B%E8%B0%83%E8%BF%90%E6%96%B9%E6%A1%88%E3%80%82"><span class="post-toc-text">（1）依据供需平衡表和运价表运用最小元素法确定初始调运方案。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E6%9C%80%E4%BC%98%E6%80%A7%E6%A3%80%E9%AA%8C%EF%BC%9A"><span class="post-toc-text">（2）最优性检验：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%9B%BE%E4%B8%8A%E4%BD%9C%E4%B8%9A%E6%B3%95"><span class="post-toc-text">2.图上作业法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E7%A0%B4%E5%9C%88%EF%BC%9A%E7%A0%B4%E9%99%A4%E5%9C%88%E4%B8%AD%E6%9C%80%E9%95%BF%E7%9A%84%E9%82%A3%E6%9D%A1"><span class="post-toc-text">（1）破圈：破除圈中最长的那条</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E7%94%BB%E6%B5%81%E5%90%91%E5%9B%BE"><span class="post-toc-text">（2）画流向图</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E6%A3%80%E9%AA%8C%E5%86%85%E5%9C%88%E5%92%8C%E5%A4%96%E5%9C%88%E5%92%8C%E5%B0%8F%E4%BA%8E%E5%9C%88%E9%95%BF%E7%9A%84%E4%B8%80%E5%8D%8A%EF%BC%8C%E5%A6%82%E6%9E%9C%E4%B8%8D%E6%98%AF%EF%BC%8C%E5%88%99%E5%93%AA%E4%B8%AA%E5%A4%9A%E4%BA%86%E5%B0%B1%E5%87%8F%E5%8E%BB%E5%93%AA%E4%B8%AA%E5%9C%88%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B5%81%E9%87%8F"><span class="post-toc-text">（3）检验内圈和外圈和小于圈长的一半，如果不是，则哪个多了就减去哪个圈的最小流量</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89-%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93%E8%B0%83%E5%BA%A6%EF%BC%88X%EF%BC%89"><span class="post-toc-text">三.货物运输调度（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%AF%B9%E8%BF%90%E8%BE%93%E5%B7%A5%E5%85%B7%E7%9A%84%E8%B0%83%E5%BA%A6"><span class="post-toc-text">1.对运输工具的调度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E6%A3%80%E6%9F%A5%E8%BF%90%E8%BE%93%E5%B7%A5%E5%85%B7%E4%BD%9C%E4%B8%9A%E8%AE%A1%E5%88%92%E7%9A%84%E6%89%A7%E8%A1%8C%E6%83%85%E5%86%B5"><span class="post-toc-text">2.检查运输工具作业计划的执行情况</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%BB%84%E7%BB%87%E8%B4%A7%E6%BA%90%E7%9A%84%E9%85%8D%E8%BD%BD"><span class="post-toc-text">3.组织货源的配载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E8%BF%90%E8%BE%93%E8%B7%AF%E7%BA%BF%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%B0%83%E6%95%B4"><span class="post-toc-text">4.运输路线的设计和调整</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E8%BF%90%E8%BE%93%E7%9B%91%E6%8E%A7"><span class="post-toc-text">5.运输监控</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E8%BF%90%E8%BE%93%E8%B0%83%E5%BA%A6%E6%96%B9%E6%B3%95"><span class="post-toc-text">2.运输调度方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E4%BB%A5%E8%B4%A7%E6%B5%81%E4%B8%BA%E5%9F%BA%E7%A1%80%EF%BC%8C%E7%BB%84%E7%BB%87%E8%BF%90%E8%BE%93%E5%B7%A5%E5%85%B7"><span class="post-toc-text">（1）以货流为基础，组织运输工具</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E5%BD%B1%E5%93%8D%E8%BF%90%E8%BE%93%E8%AE%A1%E5%88%92%E5%9B%A0%E7%B4%A0%E7%9A%84%E5%A4%84%E7%90%86"><span class="post-toc-text">（2）影响运输计划因素的处理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a-%E5%BD%B1%E5%93%8D%E8%BF%90%E8%BE%93%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C%E7%9A%84%E5%9B%A0%E7%B4%A0"><span class="post-toc-text">a.影响运输计划执行的因素</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#b-%E8%BF%90%E8%BE%93%E8%AE%A1%E5%88%92%E8%A2%AB%E6%89%93%E4%B9%B1%E6%97%B6%EF%BC%8C%E5%BA%94%E7%AB%8B%E5%8D%B3%E9%87%87%E5%8F%96%E7%9A%84%E6%9C%89%E6%95%88%E8%B0%83%E8%8A%82%E6%8E%AA%E6%96%BD%EF%BC%8C%E5%85%B6%E5%8E%9F%E5%88%99%E6%98%AF"><span class="post-toc-text">b.运输计划被打乱时，应立即采取的有效调节措施，其原则是</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E5%8A%A0%E5%BC%BA%E8%BF%90%E8%BE%93%E8%AE%A1%E5%88%92%E6%A3%80%E6%9F%A5"><span class="post-toc-text">（3）加强运输计划检查</span></a></li></ol></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="第五章-第二节-运输调度"><a href="#第五章-第二节-运输调度" class="headerlink" title="第五章 第二节 运输调度"></a>第五章 第二节 运输调度</h1><h2 id="一、货物运输计划（X）"><a href="#一、货物运输计划（X）" class="headerlink" title="一、货物运输计划（X）"></a>一、货物运输计划（X）</h2><h3 id="1-内容："><a href="#1-内容：" class="headerlink" title="1.内容："></a>1.内容：</h3><h4 id="（1）货物运输量计划"><a href="#（1）货物运输量计划" class="headerlink" title="（1）货物运输量计划"></a>（1）货物运输量计划</h4><ul>
+<li>预计在计划期内完成的<strong>货物运输量和周转量</strong></li>
+</ul>
+<h4 id="（2）货物运输工具计划（年度）"><a href="#（2）货物运输工具计划（年度）" class="headerlink" title="（2）货物运输工具计划（年度）"></a>（2）货物运输工具计划（年度）</h4><ul>
+<li>确定计划期内的<strong>运输能力</strong>，反映企业在计划期内的<strong>平均运输能力</strong>与<strong>营运工具数量</strong></li>
+</ul>
+<h4 id="（3）货物运输工具运用计划（月度）"><a href="#（3）货物运输工具运用计划（月度）" class="headerlink" title="（3）货物运输工具运用计划（月度）"></a>（3）货物运输工具运用计划（月度）</h4><ul>
+<li>反映<strong>营运工具</strong>的<strong>使用效率</strong></li>
+<li><strong>运输工具的平均完好率</strong></li>
+<li><strong>工作效率</strong></li>
+<li><strong>行程使用率</strong></li>
+<li>该计划以<strong>月度</strong>形式反映</li>
+</ul>
+<h3 id="2-种类"><a href="#2-种类" class="headerlink" title="2.种类"></a>2.种类</h3><h4 id="（1）根据其编制期限分类"><a href="#（1）根据其编制期限分类" class="headerlink" title="（1）根据其编制期限分类"></a>（1）根据其编制期限分类</h4><ul>
+<li>长远计划</li>
+<li>年度计划</li>
+<li>月度计划</li>
+</ul>
+<h4 id="（2）按其运输方式分类"><a href="#（2）按其运输方式分类" class="headerlink" title="（2）按其运输方式分类"></a>（2）按其运输方式分类</h4><ul>
+<li>整车运输计划</li>
+<li>零担运输计划</li>
+<li>集装箱运输计划</li>
+</ul>
+<h4 id="（3）按货运日常工作组织要求分类"><a href="#（3）按货运日常工作组织要求分类" class="headerlink" title="（3）按货运日常工作组织要求分类"></a>（3）按货运日常工作组织要求分类</h4><ul>
+<li>月度计划</li>
+<li>日计划</li>
+</ul>
+<h2 id="二、运输路线优化（X）"><a href="#二、运输路线优化（X）" class="headerlink" title="二、运输路线优化（X）"></a>二、运输路线优化（X）</h2><h3 id="1-表上作业法"><a href="#1-表上作业法" class="headerlink" title="1.表上作业法"></a>1.表上作业法</h3><h4 id="（1）依据供需平衡表和运价表运用最小元素法确定初始调运方案。"><a href="#（1）依据供需平衡表和运价表运用最小元素法确定初始调运方案。" class="headerlink" title="（1）依据供需平衡表和运价表运用最小元素法确定初始调运方案。"></a>（1）依据供需平衡表和运价表运用最小元素法确定初始调运方案。</h4><table>
+<thead>
+<tr>
+<th align="center">产地&#x2F;销量</th>
+<th align="center">B1</th>
+<th align="center">B2</th>
+<th align="center">B3</th>
+<th align="center">B4</th>
+<th align="center">产量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a</td>
+</tr>
+<tr>
+<td align="center">A2</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">b</td>
+</tr>
+<tr>
+<td align="center">A3</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">c</td>
+</tr>
+<tr>
+<td align="center">销量&#x2F;需求量</td>
+<td align="center">e</td>
+<td align="center">f</td>
+<td align="center">g</td>
+<td align="center">h</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>在供需平衡表中对应运价表的运价，从最小的开始调运。</p>
+<h4 id="（2）最优性检验："><a href="#（2）最优性检验：" class="headerlink" title="（2）最优性检验："></a>（2）最优性检验：</h4><table>
+<thead>
+<tr>
+<th align="center">产量&#x2F;销量</th>
+<th align="center">B1</th>
+<th align="center">B2</th>
+<th align="center">B3</th>
+<th align="center">B4</th>
+<th align="center">位势值u</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a1</td>
+<td align="center">a2</td>
+<td align="center">u1</td>
+</tr>
+<tr>
+<td align="center">A2</td>
+<td align="center">b1</td>
+<td align="center"></td>
+<td align="center">b2</td>
+<td align="center"></td>
+<td align="center">u2</td>
+</tr>
+<tr>
+<td align="center">A3</td>
+<td align="center"></td>
+<td align="center">c1</td>
+<td align="center"></td>
+<td align="center">c2</td>
+<td align="center">u3</td>
+</tr>
+<tr>
+<td align="center">位势值v</td>
+<td align="center">v1</td>
+<td align="center">v2</td>
+<td align="center">v3</td>
+<td align="center">v4</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>上表中有<strong>数字的</strong>检验数都是为0，也就是可以列方程求出所有u和v</p>
+<ul>
+<li>A1B3运价&#x3D;u1+v3</li>
+<li>A1B4运价&#x3D;U1+V4</li>
+<li>A2B1运价&#x3D;U2+V1</li>
+<li>A2B3运价&#x3D;U2+V3</li>
+<li>A3B2运价&#x3D;U3+V2</li>
+<li>A3B4运价&#x3D;U3+V4<br>令U1&#x3D;0，求得所有位势<br>再求<strong>空格内</strong>的检验数<br>检验数&#x3D;空格的运价-u-v<br>检验数都大于0即调运方案最优，如有小于0，则从小于0的那个点出发，绘制闭合回路，如果有多个小于0，则以最小的那个空格出发绘制回路，遇到有数字的方格就转折，直到形成闭合回路。然后取闭合回路中<strong>偶数序号顶点的最小运量为调整量</strong>，<strong>奇加偶减</strong>，调整后，再算位势和检验数，直到检验数全为正的为止。</li>
+</ul>
+<h3 id="2-图上作业法"><a href="#2-图上作业法" class="headerlink" title="2.图上作业法"></a>2.图上作业法</h3><h4 id="（1）破圈：破除圈中最长的那条"><a href="#（1）破圈：破除圈中最长的那条" class="headerlink" title="（1）破圈：破除圈中最长的那条"></a>（1）破圈：破除圈中最长的那条</h4><h4 id="（2）画流向图"><a href="#（2）画流向图" class="headerlink" title="（2）画流向图"></a>（2）画流向图</h4><h4 id="（3）检验内圈和外圈和小于圈长的一半，如果不是，则哪个多了就减去哪个圈的最小流量"><a href="#（3）检验内圈和外圈和小于圈长的一半，如果不是，则哪个多了就减去哪个圈的最小流量" class="headerlink" title="（3）检验内圈和外圈和小于圈长的一半，如果不是，则哪个多了就减去哪个圈的最小流量"></a>（3）检验内圈和外圈和小于圈长的一半，如果不是，则哪个多了就减去哪个圈的最小流量</h4><h2 id="三-货物运输调度（X）"><a href="#三-货物运输调度（X）" class="headerlink" title="三.货物运输调度（X）"></a>三.货物运输调度（X）</h2><h3 id="1-对运输工具的调度"><a href="#1-对运输工具的调度" class="headerlink" title="1.对运输工具的调度"></a>1.对运输工具的调度</h3><ul>
+<li>可使货源、运载工具、装卸设备和作业人员处于就绪状态</li>
+</ul>
+<h3 id="2-检查运输工具作业计划的执行情况"><a href="#2-检查运输工具作业计划的执行情况" class="headerlink" title="2.检查运输工具作业计划的执行情况"></a>2.检查运输工具作业计划的执行情况</h3><ul>
+<li>可以对运输计划随时调节、控制和校正</li>
+</ul>
+<h3 id="3-组织货源的配载"><a href="#3-组织货源的配载" class="headerlink" title="3.组织货源的配载"></a>3.组织货源的配载</h3><ul>
+<li>根据货物的流量、流向和变化规律，利用配载网络组织货源的配载</li>
+</ul>
+<h3 id="4-运输路线的设计和调整"><a href="#4-运输路线的设计和调整" class="headerlink" title="4.运输路线的设计和调整"></a>4.运输路线的设计和调整</h3><ul>
+<li>运输调度根据情况设计和调整运输线路</li>
+</ul>
+<h3 id="5-运输监控"><a href="#5-运输监控" class="headerlink" title="5.运输监控"></a>5.运输监控</h3><p>运输调度运用信息技术，对运输工具和货物进行实时监控</p>
+<h3 id="2-运输调度方法"><a href="#2-运输调度方法" class="headerlink" title="2.运输调度方法"></a>2.运输调度方法</h3><h4 id="（1）以货流为基础，组织运输工具"><a href="#（1）以货流为基础，组织运输工具" class="headerlink" title="（1）以货流为基础，组织运输工具"></a>（1）以货流为基础，组织运输工具</h4><ul>
+<li>从<strong>货流组织和调整开始，到配载和装卸货物</strong>的全过程，把<strong>提高运输工具的装载质量</strong>放在首位，排除重复装卸</li>
+<li>在提高装载质量的同时，尽可能<strong>组织回程配载及调整空车流向</strong>，减少空驶里程。</li>
+</ul>
+<h4 id="（2）影响运输计划因素的处理"><a href="#（2）影响运输计划因素的处理" class="headerlink" title="（2）影响运输计划因素的处理"></a>（2）影响运输计划因素的处理</h4><h5 id="a-影响运输计划执行的因素"><a href="#a-影响运输计划执行的因素" class="headerlink" title="a.影响运输计划执行的因素"></a>a.影响运输计划执行的因素</h5><ul>
+<li><strong>货源</strong>未落实，待货时间长</li>
+<li><strong>装卸</strong>时间超过定额时间</li>
+<li><strong>车辆维修时间</strong>超过定额时间</li>
+<li><strong>驾驶人员</strong>出现问题</li>
+<li><strong>调度</strong>控制不力，应变能力差</li>
+<li><strong>运输路线</strong>出现故障</li>
+</ul>
+<h5 id="b-运输计划被打乱时，应立即采取的有效调节措施，其原则是"><a href="#b-运输计划被打乱时，应立即采取的有效调节措施，其原则是" class="headerlink" title="b.运输计划被打乱时，应立即采取的有效调节措施，其原则是"></a>b.运输计划被打乱时，应立即采取的有效调节措施，其原则是</h5><ul>
+<li>放弃<strong>局部</strong>，保持<strong>整体计划</strong>运行</li>
+<li>放弃<strong>少数货运计划</strong>，保持<strong>多数</strong>货运计划</li>
+<li>放弃<strong>当日</strong>计划，保持<strong>次日及以后</strong>正常计划</li>
+<li>放弃<strong>短途</strong>计划，维持<strong>长途</strong>运输计划</li>
+<li>放弃<strong>小吨位</strong>计划，保持<strong>大运量</strong>计划</li>
+</ul>
+<h4 id="（3）加强运输计划检查"><a href="#（3）加强运输计划检查" class="headerlink" title="（3）加强运输计划检查"></a>（3）加强运输计划检查</h4><ul>
+<li>运输中途站点检查，由站点工作人员将运输工具执行情况直接报各级调度</li>
+<li>运输结束检查，调度人员根据对回收的单据检查分析，为以后编制计划提供参照</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-04-20</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%B8%89%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            三级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

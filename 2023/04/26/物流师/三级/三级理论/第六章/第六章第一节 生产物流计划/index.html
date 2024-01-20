@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="6.1 生产物流计划" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            6.1 生产物流计划
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E7%AC%AC%E4%B8%80%E8%8A%82-%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E8%AE%A1%E5%88%92"><span class="post-toc-text">第六章第一节 生产物流计划</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E6%A6%82%E5%BF%B5%EF%BC%88X%EF%BC%89"><span class="post-toc-text">一、生产物流概念（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="post-toc-text">1.定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E4%BA%94%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="post-toc-text">2.五个阶段</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C-%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E4%B8%8E%E7%A4%BE%E4%BC%9A%E7%89%A9%E6%B5%81%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="post-toc-text">二.生产物流与社会物流的差异</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%AE%9E%E7%8E%B0%E4%BB%B7%E5%80%BC%E6%96%B9%E9%9D%A2%EF%BC%88%E6%9C%80%E6%9C%AC%E8%B4%A8%E4%B8%8D%E5%90%8C%EF%BC%89"><span class="post-toc-text">1.实现价值方面（最本质不同）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E8%A6%81%E7%B4%A0"><span class="post-toc-text">2.主要功能要素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%89%A9%E6%B5%81%E8%BF%87%E7%A8%8B%E6%96%B9%E9%9D%A2"><span class="post-toc-text">3. 物流过程方面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E7%89%A9%E6%B5%81%E8%BF%90%E8%A1%8C%E6%96%B9%E9%9D%A2"><span class="post-toc-text">4.物流运行方面</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0%EF%BC%885%EF%BC%89"><span class="post-toc-text">三、生产物流影响因素（5）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%94%9F%E4%BA%A7%E5%B7%A5%E8%89%BA"><span class="post-toc-text">1.生产工艺</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%94%9F%E4%BA%A7%E7%B1%BB%E5%9E%8B"><span class="post-toc-text">2.生产类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%94%9F%E4%BA%A7%E8%A7%84%E6%A8%A1%EF%BC%88%E8%A7%84%E6%A8%A1%E4%B8%8E%E7%89%A9%E6%B5%81%E9%87%8F%EF%BC%89"><span class="post-toc-text">3. 生产规模（规模与物流量）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%B8%93%E4%B8%9A%E5%8C%96%E5%92%8C%E5%8D%8F%E4%BD%9C%E5%8C%96%E6%B0%B4%E5%B9%B3%EF%BC%88%E7%9B%B8%E4%BA%92%E5%8D%8F%E4%BD%9C%E5%98%9B%E6%89%8D%E6%9C%89%E7%AE%A1%E7%90%86%EF%BC%89"><span class="post-toc-text">4.专业化和协作化水平（相互协作嘛才有管理）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E7%94%9F%E4%BA%A7%E8%AE%BE%E5%A4%87%E5%92%8C%E7%89%A9%E6%B5%81%E8%AE%BE%E6%96%BD%EF%BC%88%E5%8D%87%E7%BA%A7%E6%9B%B4%E6%96%B0%E8%AE%BE%E5%A4%87%E8%AE%BE%E6%96%BD%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87%EF%BC%89"><span class="post-toc-text">5.生产设备和物流设施（升级更新设备设施提高效率）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E7%BB%84%E7%BB%87%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E5%BA%94%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%88X%EF%BC%89"><span class="post-toc-text">四、组织生产物流应注意的问题（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%89%A9%E6%B5%81%E8%BF%87%E7%A8%8B%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7"><span class="post-toc-text">1.物流过程的连续性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%89%A9%E6%B5%81%E8%BF%87%E7%A8%8B%E7%9A%84%E5%B9%B3%E8%A1%8C%E6%80%A7"><span class="post-toc-text">2.物流过程的平行性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%89%A9%E6%B5%81%E8%BF%87%E7%A8%8B%E7%9A%84%E8%8A%82%E5%A5%8F%E6%80%A7"><span class="post-toc-text">3.物流过程的节奏性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E7%89%A9%E6%B5%81%E8%BF%87%E7%A8%8B%E7%9A%84%E6%AF%94%E4%BE%8B%E6%80%A7"><span class="post-toc-text">4.物流过程的比例性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E7%89%A9%E6%B5%81%E8%BF%87%E7%A8%8B%E7%9A%84%E9%80%82%E5%BA%94%E6%80%A7"><span class="post-toc-text">5.物流过程的适应性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%94%E3%80%81%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%BB%84%E7%BB%87%E6%96%B9%E5%BC%8F%EF%BC%88Y%EF%BC%89"><span class="post-toc-text">五、生产物流组织方式（Y）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E6%8C%89%E7%A9%BA%E9%97%B4%E7%BB%84%E7%BB%87%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81"><span class="post-toc-text">1.按空间组织生产物流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E5%AE%9A%E4%B9%89"><span class="post-toc-text">（1）定义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89-%E4%B8%89%E7%A7%8D%E7%BB%84%E7%BB%87%E6%96%B9%E5%BC%8F"><span class="post-toc-text">（2） 三种组织方式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E6%8C%89%E6%97%B6%E9%97%B4%E7%BB%84%E7%BB%87%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81"><span class="post-toc-text">2.按时间组织生产物流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E5%AE%9A%E4%B9%89-1"><span class="post-toc-text">（1）定义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="post-toc-text">（2）三种方式</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AD%E3%80%81%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E8%AE%A1%E5%88%92%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%88X%EF%BC%89"><span class="post-toc-text">六、生产物流计划的概念（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%9C%E7%94%A8%EF%BC%88%E4%B8%8D%E8%80%83%EF%BC%89"><span class="post-toc-text">作用（不考）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%83%E3%80%81%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E4%BD%9C%E4%B8%9A%E8%AE%A1%E5%88%92%E7%9A%84%E7%BC%96%E5%88%B6%EF%BC%88X%EF%BC%89"><span class="post-toc-text">七、生产物流作业计划的编制（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%BC%96%E5%88%B6%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E8%AE%A1%E5%88%92%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="post-toc-text">1.编制生产物流计划前的准备工作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E5%81%9A%E5%A5%BD%E5%B8%82%E5%9C%BA%E9%A2%84%E6%B5%8B%EF%BC%8C%E6%8E%8C%E6%8F%A1%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E5%B8%82%E5%9C%BA%E5%8A%A8%E6%80%81%EF%BC%9B"><span class="post-toc-text">（1）做好市场预测，掌握生产物流市场动态；</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E6%94%B6%E9%9B%86%E4%BC%81%E4%B8%9A%E5%86%85%E9%83%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E8%B5%84%E6%96%99"><span class="post-toc-text">（2）收集企业内部的相关数据资料</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E5%88%B6%E5%AE%9A%E6%9C%89%E5%85%B3%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%9A%84%E6%B6%88%E8%80%97%E5%AE%9A%E9%A2%9D"><span class="post-toc-text">（3）制定有关生产物流的消耗定额</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E8%AE%A1%E5%88%92%E7%9A%84%E7%BC%96%E5%88%B6"><span class="post-toc-text">2.生产物流计划的编制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E6%8C%89%E8%AE%A1%E5%88%92%E6%9C%9F%E9%95%BF%E7%9F%AD%E5%88%86%E4%B8%BA%EF%BC%9A"><span class="post-toc-text">（1）按计划期长短分为：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E5%B9%B4%E5%BA%A6%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E8%AE%A1%E5%88%92%E7%BC%96%E5%88%B6%E8%BF%87%E7%A8%8B"><span class="post-toc-text">（2）年度生产物流计划编制过程</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%83%E3%80%81%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E8%AE%A1%E5%88%92%E7%9A%84%E6%89%A7%E8%A1%8C%EF%BC%88%E6%8A%80%E8%83%BDX%EF%BC%89"><span class="post-toc-text">七、生产物流计划的执行（技能X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%83%E3%80%81%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%9A%84%E8%AE%A1%E5%88%92%E6%A3%80%E6%9F%A5%EF%BC%88%E6%8A%80%E8%83%BDX%EF%BC%89"><span class="post-toc-text">七、生产物流的计划检查（技能X）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%83%E3%80%81%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E8%AE%A1%E5%88%92%E4%BF%AE%E8%AE%A2%EF%BC%88%E6%8A%80%E8%83%BDX%EF%BC%89"><span class="post-toc-text">七、生产物流计划修订（技能X）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AB%E3%80%81%E4%B8%8D%E5%90%8C%E7%94%9F%E4%BA%A7%E8%BF%87%E7%A8%8B%E7%9A%84%E7%89%A9%E6%B5%81%E7%89%B9%E5%BE%81%EF%BC%88X%EF%BC%89"><span class="post-toc-text">八、不同生产过程的物流特征（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E4%B8%AD%E7%9A%84%E7%89%A9%E6%B5%81%E7%89%B9%E5%BE%81%E4%B8%BB%E8%A6%81%E8%A1%A8%E7%8E%B0%E5%9C%A8"><span class="post-toc-text">1.生产物流中的物流特征主要表现在</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%94%9F%E4%BA%A7%E8%BF%87%E7%A8%8B%E7%9A%84%E4%BA%94%E7%A7%8D%E7%B1%BB%E5%9E%8B"><span class="post-toc-text">2.生产过程的五种类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%881%EF%BC%89%E5%88%92%E5%88%86%E4%BE%9D%E6%8D%AE"><span class="post-toc-text">（1）划分依据</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%882%EF%BC%89%E9%A1%B9%E7%9B%AE%E5%9E%8B%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%89%B9%E5%BE%81"><span class="post-toc-text">（2）项目型生产物流特征</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%883%EF%BC%89%E5%8D%95%E4%BB%B6%E5%B0%8F%E6%89%B9%E9%87%8F%E5%9E%8B%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%89%B9%E5%BE%81"><span class="post-toc-text">（3）单件小批量型生产物流特征</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%884%EF%BC%89%E5%A4%9A%E5%93%81%E7%A7%8D%E5%B0%8F%E6%89%B9%E9%87%8F%E5%9E%8B%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81"><span class="post-toc-text">（4）多品种小批量型生产物流</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%885%EF%BC%89%E5%8D%95%E4%B8%80%E5%93%81%E7%A7%8D%E5%A4%A7%E6%89%B9%E9%87%8F%E5%9E%8B%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%89%B9%E5%BE%81"><span class="post-toc-text">（5）单一品种大批量型生产物流特征</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%EF%BC%886%EF%BC%89%E5%A4%9A%E5%93%81%E7%A7%8D%E5%A4%A7%E6%89%B9%E9%87%8F%E5%9E%8B%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%89%B9%E5%BE%81"><span class="post-toc-text">（6）多品种大批量型生产物流特征</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B9%9D%E3%80%81%E4%B8%8D%E5%90%8C%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%89%A9%E6%B5%81%E6%96%B9%E6%A1%88%E7%9A%84%E9%80%89%E6%8B%A9%E2%80%94%E2%80%94%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F"><span class="post-toc-text">九、不同生产模式下物流方案的选择——生产模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F%EF%BC%88X%EF%BC%89"><span class="post-toc-text">1.生产模式（X）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E3%80%81%E6%80%BB%E7%94%9F%E4%BA%A7%E6%88%90%E6%9C%AC%EF%BC%88Z%EF%BC%89"><span class="post-toc-text">十、总生产成本（Z）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%87%86%E6%97%B6%E5%88%B6%E7%94%9F%E4%BA%A7%E6%A6%82%E5%BF%B5%EF%BC%88X%EF%BC%89"><span class="post-toc-text">十一、准时制生产概念（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%AE%9A%E4%B9%89-1"><span class="post-toc-text">1.定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%9B%AE%E7%9A%84"><span class="post-toc-text">2.目的</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E8%A6%81%E7%82%B9"><span class="post-toc-text">3.要点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E5%87%86%E6%97%B6%E5%88%B6%E7%94%9F%E4%BA%A7%E5%8E%9F%E5%88%99%EF%BC%88X%EF%BC%89"><span class="post-toc-text">十二、准时制生产原则（X）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E7%9C%8B%E6%9D%BF%E7%AE%A1%E7%90%86%E7%9A%84%E6%84%8F%E4%B9%89%EF%BC%88X%EF%BC%89"><span class="post-toc-text">十三、看板管理的意义（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E4%BC%A0%E9%80%92%E7%8E%B0%E5%9C%BA%E7%9A%84%E7%94%9F%E4%BA%A7%E4%BF%A1%E6%81%AF%EF%BC%8C%E7%BB%9F%E4%B8%80%E6%80%9D%E6%83%B3"><span class="post-toc-text">1.传递现场的生产信息，统一思想</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E6%9D%9C%E7%BB%9D%E7%8E%B0%E5%9C%BA%E7%AE%A1%E7%90%86%E4%B8%AD%E7%9A%84%E6%BC%8F%E6%B4%9E"><span class="post-toc-text">2.杜绝现场管理中的漏洞</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%BB%A9%E6%95%88%E8%80%83%E6%A0%B8%E7%9A%84%E5%85%AC%E5%B9%B3%E5%8C%96%E3%80%81%E9%80%8F%E6%98%8E%E5%8C%96"><span class="post-toc-text">3.绩效考核的公平化、透明化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%BF%9D%E8%AF%81%E7%94%9F%E4%BA%A7%E7%8E%B0%E5%9C%BA%E4%BD%9C%E4%B8%9A%E7%A7%A9%E5%BA%8F%EF%BC%8C%E6%8F%90%E5%8D%87%E5%85%AC%E5%8F%B8%E7%9A%84%E5%BD%A2%E8%B1%A1"><span class="post-toc-text">4.保证生产现场作业秩序，提升公司的形象</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81%E7%9C%8B%E6%9D%BF%E7%AE%A1%E7%90%86%E4%BD%9C%E7%94%A8%EF%BC%88Y%EF%BC%89"><span class="post-toc-text">十四、看板管理作用（Y）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%94%9F%E4%BA%A7%E5%8F%8A%E6%90%AC%E8%BF%90%E7%9A%84%E4%BD%9C%E4%B8%9A%E6%8C%87%E4%BB%A4"><span class="post-toc-text">1.生产及搬运的作业指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E9%98%B2%E6%AD%A2%E8%BF%87%E9%87%8F%E7%94%9F%E4%BA%A7%E5%92%8C%E8%BF%87%E9%87%8F%E6%90%AC%E8%BF%90"><span class="post-toc-text">2.防止过量生产和过量搬运</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E8%BF%9B%E8%A1%8C%E7%9B%AE%E8%A7%86%E7%AE%A1%E7%90%86%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="post-toc-text">3.进行目视管理的工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E6%94%B9%E5%96%84%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="post-toc-text">4.改善的工具</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E4%BA%94%E3%80%81%E7%9C%8B%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%88X%EF%BC%89"><span class="post-toc-text">十五、看板的使用方法（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%B7%A5%E5%BA%8F%E5%86%85%E7%9C%8B%E6%9D%BF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="post-toc-text">1.工序内看板使用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E4%BF%A1%E5%8F%B7%E7%9C%8B%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="post-toc-text">2.信号看板的使用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%B7%A5%E5%BA%8F%E9%97%B4%E7%9C%8B%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="post-toc-text">3.工序间看板的使用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%A4%96%E5%8D%8F%E7%9C%8B%E6%9D%BF"><span class="post-toc-text">4.外协看板</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E5%85%AD%E3%80%81MRP%E7%9A%84%E5%8F%91%E5%B1%95%E8%BF%87%E7%A8%8B%EF%BC%88Y%EF%BC%89"><span class="post-toc-text">十六、MRP的发展过程（Y）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E8%AE%A2%E8%B4%A7%E7%82%B9%E6%B3%95"><span class="post-toc-text">1.订货点法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%9F%BA%E6%9C%ACMRP%EF%BC%9A"><span class="post-toc-text">2.基本MRP：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E9%97%AD%E7%8E%AFMRP%EF%BC%9A%E8%AE%A1%E5%88%92-%E6%89%A7%E8%A1%8C-%E5%8F%8D%E9%A6%88"><span class="post-toc-text">3.闭环MRP：计划-执行-反馈</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-MRPII%E9%98%B6%E6%AE%B5%EF%BC%9A"><span class="post-toc-text">4. MRPII阶段：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-ERP%E9%98%B6%E6%AE%B5%EF%BC%9A%E4%BE%9B%E5%BA%94%E9%93%BE%E5%8E%9F%E7%90%86"><span class="post-toc-text">5.ERP阶段：供应链原理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E4%B8%83%E3%80%81MRP%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%EF%BC%88-X%EF%BC%89"><span class="post-toc-text">十七、MRP基本知识（ X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-MRP%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="post-toc-text">1.MRP工作原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-MRP%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="post-toc-text">2.MRP的目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-MRP%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="post-toc-text">3.MRP主要内容</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%BA%93%E5%AD%98%E6%8E%A7%E5%88%B6%E6%8A%80%E6%9C%AF"><span class="post-toc-text">4.库存控制技术</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E5%85%AB%E3%80%81MRP%E7%9A%84%E8%BE%93%E5%85%A5%E4%BF%A1%E6%81%AF%EF%BC%88X%EF%BC%89"><span class="post-toc-text">十八、MRP的输入信息（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E4%B8%BB%E7%94%9F%E4%BA%A7%E8%AE%A1%E5%88%92%EF%BC%88MPS%EF%BC%89"><span class="post-toc-text">1. 主生产计划（MPS）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%B2%97%E8%83%BD%E5%8A%9B%E8%AE%A1%E5%88%92"><span class="post-toc-text">2.粗能力计划</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%BA%93%E5%AD%98%E7%8A%B6%E6%80%81%E4%BF%A1%E6%81%AF"><span class="post-toc-text">3. 库存状态信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E4%BA%A7%E5%93%81%E7%BB%93%E6%9E%84%E4%BF%A1%E6%81%AF%EF%BC%88%E7%89%A9%E6%96%99%E6%B8%85%E5%8D%95BOM%EF%BC%89"><span class="post-toc-text">4.产品结构信息（物料清单BOM）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E7%89%A9%E6%96%99%E9%9C%80%E6%B1%82%E8%AE%A1%E5%88%92%EF%BC%88%E6%A0%B8%E5%BF%83%EF%BC%89"><span class="post-toc-text">5. 物料需求计划（核心）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E4%BA%A7%E8%83%BD%E9%9C%80%E6%B1%82%E8%AE%A1%E5%88%92"><span class="post-toc-text">6.产能需求计划</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-%E5%B7%A5%E8%89%BA%E8%B7%AF%E7%BA%BF"><span class="post-toc-text">7.工艺路线</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%BF%83"><span class="post-toc-text">8. 工作中心</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-%E5%A4%96%E9%83%A8%E9%9B%B6%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="post-toc-text">9.外部零件信息</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%81%E4%B9%9D%E3%80%81%E5%BD%B1%E5%93%8DMRP%E8%BF%90%E8%A1%8C%E7%9A%84%E5%9B%A0%E7%B4%A0%EF%BC%88X%EF%BC%89"><span class="post-toc-text">十九、影响MRP运行的因素（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%8B%AC%E7%AB%8B%E9%9C%80%E6%B1%82%E7%9A%84%E5%87%86%E7%A1%AE%E6%80%A7"><span class="post-toc-text">1. 独立需求的准确性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E6%8F%90%E5%89%8D%E6%9C%9F%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7"><span class="post-toc-text">2.提前期设置的合理性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%89%A9%E6%96%99%E6%B8%85%E5%8D%95%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%87%86%E7%A1%AE%E6%80%A7"><span class="post-toc-text">3.物料清单参数设置的准确性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%BA%93%E5%AD%98%E4%BF%A1%E6%81%AF%E7%9A%84%E5%87%86%E7%A1%AE%E6%80%A7"><span class="post-toc-text">4.库存信息的准确性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E7%94%9F%E4%BA%A7%E6%9B%BF%E4%BB%A3%E7%89%A9%E6%96%99%E6%9B%B4%E6%8D%A2%E7%9A%84%E9%A2%91%E7%B9%81%E6%80%A7"><span class="post-toc-text">5. 生产替代物料更换的频繁性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E6%9C%AA%E5%AE%8C%E6%88%90%E8%AE%A2%E5%8D%95%E4%BF%A1%E6%81%AF%E4%BC%A0%E9%80%92%E7%9A%84%E5%8F%8A%E6%97%B6%E6%80%A7"><span class="post-toc-text">6.未完成订单信息传递的及时性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E5%8D%81%E3%80%81%E5%8D%B7%E7%83%9F%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E4%B8%BB%E8%A6%81%E7%8E%AF%E8%8A%82%EF%BC%88X%EF%BC%89"><span class="post-toc-text">二十、卷烟生产物流主要环节（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%8E%9F%E6%96%99%E4%BE%9B%E5%BA%94"><span class="post-toc-text">1.原料供应</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E9%85%8D%E5%88%B6%E9%A6%99%E7%B3%96%E6%96%99%E4%BE%9B%E5%BA%94"><span class="post-toc-text">2. 配制香糖料供应</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%88%B6%E4%B8%9D%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81"><span class="post-toc-text">3.制丝生产物流</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E7%83%9F%E4%B8%9D%E5%AD%98%E5%82%A8%EF%BC%88%E7%83%9F%E4%B8%9D%E9%85%8D%E6%96%B9%E5%BA%93%EF%BC%89%E4%BE%9B%E5%BA%94"><span class="post-toc-text">4.烟丝存储（烟丝配方库）供应</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E5%8D%B7%E6%8E%A5"><span class="post-toc-text">5.卷接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-%E5%8C%85%E8%A3%85"><span class="post-toc-text">6.包装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-%E6%88%90%E5%93%81%E4%B8%8B%E7%BA%BF%E5%85%A5%E5%BA%93"><span class="post-toc-text">7. 成品下线入库</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B8%80%E3%80%81%E5%8D%B7%E7%83%9F%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%88X%EF%BC%89"><span class="post-toc-text">二十一、卷烟生产物流的特点（X）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%8D%B7%E7%83%9F%E7%94%9F%E4%BA%A7%E5%B7%A5%E8%89%BA%E5%B8%83%E5%B1%80%E5%86%B3%E5%AE%9A%E4%BA%86%E5%8D%B7%E7%83%9F%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="post-toc-text">1. 卷烟生产工艺布局决定了卷烟生产物流的方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%8D%B7%E7%83%9F%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E9%87%8F%E5%A4%A7"><span class="post-toc-text">2. 卷烟生产物流量大</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%8D%B7%E7%83%9F%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%9A%84%E8%BE%93%E9%80%81%E7%8E%AF%E8%8A%82%E5%A4%9A"><span class="post-toc-text">3.卷烟生产物流的输送环节多</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%8D%B7%E7%83%9F%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E7%A8%8B%E5%BA%A6%E9%AB%98"><span class="post-toc-text">4. 卷烟生产物流的自动化程度高</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E5%8D%B7%E7%83%9F%E7%94%9F%E4%BA%A7%E7%89%A9%E6%B5%81%E7%9A%84%E8%AE%A1%E5%88%92%E6%80%A7%E5%BC%BA"><span class="post-toc-text">5.卷烟生产物流的计划性强</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="第六章第一节-生产物流计划"><a href="#第六章第一节-生产物流计划" class="headerlink" title="第六章第一节 生产物流计划"></a>第六章第一节 生产物流计划</h1><h2 id="一、生产物流概念（X）"><a href="#一、生产物流概念（X）" class="headerlink" title="一、生产物流概念（X）"></a>一、生产物流概念（X）</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><ul>
+<li><em>生产物流：</em><ul>
+<li>指<strong>原材料、燃料、外购件</strong>投入生产后，</li>
+<li>经过<strong>下料、发料、运送</strong>到各<strong>加工点和存储点</strong></li>
+<li>以<strong>在制品</strong>的形态，从一个<strong>生产单位</strong>流入到另一个<strong>生产单位</strong></li>
+<li>按照规定的<strong>生产工艺流程</strong>进行<strong>加工，储存</strong>的全部过程</li>
+<li>其借助一定的<strong>运输装置</strong>，在某点内流转，又从某个点流出，始终体现着<strong>物料实物形态的流转过程</strong>。</li>
+</ul>
+</li>
+<li><strong>生产物流和生产流程同步</strong>，是从<strong>原材料购进开始</strong>，直到<strong>产成品发送为止</strong>的全过程的物流活动。</li>
+<li>生产物流的形式和规模取决于<strong>生产的类型、规模、方式和生产的专业化与协作化水平</strong>。</li>
+</ul>
+<h3 id="2-五个阶段"><a href="#2-五个阶段" class="headerlink" title="2.五个阶段"></a>2.五个阶段</h3><ul>
+<li><strong>人工</strong>物流</li>
+<li><strong>机械化</strong>物流</li>
+<li><strong>自动化</strong>物流</li>
+<li><strong>集成化</strong>物流</li>
+<li><strong>智能化</strong>物流</li>
+</ul>
+<h2 id="二-生产物流与社会物流的差异"><a href="#二-生产物流与社会物流的差异" class="headerlink" title="二.生产物流与社会物流的差异"></a>二.生产物流与社会物流的差异</h2><h3 id="1-实现价值方面（最本质不同）"><a href="#1-实现价值方面（最本质不同）" class="headerlink" title="1.实现价值方面（最本质不同）"></a>1.<em>实现价值方面</em>（<strong>最本质不同</strong>）</h3><ul>
+<li>实现<strong>加工附加值</strong>的经济活动；</li>
+<li>不以实现<strong>时间价值和空间价值</strong>为目的</li>
+<li>企业的<strong>小范围内完成</strong>，空间距离变化不大；</li>
+<li>在企业内部<strong>储存是对生产的保证</strong>，而不是一种追求利润的独立功能，时间价值不高。</li>
+</ul>
+<h3 id="2-主要功能要素"><a href="#2-主要功能要素" class="headerlink" title="2.主要功能要素"></a>2.<em>主要功能要素</em></h3><ul>
+<li><strong>搬运活动</strong>，而一般社会物流主要功能是运输和储存。</li>
+<li>通过不停的搬运过程，<strong>物料</strong>得到了<strong>加工、改变了形态</strong></li>
+<li><strong>配送和批发企业</strong>内部物流，通过搬运完成了分货、拣货、配货，完成了<strong>大改小、小集大的换装工作</strong>，使商品形成可配送、可批发形态。</li>
+</ul>
+<h3 id="3-物流过程方面"><a href="#3-物流过程方面" class="headerlink" title="3. 物流过程方面"></a>3. <em>物流过程方面</em></h3><ul>
+<li>工艺过程性物流<ul>
+<li>随着企业<strong>生产工艺、生产设备、生产流程</strong>的确定，企业生产物流业形成了一种<strong>稳定性的物流</strong>，物流成了工艺流程的重要组成部分。</li>
+<li>稳定性增强了生产物流的<strong>可控性、计划性</strong>，<strong>选择性和可变性减少</strong>。</li>
+<li>改进物流<strong>只能通过工艺流程的优化</strong>实现。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-物流运行方面"><a href="#4-物流运行方面" class="headerlink" title="4.物流运行方面"></a>4.<em>物流运行方面</em></h3><ul>
+<li><strong>极强的伴生性</strong>（与谁伴生？有没有可分？）<ul>
+<li>往往是<strong>生产过程</strong>中的一个组成部分或一个伴生部分；</li>
+<li>决定了企业生产物流<strong>很难与生产过程分开</strong>而形成<strong>独立的系统</strong>。</li>
+<li><strong>总体与生产过程伴生</strong>的同时，也存在与生产工艺过程<strong>可分的局部物流活动</strong>，这些局部的物流活动<strong>有本身的界限和运动规律</strong>，当前研究针对这些局部物流活动。</li>
+<li>局部物流活动包括<ul>
+<li><strong>仓库储存活动</strong></li>
+<li><strong>接货物流活动</strong></li>
+<li><strong>车间或分厂之间运输活动</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、生产物流影响因素（5）"><a href="#三、生产物流影响因素（5）" class="headerlink" title="三、生产物流影响因素（5）"></a>三、生产物流影响因素（5）</h2><h3 id="1-生产工艺"><a href="#1-生产工艺" class="headerlink" title="1.生产工艺"></a>1.生产工艺</h3><ul>
+<li>生产工艺对生产物流有<strong>不同要求与限制</strong></li>
+</ul>
+<h3 id="2-生产类型"><a href="#2-生产类型" class="headerlink" title="2.生产类型"></a>2.生产类型</h3><ul>
+<li>生产类型影响生产物流的<strong>构成与比例</strong></li>
+</ul>
+<h3 id="3-生产规模（规模与物流量）"><a href="#3-生产规模（规模与物流量）" class="headerlink" title="3. 生产规模（规模与物流量）"></a>3. 生产规模（<strong>规模与物流量</strong>）</h3><ul>
+<li>生产规模影响物流量的大小</li>
+</ul>
+<h3 id="4-专业化和协作化水平（相互协作嘛才有管理）"><a href="#4-专业化和协作化水平（相互协作嘛才有管理）" class="headerlink" title="4.专业化和协作化水平（相互协作嘛才有管理）"></a>4.专业化和协作化水平（<strong>相互协作嘛才有管理</strong>）</h3><ul>
+<li>专业化和协作化水平影响生产物流的<strong>构成与管理</strong></li>
+</ul>
+<h3 id="5-生产设备和物流设施（升级更新设备设施提高效率）"><a href="#5-生产设备和物流设施（升级更新设备设施提高效率）" class="headerlink" title="5.生产设备和物流设施（升级更新设备设施提高效率）"></a>5.生产设备和物流设施（<strong>升级更新设备设施提高效率</strong>）</h3><ul>
+<li>生产设备和物流设施影响<strong>生产物流作业的方式和效率</strong></li>
+</ul>
+<h2 id="四、组织生产物流应注意的问题（X）"><a href="#四、组织生产物流应注意的问题（X）" class="headerlink" title="四、组织生产物流应注意的问题（X）"></a>四、组织生产物流应注意的问题（X）</h2><h3 id="1-物流过程的连续性"><a href="#1-物流过程的连续性" class="headerlink" title="1.物流过程的连续性"></a>1.物流过程的<strong>连续性</strong></h3><ul>
+<li>物料<strong>顺畅、最快、最省</strong>地走完各个工序，直到成为产品。</li>
+</ul>
+<h3 id="2-物流过程的平行性"><a href="#2-物流过程的平行性" class="headerlink" title="2.物流过程的平行性"></a>2.物流过程的<strong>平行性</strong></h3><ul>
+<li>是指各个<strong>支流平行流动</strong></li>
+</ul>
+<h3 id="3-物流过程的节奏性"><a href="#3-物流过程的节奏性" class="headerlink" title="3.物流过程的节奏性"></a>3.物流过程的<strong>节奏性</strong></h3><ul>
+<li>生产过程中<strong>各阶段都能有节奏地、均衡地进行</strong></li>
+</ul>
+<h3 id="4-物流过程的比例性"><a href="#4-物流过程的比例性" class="headerlink" title="4.物流过程的比例性"></a>4.物流过程的<strong>比例性</strong></h3><ul>
+<li>考虑各工序内的<strong>质量合格率，以及装卸搬运过程中的可能损失</strong></li>
+<li><strong>零部件数量</strong>在各工序间<strong>有一定的比例</strong>，形成物流过程比例性</li>
+</ul>
+<h3 id="5-物流过程的适应性"><a href="#5-物流过程的适应性" class="headerlink" title="5.物流过程的适应性"></a>5.物流过程的适应性</h3><ul>
+<li>企业生产组织向<strong>多品种、小批量发展</strong>，要求生产过程具有较强的<strong>应变能力</strong>，物流过程同时具备相应<strong>应变能力</strong>；</li>
+<li>一个生产物流作业计划<strong>依赖于制造过程的构成</strong>。</li>
+</ul>
+<h2 id="五、生产物流组织方式（Y）"><a href="#五、生产物流组织方式（Y）" class="headerlink" title="五、生产物流组织方式（Y）"></a>五、生产物流组织方式（Y）</h2><h3 id="1-按空间组织生产物流"><a href="#1-按空间组织生产物流" class="headerlink" title="1.按空间组织生产物流"></a>1.按空间组织生产物流</h3><h4 id="（1）定义"><a href="#（1）定义" class="headerlink" title="（1）定义"></a>（1）<em>定义</em></h4><ul>
+<li>企业在<strong>不同的生产区</strong>域之间所进行的<strong>物料搬运活动</strong></li>
+<li>目标是<strong>如何缩短物料</strong>在工艺流程中的<strong>移动距离</strong></li>
+</ul>
+<h4 id="（2）-三种组织方式"><a href="#（2）-三种组织方式" class="headerlink" title="（2） 三种组织方式"></a>（2） <em>三种组织方式</em></h4><ul>
+<li><p>按<em>工艺专业化</em>组织生产物流</p>
+<ul>
+<li><strong>工艺原则、功能性生产物流体系</strong></li>
+<li><em>特点</em>：将<strong>同类的生产设备集中</strong>到一起，对各种<strong>产品</strong>进行<strong>相同工艺的加工</strong>，即<strong>加工对象多样化，加工工艺方法相似</strong></li>
+<li><em>适用于</em>：<strong>企业生产规模不大，生产专业化程度低，产品品种不稳定的单件小批量</strong></li>
+<li><em>优点</em>：<strong>产品品种变化和加工顺序变化</strong>适应能力强，生产系统<strong>可靠性高，工艺和设备管理方便</strong></li>
+<li><em>缺点</em>：物料在加工过程中<strong>物流次数及路线复杂，难以协调</strong>。</li>
+</ul>
+</li>
+<li><p>按<em>对象专业化</em>组织生产物流</p>
+<ul>
+<li><strong>产品专业化原则、流水线</strong></li>
+<li><em>特点</em>：<strong>生产设备、辅助设备</strong>按<strong>生产对象加工路线组织起来</strong>，即<strong>加工对象单一、加工工艺和方式多样化</strong></li>
+<li><em>适用于</em>：企业<strong>专业化方向已定</strong>，产品<strong>品种比较稳定，大批量生产，设备比较齐全且有充分负荷的条件下</strong></li>
+<li><em>优点</em>：<ul>
+<li>减少运输次数，</li>
+<li>缩短运输路线，</li>
+<li>协作关系简单，</li>
+<li>简化生产管理，</li>
+<li>在制品少，生产周期短</li>
+</ul>
+</li>
+<li><em>缺点</em>：对<strong>品种的变化适应性差</strong>，生产系统的<strong>可靠性低，工艺及设备管理复杂</strong></li>
+</ul>
+</li>
+<li><p>按<em>成组工艺</em>形式组织生产物流</p>
+<ul>
+<li>按<strong>成组技术原理</strong>，把具有<strong>相似性的零件</strong>分成一个<strong>成组生产单元</strong>，并根据其<strong>加工路线组织设备</strong></li>
+<li><em>优点</em>：是可以大大<strong>简化零件的加工流程</strong>，<strong>减少物流的迂回路线</strong>，在满足<strong>品种变化的基础上</strong>有一定的<strong>批量生产</strong>，具有<strong>柔性和适应性</strong>。</li>
+</ul>
+</li>
+</ul>
+<p>⚠️：如何选择上述方式取决于生产系统中<strong>产品品种的多少和产量的大小</strong>。</p>
+<h3 id="2-按时间组织生产物流"><a href="#2-按时间组织生产物流" class="headerlink" title="2.按时间组织生产物流"></a>2.按时间组织生产物流</h3><h4 id="（1）定义-1"><a href="#（1）定义-1" class="headerlink" title="（1）定义"></a>（1）定义</h4><ul>
+<li>如何将一批物料在生产过程中的各生产单位、各道工序之间在时间上进行衔接和结合。</li>
+<li>合理组织生产物流，不断要缩短物料搬运距离，还要加快物料流动速度，减少成批等待，实现物流的节奏性、连续性。</li>
+</ul>
+<h4 id="（2）三种方式"><a href="#（2）三种方式" class="headerlink" title="（2）三种方式"></a>（2）三种方式</h4><ul>
+<li><p><em>顺序移动方式</em></p>
+<ul>
+<li><em>定义</em>：指一批物料在<strong>上一道工序全部加工完毕后</strong>才<strong>整批地移动到下一道工序继续加工</strong></li>
+<li><em>优点</em>：是一批物料连续加工，设备不停顿，物料整批转下一道工序，便于组织生产。</li>
+<li><em>缺点</em>：不同的物料之间有<strong>等待加工、运输的时间</strong>，因而<strong>生产周期长</strong>。</li>
+</ul>
+</li>
+<li><p><em>平行移动方式</em></p>
+<ul>
+<li><em>定义</em>：指一批物料在前道工序加工一件物料以后，立即传送到下一道工序去继续加工，形成<strong>前后交叉作业的移动方式</strong></li>
+<li><em>优点</em>：<strong>不会出现物料成批等待</strong>现象，因而整批物料<strong>生产周期最短</strong></li>
+<li><em>缺点</em>：在当<strong>物料在各道工序加工时间不等</strong>时，会出现<strong>人力和设备的停工现象</strong></li>
+</ul>
+</li>
+<li><p><em>平行顺序移动方式</em></p>
+<ul>
+<li><em>定义</em>：把顺序移动和平行移动结合使用。<strong>一批零件在一道工序上尚未全部加工完毕</strong>，就将已加工好的一部分零件转入下道工序加工，以恰好使下道工序连续地全部加工完该批零件为条件的移动方式。</li>
+<li>其生产周期比平行移动长，但可以保证设备 负荷充分。</li>
+<li><em>特点</em>：当<strong>上一道工序的加工时间小于或等于下一道工序的加工时间</strong>时，上一道工序加工完每一件物料后，应<strong>立即传到下一道工序去加工</strong>；当<strong>上一道工序的加工时间大于下一道工序的加工时间</strong>时，要使上一道工序<strong>加工完最后一件物料，恰好供应下一道工序开始加工该批物料的最后一件物料</strong>。</li>
+<li><em>优点</em>：吸取了前两种优点，消<strong>除了间歇停顿现象，使工作满负荷</strong>。<strong>工序周期较短，但安排进度时比较复杂</strong>。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/media/16614754982971/16614991151926.png"></p>
+<h2 id="六、生产物流计划的概念（X）"><a href="#六、生产物流计划的概念（X）" class="headerlink" title="六、生产物流计划的概念（X）"></a>六、生产物流计划的概念（X）</h2><ul>
+<li>生产物流计划是指为<strong>保证生产顺利进行</strong>而编制的<strong>生产物流供应计划</strong>；</li>
+<li>是企业计划期内<strong>生产物流供应活动的行动纲领</strong>。</li>
+<li>和企业的<strong>物流能力、物料需求、制造需求、采购需求</strong>紧密联系在一起；</li>
+<li><em>核心是</em>：<strong>生产物流作业计划编制</strong><ul>
+<li>根据计划期内确定的<strong>产品品种、数量、期限，以及生产变化的客观实际</strong>，<strong>具体安排产品及其部件</strong>在各个生产工艺阶段的<strong>生产进度和生产任务</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="作用（不考）"><a href="#作用（不考）" class="headerlink" title="作用（不考）"></a>作用（不考）</h3><ul>
+<li>保证生产计划的顺利完成</li>
+<li>为均衡生产创造条件</li>
+<li>加强在制品管理，缩短生产周期</li>
+</ul>
+<h2 id="七、生产物流作业计划的编制（X）"><a href="#七、生产物流作业计划的编制（X）" class="headerlink" title="七、生产物流作业计划的编制（X）"></a>七、生产物流作业计划的编制（X）</h2><h3 id="1-编制生产物流计划前的准备工作"><a href="#1-编制生产物流计划前的准备工作" class="headerlink" title="1.编制生产物流计划前的准备工作"></a>1.编制生产物流计划前的准备工作</h3><blockquote>
+<p>（1）必须<em>了解生产物料的市场供求状况、生产物料的需求量和储备量以及生产物料分销</em>要求等情况；<br>（2）运用<em>系统分析和综合平衡</em>的方法制订出<em>科学合理</em>的生产物流计划。</p>
+</blockquote>
+<h4 id="（1）做好市场预测，掌握生产物流市场动态；"><a href="#（1）做好市场预测，掌握生产物流市场动态；" class="headerlink" title="（1）做好市场预测，掌握生产物流市场动态；"></a>（1）做好市场预测，掌握生产物流市场动态；</h4><ul>
+<li>市场经济体制下，<strong>生产物料市场</strong>呈现<strong>波动状态</strong>；</li>
+<li>对所需生产物料做好<strong>市场调研工作</strong>，<strong>分析货源</strong>，<strong>调查了解</strong>：<ul>
+<li>现有供应量，</li>
+<li>供货方的生产能力，</li>
+<li>今后市场需求变换趋势，</li>
+<li>是否有相应替代品，</li>
+</ul>
+</li>
+<li>并<strong>结合本企业的生产计划</strong>确定<strong>某项生产物料的需求计划</strong></li>
+</ul>
+<h4 id="（2）收集企业内部的相关数据资料"><a href="#（2）收集企业内部的相关数据资料" class="headerlink" title="（2）收集企业内部的相关数据资料"></a>（2）收集企业内部的相关数据资料</h4><ul>
+<li><strong>生产物流计划</strong>是企业生产经营活动在<strong>物资方面</strong>的<strong>综合反映</strong>，对企业整个生产过程产生重要影响，所以编制生产物流计划前<strong>需要掌握详尽的企业内部资料</strong>。</li>
+<li>包括<ul>
+<li>生产物料消耗定额；</li>
+<li>生产计划</li>
+<li>在制品数量</li>
+<li>产品设计更改单</li>
+<li>物料供应与物料消耗规律</li>
+<li>上期生产物流计划在执行中的问题</li>
+<li>在途及库存生产物料资源</li>
+<li>委托加工生产物料资源</li>
+<li>预计的计划期期初资源</li>
+</ul>
+</li>
+</ul>
+<h4 id="（3）制定有关生产物流的消耗定额"><a href="#（3）制定有关生产物流的消耗定额" class="headerlink" title="（3）制定有关生产物流的消耗定额"></a>（3）制定有关生产物流的消耗定额</h4><ul>
+<li>在一定<strong>生产技术和组织条件下</strong>，为<strong>制造单位产品</strong>或<strong>完成单位工作量</strong>所规定的必须<strong>消耗的生产物料数量标准</strong>。</li>
+<li>它是<strong>现代企业生产物流管理</strong>的<strong>基础工作</strong>和<strong>重要手段</strong></li>
+<li>是<strong>编制</strong>生产物流计划的<strong>依据</strong>和<strong>考核</strong>生产物流消耗的<strong>标准</strong>。</li>
+</ul>
+<h3 id="2-生产物流计划的编制"><a href="#2-生产物流计划的编制" class="headerlink" title="2.生产物流计划的编制"></a>2.生产物流计划的编制</h3><h4 id="（1）按计划期长短分为："><a href="#（1）按计划期长短分为：" class="headerlink" title="（1）按计划期长短分为："></a>（1）按计划期长短分为：</h4><ul>
+<li><em>年度生产物流计划</em>：<ul>
+<li>是企业全年生产物流供应工作的<strong>依据和基础</strong>。</li>
+</ul>
+</li>
+<li><em>季度生产物流计划</em>：<ul>
+<li>是在<strong>年度</strong>计划的<strong>基础上编制</strong>的；</li>
+<li>是由<strong>年度到月度</strong>，由<strong>长期到短期</strong>的<strong>中间环节</strong></li>
+<li>企业物资部门在<strong>季度到来之前10天左右</strong>时间编制</li>
+</ul>
+</li>
+<li><em>月度生产物流计划</em>：<ul>
+<li>是<strong>季度计划的具体化</strong>；</li>
+<li>把<strong>年度、季度</strong>生产物流计划中规定<strong>的指标</strong>，按照<strong>月、旬</strong>具体地安排到<strong>车间、班组</strong>、层层落实，保证企业生产计划的完成。</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）年度生产物流计划编制过程"><a href="#（2）年度生产物流计划编制过程" class="headerlink" title="（2）年度生产物流计划编制过程"></a>（2）年度生产物流计划编制过程</h4><ul>
+<li><p><em>审核编制计划的数据资料</em></p>
+<ul>
+<li>生产部门的<strong>生产物资需求量</strong>是否<strong>合理</strong></li>
+<li>需要<strong>时间</strong>是否<strong>恰当</strong></li>
+<li><strong>生产物料消耗定额</strong>是否<strong>先进可靠</strong></li>
+<li>预计<strong>期末库存、周转库存量</strong>是否<strong>合理</strong></li>
+<li>各种<strong>物资需要</strong>是否<strong>配套</strong>，生产物料所需<strong>资金</strong>是否<strong>超出资金定额指标</strong></li>
+</ul>
+</li>
+<li><p><em>综合平衡</em></p>
+<ul>
+<li>企业的生产物流计划与企业其他计划（<strong>销售计划、生产计划、运输计划、资金使用计划、库存计划</strong>）构成一个企业的计划管理体系，是相<strong>互依存，相互制约</strong>的关系；</li>
+<li><strong>企业生产物流计划</strong>与企业<strong>其他计划</strong>进行<strong>综合平衡</strong></li>
+</ul>
+</li>
+<li><p><em>编制计划</em></p>
+<ul>
+<li><strong>生产物流核算表</strong></li>
+<li><strong>待购生产物流表</strong></li>
+<li><strong>文字说明</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="七、生产物流计划的执行（技能X）"><a href="#七、生产物流计划的执行（技能X）" class="headerlink" title="七、生产物流计划的执行（技能X）"></a>七、生产物流计划的执行（技能X）</h2><ul>
+<li><p><em>执行的重点</em>在于<em>资源</em>，积极<em>组织力量</em>通过</p>
+<ul>
+<li><strong>订货</strong></li>
+<li><strong>采购</strong></li>
+<li><strong>委托加工</strong></li>
+<li><strong>协作</strong></li>
+</ul>
+</li>
+</ul>
+<p>等方式<em>保证生产物料供应</em>。</p>
+<ul>
+<li><p><em>生产物料进厂后</em></p>
+<ul>
+<li><strong>及时发放</strong><ul>
+<li><strong>重要产品</strong>生产所需生产物料应<strong>优先保证</strong></li>
+<li><strong>紧张短缺</strong>生产物料<strong>择优供应</strong></li>
+<li><strong>超储积压</strong>生产物科<strong>组织利用</strong></li>
+</ul>
+</li>
+<li><strong>加强生产物流管理，定额发料，防止浪费</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="七、生产物流的计划检查（技能X）"><a href="#七、生产物流的计划检查（技能X）" class="headerlink" title="七、生产物流的计划检查（技能X）"></a>七、生产物流的计划检查（技能X）</h3><ul>
+<li><p><em>检查内容</em></p>
+<ul>
+<li><strong>计划需用量</strong>与<strong>实际耗用量</strong>的对比</li>
+<li>生产<strong>物料到货衔接</strong>情况</li>
+<li><strong>供货合同执行进度</strong>和<strong>情况</strong></li>
+<li><strong>生产物料消耗定额</strong>执行情况</li>
+<li><strong>生产物料节约使用</strong></li>
+</ul>
+</li>
+<li><p><em>检查方法</em></p>
+<ul>
+<li><strong>全面</strong>检查与<strong>专题</strong>检查</li>
+<li><strong>经常</strong>检查与<strong>定期</strong>检查</li>
+<li><strong>统计资料对比</strong>与<strong>现场分析</strong></li>
+<li><strong>生产物料核销检查</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="七、生产物流计划修订（技能X）"><a href="#七、生产物流计划修订（技能X）" class="headerlink" title="七、生产物流计划修订（技能X）"></a>七、生产物流计划修订（技能X）</h2><ul>
+<li><p><em>调整原因</em></p>
+<ul>
+<li><strong>生产计划变动</strong></li>
+<li><strong>设计变动</strong></li>
+<li><strong>工艺变动</strong></li>
+<li>生产物流<strong>计划本身的不准确性</strong>而进行的修订</li>
+</ul>
+</li>
+<li><p><em>修订方法</em></p>
+<ul>
+<li><p><strong>定期修订</strong></p>
+<ul>
+<li>多在<strong>订货前</strong></li>
+</ul>
+</li>
+<li><p><strong>经常修订</strong></p>
+<ul>
+<li>对<strong>随时可能发生的变化</strong>进行<strong>局部性的、较小的修订</strong></li>
+</ul>
+</li>
+<li><p><strong>专项修订</strong></p>
+<ul>
+<li><strong>实际进程与原计划任务相差较大</strong>时进行的修正。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="八、不同生产过程的物流特征（X）"><a href="#八、不同生产过程的物流特征（X）" class="headerlink" title="八、不同生产过程的物流特征（X）"></a>八、不同生产过程的物流特征（X）</h2><h3 id="1-生产物流中的物流特征主要表现在"><a href="#1-生产物流中的物流特征主要表现在" class="headerlink" title="1.生产物流中的物流特征主要表现在"></a>1.生产物流中的物流特征主要表现在</h3><ul>
+<li>物料按工艺流程流动</li>
+<li>物流作业与生产作业紧密关联，相互交叉</li>
+<li>物流连续、有节奏地按比例运转</li>
+</ul>
+<h3 id="2-生产过程的五种类型"><a href="#2-生产过程的五种类型" class="headerlink" title="2.生产过程的五种类型"></a>2.生产过程的五种类型</h3><h4 id="（1）划分依据"><a href="#（1）划分依据" class="headerlink" title="（1）划分依据"></a>（1）划分依据</h4><ul>
+<li>依据物流<strong>连续性从低到高</strong>和<strong>产品需求特征从品种多，产量少到品种少，产量多</strong>；</li>
+</ul>
+<p><img src="/media/16614754982971/%E6%88%AA%E5%B1%8F2022-08-26%20%E4%B8%8B%E5%8D%884.57.58.png" alt="截屏2022-08-26 下午4.57.58"></p>
+<h4 id="（2）项目型生产物流特征"><a href="#（2）项目型生产物流特征" class="headerlink" title="（2）项目型生产物流特征"></a>（2）项目型生产物流特征</h4><ul>
+<li><em>定义</em><ul>
+<li>生产过程<strong>具有项目特征</strong></li>
+<li>有具体的<strong>开始和结束时间</strong></li>
+<li>有严格定义的<strong>最终目标</strong></li>
+<li>有<strong>成本和时间计划</strong></li>
+<li>能够产生<strong>具体结果</strong></li>
+<li><strong>只发生一次</strong>的生产物流系统</li>
+</ul>
+</li>
+<li><em>类型</em><ul>
+<li><strong>只有物料流入、几乎无物料流出</strong>的“<strong>纯项目型</strong>”生产物流系统 ，如<strong>建筑工程</strong>；</li>
+<li><strong>物料流入</strong>生产场地后，<strong>滞留相当长一段时间</strong>再流出的“<strong>准项目型</strong>”生产物流系统，如<strong>大型专用设备、大型高价值产品的设计与制造（飞机、船舶生产制造</strong>）</li>
+</ul>
+</li>
+<li><em>主要特征表现</em><ul>
+<li>物料<strong>采购量大</strong>，<strong>供应商多变</strong>，外部物流<strong>较难控制</strong>；</li>
+<li>生产过程<strong>原材料、在制品占用的物流量大</strong>，几乎<strong>无产成品占用</strong>；</li>
+<li>物流在加工场地的<strong>方向不确定</strong>，加工<strong>路线变化极大</strong>，工序间的<strong>物流联系不规律</strong>；</li>
+<li>物料需求与具体产品存在<strong>一一对应的相关需求</strong>。</li>
+</ul>
+</li>
+</ul>
+<h4 id="（3）单件小批量型生产物流特征"><a href="#（3）单件小批量型生产物流特征" class="headerlink" title="（3）单件小批量型生产物流特征"></a>（3）单件小批量型生产物流特征</h4><ul>
+<li><em>定义</em><ul>
+<li>需要生产的产品品种多，但每一品种生产的数量很少，生产重复度低的生产物流系统。</li>
+</ul>
+</li>
+<li><em>主要特征表现：</em><ul>
+<li>生产<strong>重复程度低</strong>，从而<strong>物料需求与具体产品制造</strong>存在<strong>一一对应的相关需求</strong>；</li>
+<li>由于单件生产，产品设计和工艺设计<strong>重复性低</strong>，从而物料的消<strong>耗定额不容易或不适宜准确制定</strong>；</li>
+<li>由于生产<strong>品种的多样性</strong>，使得制造过程中<strong>采购物料所需的供应商多变</strong>，<strong>外部物流较难控制</strong>。</li>
+</ul>
+</li>
+</ul>
+<h4 id="（4）多品种小批量型生产物流"><a href="#（4）多品种小批量型生产物流" class="headerlink" title="（4）多品种小批量型生产物流"></a>（4）多品种小批量型生产物流</h4><ul>
+<li><em>定义</em><ul>
+<li>生产的<strong>产品品种繁多</strong>，并且<strong>每一品种有一定的生产数量</strong>，生产<strong>重复性中等</strong>的生产物流系统。</li>
+<li>由于企业必须按用户需求<strong>以销定产</strong>，使企业物流<strong>配送管理工作复杂化</strong>，协调采购、生产、销售物流并<strong>最大限度地降低物流费用</strong>是多品种小批量型生产。</li>
+</ul>
+</li>
+<li><em>主要特征表现</em>：<ul>
+<li>物料生产的重复性<strong>介于单件和大量生产之间</strong>，一般是<strong>制定生产频次，采用混流生产</strong>；</li>
+<li>MRP物料需求计划<strong>实现物料的外部独立需求</strong>与<strong>内部的相关需求之间的平衡</strong>。以JIT实现客户<strong>个性化特征</strong>对生产过程中物料、零部件和成品的<strong>拉动需求</strong>；</li>
+<li>由于<strong>产品设计和工艺设计</strong>采用<strong>并行工程处理</strong>，物料的<strong>消耗定额</strong>容易<strong>准确制定</strong>，从而产品成本容易降低；</li>
+<li>由于生产品种的<strong>多样性</strong>，对制造过程中物料的供应商有较强的选择要求，从而<strong>外部物流的协调难以控制</strong>。</li>
+</ul>
+</li>
+</ul>
+<h4 id="（5）单一品种大批量型生产物流特征"><a href="#（5）单一品种大批量型生产物流特征" class="headerlink" title="（5）单一品种大批量型生产物流特征"></a>（5）单一品种大批量型生产物流特征</h4><ul>
+<li><em>定义</em><ul>
+<li>是指生产的<strong>产品品种相对单一</strong>，而<strong>产量</strong>却相当<strong>大</strong>，<strong>生产重复度非常高</strong>，且需<strong>大批量配送</strong>的生产物流系统。</li>
+<li>企业面临的<strong>主要问题</strong>是<strong>如何增加产品数量</strong>，从物流角度看，各种物料的计划、采购、验收、保管、发放、节约利用和综合利用贯穿了生产物流过程。</li>
+</ul>
+</li>
+<li><em>生产物流特征表现</em>：<ul>
+<li>由于物料被加工的<strong>重复度高</strong>，从而物料的<strong>外部独立需求和内部相关需求易于计划和控制</strong>；</li>
+<li>由于<strong>产品设计和工艺设计</strong>相对标准和<strong>稳定</strong>，从而物<strong>料的消耗定额容易</strong>并适宜准确<strong>制定</strong></li>
+<li>由于生产<strong>品种的单一性</strong>，使得制造过程中物料采购的<strong>供应商固定</strong>，<strong>外部物流</strong>相对而言<strong>容易控制</strong>；</li>
+<li>为达到物流<strong>自动化和智能化</strong>，强调在采购、生产和销售各<strong>物流功能的系统化</strong>方面，有利于在运输、保管、配送、装卸和包装等物流作业<strong>引入各种先进技术</strong>，并在<strong>物流系统集成化</strong>。</li>
+</ul>
+</li>
+</ul>
+<h4 id="（6）多品种大批量型生产物流特征"><a href="#（6）多品种大批量型生产物流特征" class="headerlink" title="（6）多品种大批量型生产物流特征"></a>（6）多品种大批量型生产物流特征</h4><ul>
+<li><em>定义</em>：<ul>
+<li>大批量定制生产（MC）</li>
+<li>一种以大批量生产的成本和时间，提供满足客户特定需求产品和服务的新的生产物流系统</li>
+<li>基本思想是：将定制产品的生产，通过产品重组和过程重组转化或部分转化为大批量生产问题。</li>
+<li>对客户而言：产品是定制的、个性化的</li>
+<li>对生产厂家而言，产品是采用大批量生产方式制造的成熟产品。</li>
+<li>这种生产方式在国外得到了较快发展，作为一种有效的竞争手段</li>
+<li>制造的全球化和专业化分工促进大批量定制生产在全球范围逐步实施。</li>
+</ul>
+</li>
+<li><em>特征表现</em>：<ul>
+<li>生产出标准化的基型产品，并按客户订单的实际要求对其进行重新配置和变型，所以物料被加工成基型产品的重复度高，而对装配流水线则有更高的柔性要求，从而实现大批量生产和传统定制生产有机结合。</li>
+<li>促使物流必须有一个坚实的基础，订单信息化、工艺过程管理计算机化与物流配送网络化。</li>
+<li>创建可定制的产品与服务非常关键</li>
+<li>库存不再是生产物流的终结点，基于快速响应客户需求为目标的物流配送与合理库存将真正体现出基于时间竞争的物流效益。单个企业物流将发展成为供应链系统物流、全球供应链系统物流。</li>
+<li>全球化、电子化、网络化。生产与服务紧密结合，使得基于标准服务的定制化产品和基于定制服务的产品标准化，从交货点开始就提升整个企业供应链价值。</li>
+</ul>
+</li>
+</ul>
+<h2 id="九、不同生产模式下物流方案的选择——生产模式"><a href="#九、不同生产模式下物流方案的选择——生产模式" class="headerlink" title="九、不同生产模式下物流方案的选择——生产模式"></a>九、不同生产模式下物流方案的选择——生产模式</h2><h3 id="1-生产模式（X）"><a href="#1-生产模式（X）" class="headerlink" title="1.生产模式（X）"></a>1.生产模式（X）</h3><ul>
+<li><p>发展</p>
+<ul>
+<li>作坊式手工</li>
+<li>大批量生产</li>
+<li>多品种小批量生产</li>
+</ul>
+</li>
+<li><p><em>生产环境</em></p>
+<ul>
+<li><strong>备货生产（MTS）</strong><ul>
+<li>是在<strong>接受订单前</strong>就开始组织生产；</li>
+</ul>
+</li>
+<li><strong>订货生产(MTO)</strong><ul>
+<li>按客户订单生产，<strong>只保持少量库存</strong>的方法；</li>
+</ul>
+</li>
+<li><strong>装配生产（ATO）</strong><ul>
+<li>客户所需的产品是由库存中现有的零部件最终装配而成</li>
+</ul>
+</li>
+<li><strong>工程生产（ETO）</strong><ul>
+<li>是以工程项目来组织生产，在接受订单后，先进行产品设计。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em>不同生产模式有着不同的销售环境适应能力，两种衡量方式</em>：</p>
+<ul>
+<li><strong>客户订货提前期CDL（需求周期）</strong>：客户签订销售合同开始，到客户收到订购的产品为止的时期；</li>
+<li><strong>生产周期</strong>：从设计开始，经过采购、生产、装配到客户收到货物为止。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/media/16614754982971/16615688104259.png"></p>
+<p>⚠️「<em>注意事项</em>」：一般情况下，生产周期相同时，拥有<strong>较小的需求周期</strong>的企业便拥有<strong>较大的竞争力</strong>。<br>烟草行业主要采用备货生产和订货生产两种模式</p>
+<h2 id="十、总生产成本（Z）"><a href="#十、总生产成本（Z）" class="headerlink" title="十、总生产成本（Z）"></a>十、总生产成本（Z）</h2><ul>
+<li>选择哪种生产模式关键取决于<strong>客户能够接受的等待成本（需求周期）</strong>，企业在设计不同的生产环境时还应该从<strong>生产总成本</strong>（TCM）的角度去权衡利弊。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ETO和MTO</th>
+<th>ATO</th>
+<th align="left">MTS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>较高的设计、采购和生产成本</td>
+<td>库存较低，却又可能需要大量的零部件库存导致部分成本的增加</td>
+<td align="left">设计、采购、生产、装配和运输单位成本随着数量的增加而减少</td>
+</tr>
+<tr>
+<td>较小的产成品库存，其节约的成本能抵消一部分生产设计、采购和生产成本，而小批量运输和优先运输又造成了较高的运输成本</td>
+<td></td>
+<td align="left">反映了MTS所具有的规模经济与集并运输的优势，同时，库存和仓储成本却在不断增加，这是由大批量生产所造成的</td>
+</tr>
+</tbody></table>
+<h2 id="十一、准时制生产概念（X）"><a href="#十一、准时制生产概念（X）" class="headerlink" title="十一、准时制生产概念（X）"></a>十一、准时制生产概念（X）</h2><h3 id="1-定义-1"><a href="#1-定义-1" class="headerlink" title="1.定义"></a>1.定义</h3><ul>
+<li>是指在所<strong>需要的时刻</strong>，按所<strong>需要的数量</strong>生产所<strong>需要的产品或零部件</strong>的生产模式</li>
+</ul>
+<h3 id="2-目的"><a href="#2-目的" class="headerlink" title="2.目的"></a>2.目的</h3><ul>
+<li><strong>加速半成品的流转</strong></li>
+<li>将<strong>资金</strong>的<strong>积压减少</strong>到最低限度</li>
+<li><strong>提高</strong>企业的<strong>生产效益</strong></li>
+</ul>
+<h3 id="3-要点"><a href="#3-要点" class="headerlink" title="3.要点"></a>3.要点</h3><ul>
+<li>准时制生产是一种<strong>全方位的系统管理工程</strong>，是一种<strong>拉动型</strong>生产模式</li>
+<li><em>基本思想</em>：在<strong>需要的时候</strong>，按<strong>需要的量</strong>生产所需的产品</li>
+<li>以<strong>市场需求</strong>为依据，准时地组织各个环节进行生产，既<strong>不超量</strong>，也<strong>不超前</strong>。</li>
+<li>工序间的零件是<strong>小批量流动</strong>，甚至<strong>单件流动</strong>，工<strong>序间</strong>基本<strong>不</strong>存在<strong>积压</strong></li>
+<li>采取的是<strong>多品种少批量、短周期的生产方法</strong>，实现了消除库存，优化生产物流，减少浪费的目的</li>
+</ul>
+<h2 id="十二、准时制生产原则（X）"><a href="#十二、准时制生产原则（X）" class="headerlink" title="十二、准时制生产原则（X）"></a>十二、准时制生产原则（X）</h2><ul>
+<li><em>物流准时原则</em><ul>
+<li>要求在需要的时间段内，将所有的物料按<strong>需要的规格</strong>、<strong>规定的质量水平和需要的数量</strong>，按<strong>规定的方式</strong>送到生产现场，或在指定的地点能提取货物。</li>
+</ul>
+</li>
+<li><em>管理准时原则</em><ul>
+<li>要求在<strong>管理过程中</strong>，能够按照惯例的需要，遵照管理规定的要求<strong>收集、分析、处理和应用所需的信息和数据</strong>，并作为指令来进行生产控制</li>
+</ul>
+</li>
+<li><em>财务准时原则</em><ul>
+<li>要求在<strong>需要的时候</strong>，及时按照<strong>需要的金额</strong>调拨并运用所需的周转<strong>资金</strong>，保证企业财务开支适应生产运行的需求</li>
+</ul>
+</li>
+<li><em>销售准时原则</em><ul>
+<li>在市场需求的供货时间内，组织货源和安排生产，按照订单或合同要求品种和数量<strong>销售和交付产品</strong>，满足顾客的需求</li>
+</ul>
+</li>
+<li><em>生产准时原则</em><ul>
+<li>要求企业通过实施<strong>劳动组织柔性化</strong>来坚持<strong>多机台操作</strong>和<strong>多工序管理</strong>的生产方式</li>
+<li>通过培训使操作工掌握<strong>一专多能</strong>的技艺，形成一支适应性强，技术水平高和富有创造性的工作团队，保证各项特殊要求的生产任务能出色和按时地完成；</li>
+<li>在生产组织上按照工序间“<strong>一个流</strong>”原则以及成品或半成品<strong>储备量逐年下降</strong>的原则，最终实现零库存的管理目标</li>
+<li>生产准备工作和生产调度也必须适应<strong>多品种混流生产</strong>的要求，实现柔性化生产</li>
+</ul>
+</li>
+</ul>
+<h2 id="十三、看板管理的意义（X）"><a href="#十三、看板管理的意义（X）" class="headerlink" title="十三、看板管理的意义（X）"></a>十三、看板管理的意义（X）</h2><h3 id="1-传递现场的生产信息，统一思想"><a href="#1-传递现场的生产信息，统一思想" class="headerlink" title="1.传递现场的生产信息，统一思想"></a>1.传递现场的生产信息，统一思想</h3><h3 id="2-杜绝现场管理中的漏洞"><a href="#2-杜绝现场管理中的漏洞" class="headerlink" title="2.杜绝现场管理中的漏洞"></a>2.杜绝现场管理中的漏洞</h3><h3 id="3-绩效考核的公平化、透明化"><a href="#3-绩效考核的公平化、透明化" class="headerlink" title="3.绩效考核的公平化、透明化"></a>3.绩效考核的公平化、透明化</h3><h3 id="4-保证生产现场作业秩序，提升公司的形象"><a href="#4-保证生产现场作业秩序，提升公司的形象" class="headerlink" title="4.保证生产现场作业秩序，提升公司的形象"></a>4.保证生产现场作业秩序，提升公司的形象</h3><h2 id="十四、看板管理作用（Y）"><a href="#十四、看板管理作用（Y）" class="headerlink" title="十四、看板管理作用（Y）"></a>十四、看板管理作用（Y）</h2><h3 id="1-生产及搬运的作业指令"><a href="#1-生产及搬运的作业指令" class="headerlink" title="1.生产及搬运的作业指令"></a>1.生产及搬运的作业指令</h3><ul>
+<li><strong>生产及搬运作业指令</strong>是看板最<strong>基本的功能</strong>。</li>
+</ul>
+<h3 id="2-防止过量生产和过量搬运"><a href="#2-防止过量生产和过量搬运" class="headerlink" title="2.防止过量生产和过量搬运"></a>2.防止过量生产和过量搬运</h3><p>⚠️「<em>看板操作的六个原则</em>」：<br>    - <strong>没有看板不能生产，也不能搬运</strong><br>    - <strong>看板只能来自后道工序</strong><br>    - <strong>前道工序只能生产取走部分</strong><br>    - <strong>前道工序按收到看板的顺序进行生产</strong><br>    - <strong>看板必须与实物在一起</strong><br>    - <strong>不能把不良品交到后道工序</strong></p>
+<h3 id="3-进行目视管理的工具"><a href="#3-进行目视管理的工具" class="headerlink" title="3.进行目视管理的工具"></a>3.进行目视管理的工具</h3><h3 id="4-改善的工具"><a href="#4-改善的工具" class="headerlink" title="4.改善的工具"></a>4.改善的工具</h3><ul>
+<li>看板的改善功能主要是通过<strong>减少看板的数量来实现</strong></li>
+</ul>
+<h2 id="十五、看板的使用方法（X）"><a href="#十五、看板的使用方法（X）" class="headerlink" title="十五、看板的使用方法（X）"></a>十五、看板的使用方法（X）</h2><p>⚠️「<em>注意事项</em>」：使用看板时，每一个传送看板只对应一种零部件，每种零部件总是存放在规定、相应的容器内，因此，每个传送看板对应的容器也是一定的。</p>
+<h3 id="1-工序内看板使用方法"><a href="#1-工序内看板使用方法" class="headerlink" title="1.工序内看板使用方法"></a>1.工序内看板使用方法</h3><ul>
+<li><strong>跟随实物，随产品一起移动</strong></li>
+</ul>
+<h3 id="2-信号看板的使用方法"><a href="#2-信号看板的使用方法" class="headerlink" title="2.信号看板的使用方法"></a>2.信号看板的使用方法</h3><ul>
+<li>挂在<strong>成批制作的产品</strong>上面</li>
+<li>如果该批产品的数量减<strong>少到基数</strong>时就摘下看板，送回到生产工序，然后按照看板的指示开始生产；如<strong>没有摘牌，就说明数量足够</strong>，不需要生产</li>
+</ul>
+<h3 id="3-工序间看板的使用方法"><a href="#3-工序间看板的使用方法" class="headerlink" title="3.工序间看板的使用方法"></a>3.工序间看板的使用方法</h3><ul>
+<li>挂在从前工序领来的<strong>零部件箱子</strong>上</li>
+</ul>
+<h3 id="4-外协看板"><a href="#4-外协看板" class="headerlink" title="4.外协看板"></a>4.外协看板</h3><p>-需要<strong>按照延迟的回数发出相应的看板数量</strong>，这样就能够按照JIT进行循环供货。</p>
+<h2 id="十六、MRP的发展过程（Y）"><a href="#十六、MRP的发展过程（Y）" class="headerlink" title="十六、MRP的发展过程（Y）"></a>十六、MRP的发展过程（Y）</h2><h3 id="1-订货点法"><a href="#1-订货点法" class="headerlink" title="1.订货点法"></a>1.订货点法</h3><ul>
+<li>订货点订货法依靠对库存补充周期内的需求量预测，并保持一定的安全库存储备，来确定订货点。</li>
+<li>订货点法有效性取决于大规模生产环境下物料需求的连续稳定性</li>
+</ul>
+<h3 id="2-基本MRP："><a href="#2-基本MRP：" class="headerlink" title="2.基本MRP："></a>2.基本MRP：</h3><ul>
+<li>物料需求计划（MRP）：是一种<strong>应用计算机</strong>来计算<strong>物料需求和制订生产作业计划</strong>的科学方法。</li>
+<li>MRP管理模式实现准时生产、减少库存的基本方法是：<ul>
+<li>将企业产品中的各种物料分为<strong>独立需求物料和相关需求物料</strong>，并按<strong>时间段确定不同时期</strong>的物料需求；</li>
+<li>基于<strong>产品结构的物料需求</strong>组织生产，根据<strong>产品完工日期</strong>和<strong>产品结构</strong>制定生产计划，从而解决<strong>库存物料订货与组织生产</strong>问题。</li>
+</ul>
+</li>
+<li>MRP的实施，使未来的物<strong>料短缺不是等到短缺发生时才给予解决</strong>，而是<strong>事先进行计划</strong>。</li>
+<li>MRP只说明了<strong>需求的优先顺序，没有说明是否有可能实现</strong>，只有优先计划远远不够，如果没有足够生产能力，也无法生产。</li>
+<li>MRP所输出的生产和采购计划信息若没有传送到车间和供应商那里，这些计划一点价值也没有，所需还必须增加三个方面功能<ul>
+<li><strong>能力需求计划</strong></li>
+<li><strong>物料采购</strong></li>
+<li><strong>生产作业控制</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-闭环MRP：计划-执行-反馈"><a href="#3-闭环MRP：计划-执行-反馈" class="headerlink" title="3.闭环MRP：计划-执行-反馈"></a>3.闭环MRP：计划-执行-反馈</h3><ul>
+<li>在基本MRP基础上，引进<strong>能力需求计划与保证功能</strong>，并进行运作反馈，克服基本MRP的不足；</li>
+<li><em>特点</em>：<ul>
+<li>以<strong>年度生产计划</strong>为系统流程基础主生产计划及作业执行计划的产生过程中均<strong>接受能力需求计划</strong>的<strong>平衡检验</strong>，这样<strong>使物料需求计划成为可行的计划</strong>；</li>
+<li>具有<strong>车间现场管理、采购作业管理</strong>等功能，各部门相关的执行结果均可立即取得反馈，<strong>利于计划进行合乎实际的调整和更新</strong>；</li>
+<li>主生产计划的内容满足<strong>年度生产规划的基本规范</strong>，这个计划通过多次<strong>模拟</strong>进行<strong>粗能力计划的平衡</strong>，使得经过产能负荷分析后的主生产计划能真正实现；然后再<strong>执行物料需求计划（MRP）和细能力需求计划（CRP）、车间作业计划及控制</strong>。闭环有两层含义：1.包括<strong>能力需求计划、车间调度和供应商调度</strong>；2.<strong>反馈关系</strong>，在实施系统时，利用供应商、车间现场人员反馈的真实执行情况来帮助计划的贯彻执行</li>
+</ul>
+</li>
+<li>⚠️「<em>注意事项</em>」：闭环MRP是以<strong>物料</strong>为中心的组织生产模式体现了为顾客服务、按需定产的宗旨，计划统一可行，并且借助计算机系统实现了对生产的闭环控制，比较<strong>经济和集约化</strong>，但它仅<strong>局限于生产中“物”的管理方面</strong>。</li>
+</ul>
+<h3 id="4-MRPII阶段："><a href="#4-MRPII阶段：" class="headerlink" title="4. MRPII阶段："></a>4. MRPII阶段：</h3><ul>
+<li><strong>不仅</strong>要对企业的<strong>物料</strong>进行<strong>管理</strong>，还要对<strong>企业所有内部资</strong>源等进行全面管理</li>
+<li>将<strong>时间</strong>作为一种<strong>资源</strong>；</li>
+<li>利用<strong>信息的集成</strong>对企业有限制造资源进行周密的规划、合理的利用，利用<strong>信息技术</strong>实现MRPII。</li>
+<li>对MRP赋予新的含义，即<strong>制造资源计划</strong>，实现了财、物的信息集成；</li>
+<li>MRPII成为制造业<strong>公认的管理标准系统</strong></li>
+</ul>
+<h3 id="5-ERP阶段：供应链原理"><a href="#5-ERP阶段：供应链原理" class="headerlink" title="5.ERP阶段：供应链原理"></a>5.ERP阶段：供应链原理</h3><ul>
+<li>企业资源计划；</li>
+<li>核心思想：供应链管理</li>
+<li>在MRPII基础上通过<strong>反馈的物流与反馈的信息流和资金流</strong>，把<strong>客户需求</strong>和<strong>企业内部的生产活动</strong>以及<strong>供应商的制造资源</strong>整合在一起，体现完全按<strong>用户需求</strong>制造的一种供应链管理思想的<strong>功能网络结构模式</strong>。</li>
+</ul>
+<h2 id="十七、MRP基本知识（-X）"><a href="#十七、MRP基本知识（-X）" class="headerlink" title="十七、MRP基本知识（ X）"></a>十七、MRP基本知识（ X）</h2><h3 id="1-MRP工作原理"><a href="#1-MRP工作原理" class="headerlink" title="1.MRP工作原理"></a>1.MRP工作原理</h3><ul>
+<li>根据<strong>产品的生产量</strong>，计算出<strong>构成这些产品的零部件与原材料的需求量</strong>和<strong>需求时间</strong>，根据物料需<strong>求的时间和生产（订货）周期</strong>确定各<strong>零部件开始生产（订货）的时间</strong>。</li>
+</ul>
+<h3 id="2-MRP的目标"><a href="#2-MRP的目标" class="headerlink" title="2.MRP的目标"></a>2.MRP的目标</h3><ul>
+<li>保证<strong>按时供应</strong>用户所需产品，<strong>及时取得</strong>生产所需要的原材料及零部件；</li>
+<li>保证尽可能<strong>低的库存水平</strong></li>
+<li>保证企业各生产单位生产的零部件、外购配套件的<strong>供应在时间和数量上</strong>与<strong>装配需求紧密衔接</strong></li>
+</ul>
+<h3 id="3-MRP主要内容"><a href="#3-MRP主要内容" class="headerlink" title="3.MRP主要内容"></a>3.MRP主要内容</h3><ul>
+<li><em>编制零件的生产（采购）计划</em><ul>
+<li>正确编制零件生产（采购）计划，必须<strong>首先落实产品的生产计划和进度计划</strong>，即<strong>主生产计划（MPS）</strong>，这是<strong>MRP展开的依据</strong>；</li>
+<li>MRP还必须<strong>掌握产品的零件结构</strong>，即<strong>物料清单（BOM）</strong>，才能把<strong>主生产计划展开成零件计划</strong></li>
+<li>掌握<strong>库存数量</strong>，才能准确计算出<strong>零件的采购数量</strong>。</li>
+<li>因此，MRP编制的依据是<ul>
+<li><strong>主生产计划</strong></li>
+<li><strong>物料清单</strong></li>
+<li><strong>库存信息</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>MRP基本逻辑图</em>：<br><img src="/media/16614754982971/16615795204647.png"></p>
+<h3 id="4-库存控制技术"><a href="#4-库存控制技术" class="headerlink" title="4.库存控制技术"></a>4.库存控制技术</h3><ul>
+<li>MRP思想解决了<strong>何时需要、需要什么、需要多少</strong>的问题</li>
+<li>不仅在<strong>数量上解决</strong>了缺料问题，而且从<strong>时间上解决</strong>了缺料问题。</li>
+<li>MRP涉及原则是适时物流原则，即在需要的时间生产或采购需要的数量。</li>
+<li>通过MPS知道需要生产什么，生产多少，通过BOM开展知道用到什么</li>
+<li>根据物料库存信息知道已经有了什么；</li>
+<li>通过计算知道还缺什么，何时安排生产和采购。</li>
+</ul>
+<h2 id="十八、MRP的输入信息（X）"><a href="#十八、MRP的输入信息（X）" class="headerlink" title="十八、MRP的输入信息（X）"></a>十八、MRP的输入信息（X）</h2><blockquote>
+<p>主生产计划、粗能力计划、库存状态信息、产品结构信息（物料清单）、物料需求计划、产能需求计划、工艺路线、工作中心和外部零件信息。</p>
+</blockquote>
+<h3 id="1-主生产计划（MPS）"><a href="#1-主生产计划（MPS）" class="headerlink" title="1. 主生产计划（MPS）"></a>1. 主生产计划（MPS）</h3><ul>
+<li>对企业<strong>生产计划大纲的细化</strong>，用于<strong>协调生产资源与可用资源之间</strong>的差距</li>
+<li>将生产计划大纲的<strong>大类计划转化为具体的产品计划</strong></li>
+<li>是个实际的<strong>详细的产出计划</strong>，它给出了<strong>特定的项目</strong>或<strong>产品</strong>在每个计划周期的<strong>生产数量</strong>。</li>
+<li>主生产计划的编制要<strong>以生产计划大纲</strong>（年度生产规划）<strong>为依据</strong>，并<strong>结合预测和客户订单</strong>的情况，来<strong>安排将来各周期</strong>中生产的<strong>产品种类和数量</strong></li>
+<li>主生产计划在<strong>综合平衡了客户需求</strong>和<strong>可用库存的现状</strong>后，依据生产的实际情况，<strong>综合平衡了生产需求和可用资源的矛盾</strong>，获得一个详细的，合理的，可行的<strong>产品出产进度计划</strong>。</li>
+<li>如果说<strong>销售与运作计划</strong>（SOP）还相对是<strong>宏观指导性</strong>规划的话，主生产计划则开始<strong>切入实际运作层面</strong>，触发和主导了计划体系的真正运行。</li>
+<li>主生产计划在MRP中<strong>起着“主控”作用</strong>，决定了后续所有计划及制造行为的目标</li>
+<li>主生产计划<strong>在MRP系统中的位置</strong>是一个<strong>上下内外交叉的枢纽</strong></li>
+<li>在运行主生产计划时<strong>要相伴运行粗能力计划</strong>，<strong>只有</strong>经过<strong>按时段平衡了供应与需求后</strong>的主生产计划，<strong>才能</strong>作为下一个计划层次——物料需求计划输入信息</li>
+<li>主生产计划必须是<strong>现实可行的</strong>，需求量和需求时间都必须是符合实际的</li>
+<li>主生产计划编制和控制<strong>是否得当</strong>，在相当大程度上<strong>关系</strong>到<strong>MRP系统的成败</strong>。</li>
+</ul>
+<h3 id="2-粗能力计划"><a href="#2-粗能力计划" class="headerlink" title="2.粗能力计划"></a>2.粗能力计划</h3><ul>
+<li>只是<strong>对主生产计划所需关键生产能力进行估算</strong>，给出<strong>能力需求</strong>概况；</li>
+<li>是一种<strong>计算量小</strong>，<strong>占用计算机时间比较少</strong>，比较<strong>粗略、快速</strong>的<strong>能力核定方法</strong>；</li>
+<li>只考虑<strong>关键工作中心</strong>及<strong>相关工艺路线</strong></li>
+</ul>
+<h3 id="3-库存状态信息"><a href="#3-库存状态信息" class="headerlink" title="3. 库存状态信息"></a>3. 库存状态信息</h3><ul>
+<li>保存企业数据库中<strong>所有产品、零部件、在制品、原材料</strong>等库存状态的信息<ul>
+<li><em>现有库存量</em></li>
+<li><em>预计入库量</em>（包括<strong>在途库存</strong>）</li>
+<li><em>安全库存量</em></li>
+<li><em>提前期</em>：<ul>
+<li>采购：从向<strong>供应商发出某种物料的订单</strong>到该<strong>物料到货入库为止</strong>所消耗的时间</li>
+<li>制造或装配件：<strong>下达生产指令</strong>到<strong>制造或装配完毕</strong>所消耗的时间</li>
+</ul>
+</li>
+<li><em>订购批量生产</em><ul>
+<li>某个时间段内<strong>向供应商订购或要求生产部门生产</strong>某种物料的<strong>数量</strong>。</li>
+<li>常用的<em>批量策略</em>有：<strong>缺一补一（适用价格昂贵的物料）、固定批量法</strong></li>
+<li>无论需求量多少，都必须将批量<strong>确定为一个标量</strong></li>
+</ul>
+</li>
+<li><em>组装废品系数、零件废品系数、材料利用率系数</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-产品结构信息（物料清单BOM）"><a href="#4-产品结构信息（物料清单BOM）" class="headerlink" title="4.产品结构信息（物料清单BOM）"></a>4.产品结构信息（物料清单BOM）</h3><ul>
+<li>产品信息输入计算机后，计算机根据输入的产品结构文件信息，自动赋予各部件一个底层代码</li>
+</ul>
+<h3 id="5-物料需求计划（核心）"><a href="#5-物料需求计划（核心）" class="headerlink" title="5. 物料需求计划（核心）"></a>5. 物料需求计划（核心）</h3><ul>
+<li>是计划的核心</li>
+<li><strong>根据主生产计划</strong>规定的产品品种、产量的需求<strong>确定物料需求数量</strong>的计划</li>
+</ul>
+<h3 id="6-产能需求计划"><a href="#6-产能需求计划" class="headerlink" title="6.产能需求计划"></a>6.产能需求计划</h3><ul>
+<li><strong>物料需求计划是否可行</strong>，由<strong>产能需求计划来验证</strong></li>
+<li>是确定为<strong>完成生产任务需要多少劳力</strong>和<strong>设备资源的过程</strong></li>
+<li>把物料需求计划所<strong>需零部件数量转化成标准负荷小时</strong>，把<strong>物料需求转化成产能需求</strong></li>
+<li>把物料需求计划输出的<strong>加工计划和采购计划，作为产能需求的输入</strong></li>
+<li>产能需求计划将加工计划和采购计划转化成<strong>不同时间段、不同工作中心的工时</strong>数</li>
+</ul>
+<h3 id="7-工艺路线"><a href="#7-工艺路线" class="headerlink" title="7.工艺路线"></a>7.工艺路线</h3><ul>
+<li><strong>详细描述某项目制造过程的文件</strong>，包括要进行的加工及其顺序，涉及的工作中心以及准备和加工所需的工时定额。</li>
+</ul>
+<h3 id="8-工作中心"><a href="#8-工作中心" class="headerlink" title="8. 工作中心"></a>8. 工作中心</h3><ul>
+<li><strong>用于生产产品的生产资源</strong>，包括机器设备和人，是各种生产或能力加工单位的总称<ul>
+<li>工作中心<strong>属于能力范畴</strong>，即<strong>计划范畴</strong>，不属于固定资产或设备管理范畴</li>
+<li>一个工作中心可以是一台设备，也可以是一组功能相同的设备、一条线、一个班组等；</li>
+<li>其分解结果是产生一份以工作中心的标准工时表示的产能计划</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-外部零件信息"><a href="#9-外部零件信息" class="headerlink" title="9.外部零件信息"></a>9.外部零件信息</h3><ul>
+<li>是指需从外部订货采购的备品、备件以及用于设备维护等的零部件</li>
+<li>企业本身不生成这类零件</li>
+<li>MRP系统必须输入此类信息</li>
+</ul>
+<h2 id="十九、影响MRP运行的因素（X）"><a href="#十九、影响MRP运行的因素（X）" class="headerlink" title="十九、影响MRP运行的因素（X）"></a>十九、影响MRP运行的因素（X）</h2><h3 id="1-独立需求的准确性"><a href="#1-独立需求的准确性" class="headerlink" title="1. 独立需求的准确性"></a>1. 独立需求的准确性</h3><ul>
+<li><strong>销售计划</strong>是一种<strong>独立需求</strong>，<strong>需提高其准确性</strong></li>
+<li>独立需求计划的准确性会直接<strong>影响MRP运行结果</strong></li>
+<li>以前的<strong>生产计划量不再生产</strong>，则在运行MRP之前要<strong>及时关闭或删除</strong>这部分计划量</li>
+</ul>
+<h3 id="2-提前期设置的合理性"><a href="#2-提前期设置的合理性" class="headerlink" title="2.提前期设置的合理性"></a>2.提前期设置的合理性</h3><ul>
+<li>MRP处理逻辑是根据零部件提前期，确定各种物料需求计划的投入时间、产出时间。</li>
+<li>提前期是MRP顺利运行的重要基础数据，其设置成为了MRP系统中的关键技术，直接影响生产计划的准确性、可靠性和实用性。</li>
+</ul>
+<h3 id="3-物料清单参数设置的准确性"><a href="#3-物料清单参数设置的准确性" class="headerlink" title="3.物料清单参数设置的准确性"></a>3.物料清单参数设置的准确性</h3><ul>
+<li>如果BOM没有或者无效，则下级的物料需求则不能展开；</li>
+<li>如果BOM数据某些参数设置不准确，影响MRP运行结果</li>
+</ul>
+<h3 id="4-库存信息的准确性"><a href="#4-库存信息的准确性" class="headerlink" title="4.库存信息的准确性"></a>4.库存信息的准确性</h3><ul>
+<li>直接影响MRP的运行</li>
+<li>MRP是根据计划独立需求和库存状态信息产生净需求的，安全库存也是一种需求，所以，需要合理设置安全库存</li>
+</ul>
+<h3 id="5-生产替代物料更换的频繁性"><a href="#5-生产替代物料更换的频繁性" class="headerlink" title="5. 生产替代物料更换的频繁性"></a>5. 生产替代物料更换的频繁性</h3><ul>
+<li>生产物料替代的问题直接影响MRP运行结果的准确性、生产正常运作和成本核算准确性。</li>
+<li>应避免并纠正物料频繁无原则的替代</li>
+</ul>
+<h3 id="6-未完成订单信息传递的及时性"><a href="#6-未完成订单信息传递的及时性" class="headerlink" title="6.未完成订单信息传递的及时性"></a>6.未完成订单信息传递的及时性</h3><ul>
+<li>生产订单、采购订单、销售订单及库存转储订单等未完成量都要参与MRP运算，如不再执行，应及时关闭取消，否则影响ERP运行准确性。</li>
+</ul>
+<h2 id="二十、卷烟生产物流主要环节（X）"><a href="#二十、卷烟生产物流主要环节（X）" class="headerlink" title="二十、卷烟生产物流主要环节（X）"></a>二十、卷烟生产物流主要环节（X）</h2><blockquote>
+<p>卷烟生产物流是以<strong>烤片、烟叶副产品</strong>为原料，以<strong>烟用单体香糖料</strong>生产出<strong>配制香糖料</strong>，按<strong>制丝工艺流程</strong>组织生产出<strong>烟丝</strong>，在卷包环节用<strong>烟丝及烟用材料</strong>生产出<strong>卷烟成品</strong>的生产物流过程。<br>卷烟生产物流活动是<strong>以生产卷烟所需的原料及辅料</strong>为<strong>作业对象</strong>，以<strong>卷烟生产企业为主体</strong>的生产经营活动的物流。</p>
+</blockquote>
+<h3 id="1-原料供应"><a href="#1-原料供应" class="headerlink" title="1.原料供应"></a>1.原料供应</h3><ul>
+<li><em>定义</em><ul>
+<li>将卷烟生产使用的<strong>原料（片烟、烟梗、再造烟叶）</strong>从<strong>仓储部门</strong>运送至<strong>工厂制丝线生产现场</strong>的全过程。</li>
+</ul>
+</li>
+<li><em>环节</em><ul>
+<li><em>原料输送</em></li>
+<li><em>原料组配（关键）</em><ul>
+<li>是把制丝所需的各种<strong>烤片</strong>，按<strong>工艺配方</strong>的要求，<strong>预先组配</strong>在一起，便于<strong>批量投料</strong>。</li>
+<li>组配方式：人工和原料配方库。</li>
+</ul>
+</li>
+<li><em>原料配送</em></li>
+<li><em>剩料回收</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-配制香糖料供应"><a href="#2-配制香糖料供应" class="headerlink" title="2. 配制香糖料供应"></a>2. 配制香糖料供应</h3><ul>
+<li>香糖料的配制供应，是各卷烟生产企业<strong>按每个规格产品的风格特点</strong>，制定相应的<strong>香糖料配方</strong></li>
+<li>按<strong>制丝批量</strong>，把<strong>食用单体糖料、香精</strong>分别混合配制成<strong>配制香糖料</strong>，供应制丝生产的生产物流过程。</li>
+</ul>
+<h3 id="3-制丝生产物流"><a href="#3-制丝生产物流" class="headerlink" title="3.制丝生产物流"></a>3.制丝生产物流</h3><ul>
+<li>把<strong>烤片叶组</strong>先后<strong>投入润叶生产线、制丝生产线</strong>生产出<strong>烟丝</strong>的生产物流过程。</li>
+<li>包括<ul>
+<li><strong>投料</strong></li>
+<li><strong>回潮</strong></li>
+<li><strong>润叶</strong></li>
+<li><strong>加料</strong></li>
+<li><strong>储叶</strong></li>
+<li><strong>切丝</strong></li>
+<li><strong>烘丝</strong></li>
+<li><strong>混丝</strong></li>
+<li><strong>加香</strong></li>
+<li><strong>储丝</strong></li>
+</ul>
+</li>
+<li>其<em>工艺任务</em>是：将各种<strong>烟叶配制成</strong>配比均匀、纯净无杂质、宽度、水分、温度均符合各规格卷烟工艺要求的<strong>烟丝</strong></li>
+</ul>
+<h3 id="4-烟丝存储（烟丝配方库）供应"><a href="#4-烟丝存储（烟丝配方库）供应" class="headerlink" title="4.烟丝存储（烟丝配方库）供应"></a>4.烟丝存储（烟丝配方库）供应</h3><ul>
+<li>制丝完成后的<strong>烟丝</strong>，通过<strong>输送机</strong>送入<strong>储丝柜</strong>或<strong>烟丝配方库</strong>进行储存，<strong>供应卷包</strong>机台生产<strong>使用</strong></li>
+<li><em>工艺任务</em>：将<strong>加香加料混合后</strong>的各种<strong>烟丝</strong>，<strong>保湿润香</strong>，进行一定时间的<strong>工艺醇化</strong>，<strong>供卷包生产使用</strong>。</li>
+</ul>
+<h3 id="5-卷接"><a href="#5-卷接" class="headerlink" title="5.卷接"></a>5.卷接</h3><ul>
+<li>卷接工艺从<strong>供丝、辅料配送、嘴棒的自动存储与输送到卷接成合格的烟支</strong>为止。</li>
+<li><em>工艺任务</em>：充分<strong>发挥设备效率</strong>，将<strong>合格的烟丝</strong>按照工艺技术标准及质量标准，<strong>卷接成合格的烟支</strong>，<strong>接装成滤嘴烟支</strong>。</li>
+<li><em>具体物流</em>：<ul>
+<li><em>卷制部分</em>：由<strong>烟丝进料、卷烟纸供给、烟条成型</strong>等系统构成</li>
+<li><em>接装部分</em>：<strong>滤嘴供给、接装纸供给、烟支接装、烟支分切、烟支检测</strong>等系统构成</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-包装"><a href="#6-包装" class="headerlink" title="6.包装"></a>6.包装</h3><ul>
+<li><em>工艺环节</em>：<ul>
+<li><strong>烟支输送</strong></li>
+<li><strong>辅料配送</strong></li>
+<li><strong>小包包装</strong></li>
+<li><strong>小包输送</strong></li>
+<li><strong>条包包装</strong></li>
+<li><strong>条包输送</strong></li>
+<li><strong>封装成箱</strong></li>
+</ul>
+</li>
+<li><em>工艺任务</em><ul>
+<li>采用<strong>多种包装材料</strong>和<strong>包装机械</strong>，将<strong>合格的烟支</strong>包装成符合产品质量标准、便于储运和销售的<strong>成品</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-成品下线入库"><a href="#7-成品下线入库" class="headerlink" title="7. 成品下线入库"></a>7. 成品下线入库</h3><ul>
+<li><em>工艺流程</em><ul>
+<li><strong>件烟打码</strong></li>
+<li><strong>入库扫码</strong></li>
+<li><strong>组盘堆垛</strong></li>
+<li><strong>成垛输送</strong></li>
+<li><strong>上架存入货位</strong></li>
+</ul>
+</li>
+<li><em>工艺任务</em><ul>
+<li>将<strong>件烟标识身份、组配</strong>成便于<strong>存储的单元，入库保管</strong>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="二十一、卷烟生产物流的特点（X）"><a href="#二十一、卷烟生产物流的特点（X）" class="headerlink" title="二十一、卷烟生产物流的特点（X）"></a>二十一、卷烟生产物流的特点（X）</h2><h3 id="1-卷烟生产工艺布局决定了卷烟生产物流的方式"><a href="#1-卷烟生产工艺布局决定了卷烟生产物流的方式" class="headerlink" title="1. 卷烟生产工艺布局决定了卷烟生产物流的方式"></a>1. 卷烟生产工艺布局决定了卷烟生产物流的方式</h3><ul>
+<li>随着卷烟企业<strong>工房、装备、仓库</strong>等设施的<strong>设计分布、生产工艺、生产流程的确定</strong>，卷烟生产物流的<strong>路径和物流方式</strong>也确定下来，并和<strong>生产工艺流程构成一体</strong>，卷烟生产物流也因而成了一种<strong>稳定性的物流</strong>。</li>
+</ul>
+<h3 id="2-卷烟生产物流量大"><a href="#2-卷烟生产物流量大" class="headerlink" title="2. 卷烟生产物流量大"></a>2. 卷烟生产物流量大</h3><ul>
+<li>卷烟生产是<strong>原料、辅料不断投入、搬运、加工、组合</strong>的物流过程</li>
+<li><strong>烟叶及其副产品</strong>是卷烟生产的主要原料，<strong>用量大、等级多</strong></li>
+<li><strong>制丝生产</strong>是大批量原料<strong>搬运、组合、不断改变实物形态</strong>的流动过程</li>
+<li><strong>辅料及耗材</strong>是卷包生产不可缺少的材料，<strong>品种规格繁多</strong>，在生产过程中搬<strong>运和配送量大</strong></li>
+<li><strong>卷烟成品</strong>出入库<strong>频率高、周转快</strong>。</li>
+</ul>
+<h3 id="3-卷烟生产物流的输送环节多"><a href="#3-卷烟生产物流的输送环节多" class="headerlink" title="3.卷烟生产物流的输送环节多"></a>3.卷烟生产物流的输送环节多</h3><ul>
+<li><strong>卷烟生产过程中</strong>，制丝工序复杂，相应输送环节多</li>
+<li><strong>卷包生产过程中</strong>，需要烟丝、辅料的供应，辅料还需进行搭配供料和中途补料</li>
+<li><strong>成品</strong>要进行分拣、码垛入库、拆垛、分拣出库等</li>
+<li>不同的生产流程中，形成了<strong>从库房到车间、从车间到不同库房的多次运送作业</strong>，导致输送环节多。</li>
+</ul>
+<h3 id="4-卷烟生产物流的自动化程度高"><a href="#4-卷烟生产物流的自动化程度高" class="headerlink" title="4. 卷烟生产物流的自动化程度高"></a>4. 卷烟生产物流的自动化程度高</h3><h3 id="5-卷烟生产物流的计划性强"><a href="#5-卷烟生产物流的计划性强" class="headerlink" title="5.卷烟生产物流的计划性强"></a>5.卷烟生产物流的计划性强</h3><ul>
+<li>卷烟生产企业必须严格按照国家计划进行生产，<strong>卷烟生产每月都有生产计划指标，不得超产、瞒产</strong>。</li>
+<li>国家局通过<strong>生产经营决策管理系统</strong>，把工业企业生产入库的实时信息上传国家局，<strong>计划码段用完后，就不能生产</strong></li>
+<li><strong>商业企业</strong>，国家局<strong>考核</strong>商业公司的<strong>月末存销比</strong>，形成月初集中要货，月末少到货。</li>
+<li>因此，卷烟生产<strong>月初紧、月末松</strong>，卷烟生产物流<strong>每月前紧后松</strong>，呈现计划性强的特点。</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-04-26</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%B8%89%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            三级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>

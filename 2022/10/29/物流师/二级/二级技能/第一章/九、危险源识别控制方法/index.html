@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="1.9 危险源识别控制方法" />
+    <meta name="hexo-theme-A4" content="v1.7.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>乾言语斋</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--返回顶部css-->
+    
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+    
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+
+
+    <!--目录-->
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">乾言语斋</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">📖首页</a></li>
+            
+        
+            
+                <li><a href="/list/">📕文章</a></li>
+            
+        
+            
+                <li><a href="/about/">🎁碎片</a></li>
+            
+        
+            
+                <li><a href="/tags/">🎇标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">💡分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            1.9 危险源识别控制方法
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B9%9D%E3%80%81%E5%8D%B1%E9%99%A9%E6%BA%90%E8%AF%86%E5%88%AB%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"><span class="post-toc-text">九、危险源识别控制方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E5%8D%B1%E9%99%A9%E6%BA%90%E8%AF%86%E5%88%AB%E7%9A%84%E5%86%85%E5%AE%B9%E5%92%8C%E6%96%B9%E5%90%91"><span class="post-toc-text">一、危险源识别的内容和方向</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E5%8D%B1%E9%99%A9%E6%BA%90%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95"><span class="post-toc-text">二、危险源识别方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%9B%B4%E8%A7%82%E7%BB%8F%E9%AA%8C%E6%B3%95"><span class="post-toc-text">（一）直观经验法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-%E9%80%82%E7%94%A8%E4%BA%8E"><span class="post-toc-text">1.适用于</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-%E5%88%86%E7%B1%BB"><span class="post-toc-text">2.分类</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="post-toc-text">（二）系统安全分析方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89LEC%E8%AF%84%E4%BB%B7%E6%B3%95"><span class="post-toc-text">（三）LEC评价法</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="九、危险源识别控制方法"><a href="#九、危险源识别控制方法" class="headerlink" title="九、危险源识别控制方法"></a>九、危险源识别控制方法</h1><h2 id="一、危险源识别的内容和方向"><a href="#一、危险源识别的内容和方向" class="headerlink" title="一、危险源识别的内容和方向"></a>一、危险源识别的内容和方向</h2><ul>
+<li><strong>人</strong>的不安全<strong>行为</strong>；</li>
+<li><strong>物</strong>的不安全<strong>状态</strong>；</li>
+<li>不安全的<strong>作业环境</strong>。</li>
+</ul>
+<h2 id="二、危险源识别方法"><a href="#二、危险源识别方法" class="headerlink" title="二、危险源识别方法"></a>二、危险源识别方法</h2><h3 id="（一）直观经验法"><a href="#（一）直观经验法" class="headerlink" title="（一）直观经验法"></a>（一）直观经验法</h3><h4 id="1-适用于"><a href="#1-适用于" class="headerlink" title="1.适用于"></a>1.适用于</h4><ul>
+<li><strong>可供参考先例、有以往经验</strong>可以借鉴的危险辨识过程</li>
+</ul>
+<h4 id="2-分类"><a href="#2-分类" class="headerlink" title="2.分类"></a>2.分类</h4><ul>
+<li><em>对照经验法</em><ul>
+<li>对照有关标准、法规、检查表或依靠分析人员的观察分析能力；</li>
+<li>借助于经验和判断能力直观的评价对象危险性和危害性的方法。</li>
+</ul>
+</li>
+<li><em>类比方法</em><ul>
+<li>利用相同或相似系统或作业条件的经验和职业安全卫生的统计资料来类推，分析评价对象的危险、危害因素；</li>
+<li>多用于危害因素和作业条件危险因素的辨识过程。</li>
+</ul>
+</li>
+</ul>
+<h3 id="（二）系统安全分析方法"><a href="#（二）系统安全分析方法" class="headerlink" title="（二）系统安全分析方法"></a>（二）系统安全分析方法</h3><ul>
+<li>即<strong>应用系统安全工程评价方法</strong>的部分方法进行危害辨识；</li>
+<li>常用于<strong>复杂系统、没有事故经验的新开发的系统</strong></li>
+<li>常用的系统安全分析方法有<ul>
+<li><strong>工作安全分析</strong>（JSA）（作业安全分析）；<ul>
+<li>事先或定期对某项工作进行风险评价；</li>
+<li>根据评价结果制定和实施相应的控制措施；</li>
+<li>以最大限度消除和控制风险目的的方法。</li>
+<li>是一种系统且比较科学的危险源辨识工具</li>
+<li>是有组织的对存在的危害进行识别、评估和制定实施控制措施的过程。</li>
+</ul>
+</li>
+<li><strong>事故树</strong>(FTA)；</li>
+<li><strong>安全检查表</strong>（SCL）；</li>
+<li><strong>预先危险性分析</strong>（PHA）；</li>
+<li><strong>因果分析法</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="（三）LEC评价法"><a href="#（三）LEC评价法" class="headerlink" title="（三）LEC评价法"></a>（三）LEC评价法</h3><ul>
+<li>是对具有<strong>潜在</strong>危险性作业环境中的危险源进行<strong>半定量</strong>的安全评价方法</li>
+<li>用于评价操作人员在具有<strong>潜在危险性</strong>环境中作业时的危险性、危害性；</li>
+<li>用与系统风险有关的三种因素指标值的乘积来评价操作人员伤亡风险大小；</li>
+<li><strong>D&#x3D;L✖️E✖️C</strong>【L：<strong>事故发生的可能性</strong>；E：<strong>人员暴露于危险环境中的频繁程度</strong>；C：<strong>一旦发生事故可能造成的后果</strong>，D：危险性）</li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2022-10-29</span>
+            
+                <span>该篇文章被 逸仙星辰</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            物流师
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%BA%8C%E7%BA%A7%E7%89%A9%E6%B5%81%E5%B8%88/'>
+                            二级物流师
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+<!--回到顶部按钮-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script src="/js/returnToTop.js"></script>
+
+
+<!--目录-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+
+<script src="/js/toc.js"></script>
+
+
+
+
+<script src="/js/randomHeaderContent.js"></script>
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>
