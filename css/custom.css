@@ -21,6 +21,28 @@ p {
     white-space: normal;
 }
 
+.post-audio {
+    margin: 1.25rem 0 1.75rem;
+    padding: 0.9rem 1rem 1rem;
+    border: 1px solid var(--reading-line);
+    border-left: 3px solid var(--reading-accent);
+    background: var(--reading-soft);
+}
+
+.post-audio figcaption {
+    margin-bottom: 0.55rem;
+    color: var(--reading-ink);
+    font-size: 0.92rem;
+    font-weight: 650;
+}
+
+.post-audio audio {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: 40px;
+}
+
 a {
     color: var(--reading-accent);
 }
