@@ -5,6 +5,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
     <meta name="description" content="读书、思考、工作与行走的个人记录" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="乾言语斋" />
+    <meta property="og:description" content="读书、思考、工作与行走的个人记录" />
+    <meta property="og:url" content="https://lemonpeom.cn/index.html" />
+    <meta name="twitter:card" content="summary" />
     <meta name="hexo-theme-A4" content="v1.8.1" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>乾言语斋</title>
@@ -50,13 +55,14 @@
     
 
     <!-- Local reading styles are loaded last; the version query refreshes cached themes after publishing. -->
-        <link rel="stylesheet" href="/css/custom.css?v=20260829-1">
+        <link rel="stylesheet" href="/css/custom.css?v=20260830-2">
 
 </head>
 
     
     
     <body>
+        <div class="reading-progress" aria-hidden="true"><span></span></div>
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -127,11 +133,40 @@
     </ul>
 </nav>
 
+    <button class="reading-search-trigger" type="button" data-search-open aria-label="打开搜索" title="搜索">⌕</button>
 </header>
+
+<div class="search-dialog" data-search-dialog hidden>
+    <div class="search-dialog-backdrop" data-search-close></div>
+    <section class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
+        <div class="search-panel-header">
+            <h2 id="search-title">搜索文章</h2>
+            <button class="dialog-close" type="button" data-search-close aria-label="关闭搜索">×</button>
+        </div>
+        <label class="search-field">
+            <span class="sr-only">搜索标题、摘要或标签</span>
+            <input type="search" data-search-input placeholder="输入标题、摘要或标签" autocomplete="off">
+        </label>
+        <div class="search-results" data-search-results aria-live="polite">
+            <p class="search-empty">输入关键词开始搜索</p>
+        </div>
+    </section>
+</div>
 
                     
 
 <main class="home-main">
+    <section class="home-intro" aria-label="站点概览">
+        <p>读书、思考、工作与行走的个人记录。按时间记录，按主题阅读。</p>
+        <div class="home-facts" aria-label="站点统计">
+            <span><strong>148</strong><small>篇文章</small></span>
+            <span><strong>4</strong><small>个栏目</small></span>
+            
+                <span><strong>2026.08.27</strong><small>最近更新</small></span>
+            
+        </div>
+    </section>
+
     <section class="home-section" aria-labelledby="recent-posts-title">
         <header class="collection-header home-section-header">
             <span class="collection-kicker">最近更新</span>
@@ -147,7 +182,12 @@
                 <li>
                     <time datetime="2026-08-27">2026.08.27</time>
                     <div class="home-post-copy">
-                        <a href="/2026/08/27/%E3%80%8Abig-talk%E3%80%8B/">《big talk》</a>
+                        <div class="home-post-text">
+                            <a href="/2026/08/27/%E3%80%8Abig-talk%E3%80%8B/">《big talk》</a>
+                            
+                                <small class="home-post-summary">关于深度对话与真实连接的读后感</small>
+                            
+                        </div>
                         
                             <span>语斋</span>
                         
@@ -158,7 +198,12 @@
                 <li>
                     <time datetime="2026-08-27">2026.08.27</time>
                     <div class="home-post-copy">
-                        <a href="/2026/08/27/%E7%9C%9F%E8%AF%9A%E5%80%BE%E5%90%AC-%E5%AF%8C%E6%9C%89%E5%90%8C%E7%90%86%E5%BF%83%E2%80%94%E2%80%94%E3%80%8Abig-talk%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/">真诚倾听 富有同理心——《big talk》读后感</a>
+                        <div class="home-post-text">
+                            <a href="/2026/08/27/%E7%9C%9F%E8%AF%9A%E5%80%BE%E5%90%AC-%E5%AF%8C%E6%9C%89%E5%90%8C%E7%90%86%E5%BF%83%E2%80%94%E2%80%94%E3%80%8Abig-talk%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/">真诚倾听 富有同理心——《big talk》读后感</a>
+                            
+                                <small class="home-post-summary">关于深度对话与真实连接的读后感</small>
+                            
+                        </div>
                         
                             <span>乾言</span>
                         
@@ -169,7 +214,12 @@
                 <li>
                     <time datetime="2026-06-29">2026.06.29</time>
                     <div class="home-post-copy">
-                        <a href="/2026/06/29/%E8%8B%A6%E4%B8%AD%E4%BD%9C%E4%B9%90/">物流竞赛培训——苦中作乐</a>
+                        <div class="home-post-text">
+                            <a href="/2026/06/29/%E8%8B%A6%E4%B8%AD%E4%BD%9C%E4%B9%90/">物流竞赛培训——苦中作乐</a>
+                            
+                                <small class="home-post-summary">物流竞赛培训（黄山）</small>
+                            
+                        </div>
                         
                             <span>工作</span>
                         
@@ -180,7 +230,12 @@
                 <li>
                     <time datetime="2026-06-01">2026.06.01</time>
                     <div class="home-post-copy">
-                        <a href="/2026/06/01/%E9%9D%92%E9%98%B3%E6%95%A3%E6%AD%A5%E9%A3%8E%E6%99%AF/">青阳散步风景</a>
+                        <div class="home-post-text">
+                            <a href="/2026/06/01/%E9%9D%92%E9%98%B3%E6%95%A3%E6%AD%A5%E9%A3%8E%E6%99%AF/">青阳散步风景</a>
+                            
+                                <small class="home-post-summary">青阳公园</small>
+                            
+                        </div>
                         
                             <span>行走</span>
                         
@@ -191,7 +246,10 @@
                 <li>
                     <time datetime="2026-05-27">2026.05.27</time>
                     <div class="home-post-copy">
-                        <a href="/2026/05/27/%E5%86%85%E8%AE%AD%E5%B8%88%E6%AF%94%E8%B5%9B/">内训师比赛</a>
+                        <div class="home-post-text">
+                            <a href="/2026/05/27/%E5%86%85%E8%AE%AD%E5%B8%88%E6%AF%94%E8%B5%9B/">内训师比赛</a>
+                            
+                        </div>
                         
                             <span>工作</span>
                         
@@ -202,7 +260,12 @@
                 <li>
                     <time datetime="2026-03-20">2026.03.20</time>
                     <div class="home-post-copy">
-                        <a href="/2026/03/20/%E9%99%8D%E4%BD%8E%E7%89%A9%E6%B5%81%E4%B8%AD%E5%BF%83%E9%87%8D%E5%A4%8D%E6%80%A7%E5%AE%89%E5%85%A8%E9%9A%90%E6%82%A3%E6%95%B0%E9%87%8F-qc/">降低物流中心重复性安全隐患数量（QC）</a>
+                        <div class="home-post-text">
+                            <a href="/2026/03/20/%E9%99%8D%E4%BD%8E%E7%89%A9%E6%B5%81%E4%B8%AD%E5%BF%83%E9%87%8D%E5%A4%8D%E6%80%A7%E5%AE%89%E5%85%A8%E9%9A%90%E6%82%A3%E6%95%B0%E9%87%8F-qc/">降低物流中心重复性安全隐患数量（QC）</a>
+                            
+                                <small class="home-post-summary">创新课题发布</small>
+                            
+                        </div>
                         
                             <span>工作</span>
                         
@@ -213,7 +276,12 @@
                 <li>
                     <time datetime="2026-03-17">2026.03.17</time>
                     <div class="home-post-copy">
-                        <a href="/2026/03/17/%E5%B9%B4%E5%BA%A6%E7%A7%91%E6%8A%80%E5%88%9B%E6%96%B0%E5%9F%B9%E8%AE%AD/">2026 年度科技创新培训</a>
+                        <div class="home-post-text">
+                            <a href="/2026/03/17/%E5%B9%B4%E5%BA%A6%E7%A7%91%E6%8A%80%E5%88%9B%E6%96%B0%E5%9F%B9%E8%AE%AD/">2026 年度科技创新培训</a>
+                            
+                                <small class="home-post-summary">创新专题培训</small>
+                            
+                        </div>
                         
                             <span>工作</span>
                         
@@ -224,7 +292,12 @@
                 <li>
                     <time datetime="2025-10-26">2025.10.26</time>
                     <div class="home-post-copy">
-                        <a href="/2025/10/26/%E5%BD%93%E2%80%9C%E6%9C%89%E9%81%93%E7%90%86%E2%80%9D%E6%88%90%E4%B8%BA%E4%B8%80%E7%A7%8D%E5%8D%B1%E9%99%A9%E2%80%94%E2%80%94%E8%AF%BB%E3%80%8A%E7%8E%8B%E5%AE%89%E7%9F%B3%E2%80%9C%E5%BC%BA%E8%BE%A9%E2%80%9D%E8%80%83%E3%80%8B%E6%9C%89%E6%84%9F/">当“有道理”成为一种危险——读《王安石“强辩”考》有感</a>
+                        <div class="home-post-text">
+                            <a href="/2025/10/26/%E5%BD%93%E2%80%9C%E6%9C%89%E9%81%93%E7%90%86%E2%80%9D%E6%88%90%E4%B8%BA%E4%B8%80%E7%A7%8D%E5%8D%B1%E9%99%A9%E2%80%94%E2%80%94%E8%AF%BB%E3%80%8A%E7%8E%8B%E5%AE%89%E7%9F%B3%E2%80%9C%E5%BC%BA%E8%BE%A9%E2%80%9D%E8%80%83%E3%80%8B%E6%9C%89%E6%84%9F/">当“有道理”成为一种危险——读《王安石“强辩”考》有感</a>
+                            
+                                <small class="home-post-summary">本书表面研究的是王安石为什么被称为“强辩”，实际上研究的是当知识、道德自信、政治权力和制度激励结合以后，“道理”为什么既可以成为推动改革的力量，也可能成为阻止自我纠错的牢笼。</small>
+                            
+                        </div>
                         
                             <span>语斋</span>
                         
@@ -276,44 +349,36 @@
 </footer>
 
 
-   
-    
 <script src="/js/highlight.min.js"></script>
 
-    
+
 <script src="/js/highlightjs-line-numbers.js"></script>
 
 
-    
 <script src="/js/randomHeaderContent.js"></script>
 
-    <!--回到顶部按钮-->
-    
-        
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
 <script src="/js/returnToTop.js"></script>
 
-    
 
-    <!--目录-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
     
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
-        
 <script src="/js/toc.js"></script>
-
-    
 
 
 
 <script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
+    if (window.hljs) {
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    }
 </script>
-
 
                 </div>
             
@@ -327,30 +392,5 @@
             
     </body>
 
-
-    <!--暗黑模式-->
-    <script src="/js/darkmode-js.min.js"></script>
-    <script>
-        function addDarkmodeWidget() {
-        const options = {
-            bottom: '53px', // default: '32px'
-            right: 'unset', // default: '32px'
-            left: '42px', // default: 'unset'
-            time: '0.3s', // default: '0.3s'
-            mixColor: '#fff', // default: '#fff'
-            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
-            buttonColorDark: '#100f2c',  // default: '#100f2c'
-            buttonColorLight: '#fff', // default: '#fff'
-            saveInCookies: true, // default: true,
-            label: '🌓', // default: ''
-            autoMatchOsTheme: true // default: true
-        }
-    
-        const darkmode = new Darkmode(options);
-        darkmode.showWidget();
-        
-        }
-        window.addEventListener('load', addDarkmodeWidget);
-    </script>
-  
+    <script src="/js/site.js"></script>
 </html>
