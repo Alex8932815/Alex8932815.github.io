@@ -612,10 +612,6 @@ a {
     background: var(--reading-line);
 }
 
-.post-md picture.post-image img {
-    width: 100%;
-}
-
 .post-md > table {
     display: block;
     width: 100%;
