@@ -1,6 +1,11 @@
 (function () {
     "use strict";
 
+    document.querySelectorAll(".post-md img").forEach(function (image, index) {
+        if (!image.hasAttribute("loading")) image.loading = index === 0 ? "eager" : "lazy";
+        if (!image.hasAttribute("decoding")) image.decoding = "async";
+    });
+
     var searchDialog = document.querySelector("[data-search-dialog]");
     var searchInput = document.querySelector("[data-search-input]");
     var searchResults = document.querySelector("[data-search-results]");

@@ -595,11 +595,25 @@ a {
 }
 
 .post-md img {
+    content-visibility: auto;
     display: block;
     max-width: 100%;
     height: auto;
     margin: 2rem auto;
     border-radius: 6px;
+}
+
+.post-md picture.post-image {
+    display: block;
+    max-width: 100%;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 6px;
+    background: var(--reading-line);
+}
+
+.post-md picture.post-image img {
+    width: 100%;
 }
 
 .post-md > table {
